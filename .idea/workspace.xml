@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/_App/Instruments/InstrumentCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/_App/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/_App/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +50,11 @@
       <recent name="C:\Coding\pi-2022\music-courses-prototype\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\THRUSH-frontend-2\components\_App\Instruments" />
       <recent name="C:\Coding\THRUSH-frontend-2\components\courses" />
       <recent name="C:\Coding\THRUSH-frontend-2\pages" />
       <recent name="C:\Coding\THRUSH-frontend-2\components\course" />
       <recent name="C:\Coding\THRUSH-frontend-2\components\course-component" />
-      <recent name="C:\Coding\THRUSH-frontend-2\pages\slugs" />
     </key>
   </component>
   <component name="RunManager">
@@ -103,5 +105,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
