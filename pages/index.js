@@ -1,19 +1,33 @@
-import React from 'react';
-import TopHeader from '../components/_App/TopHeader';
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import Dashboard from "../components/Dashboard";
+import Loader from "../components/Loader";
 import Navbar from '@components/_App/Navbar';
 import Footer from '@components/_App/Footer';
-import Content from '@components/_App/Content';
+export default function Home() {
+  const router = useRouter();
+  const { status, data: session } = useSession({
+    required: true,
+    onUnauthenticated() {
+      router.push("/auth/signin");
+    },
+  });
 
-const Index = () => {
-    return (
-        <>
-            <Navbar />
+  // Loading animation...
+  if (status === "loading") {
+    return <Loader />;
+  }
 
-            <Content/>
-
-            <Footer />
-        </>
-    )
+  return (
+    <div className="">
+      <Head>
+        <title>Thrush - Dashboard</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
+      <Dashboard />
+      <Footer />
+    </div>
+  );
 }
-
-export default Index;

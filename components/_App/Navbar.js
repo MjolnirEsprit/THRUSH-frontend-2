@@ -10,18 +10,18 @@ const Navbar = () => {
                     <div className="flex justify-between items-center">
                         <div>
                             <Link href="/">
-                                <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
-                                    Home
+                                <a className="font-medium mr-8 mx-16 text-white hover:text-red-400">
+                                    Music-Universe
                                 </a>
                             </Link>
                             <Link href="/">
-                                <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
-                                    Nav1
+                                <a className="font-medium mr-8 text-white hover:text-red-400">
+                                    FanSpace
                                 </a>
                             </Link>
                             <Link href="/">
-                                <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
-                                    Nav2
+                                <a className="font-medium mr-8  text-white hover:text-red-400">
+                                    Nfts
                                 </a>
                             </Link>
                         </div>

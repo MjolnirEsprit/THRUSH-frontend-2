@@ -1,13 +1,15 @@
-import 'tailwindcss/tailwind.css'
+import "../styles/globals.css";
+import { SessionProvider } from "next-auth/react";
+import { RecoilRoot } from "recoil";
 
-import Layout from '../components/_App/Layout';
-
-const MyApp =  ({ Component, pageProps }) => {
-    return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    )
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+  return (
+    <SessionProvider session={session}>
+      <RecoilRoot>
+        <Component {...pageProps} />
+      </RecoilRoot>
+    </SessionProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
