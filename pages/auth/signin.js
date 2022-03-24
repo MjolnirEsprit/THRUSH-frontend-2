@@ -24,7 +24,7 @@ function Signin({ providers }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image
-        src=" "
+        src="/public/vercel.svg"
         height={250}
         width={600}
         objectFit="contain"
