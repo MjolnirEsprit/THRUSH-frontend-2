@@ -27,7 +27,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Dashboard />
-      <Footer />
+       
     </div>
   );
 }

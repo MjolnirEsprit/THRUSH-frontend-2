@@ -7,14 +7,14 @@ const Navbar = () => {
         <section>
             <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
                 <nav className="relative" aria-label="Global">
-                    <div className="flex justify-between items-center">
-                        <div>
+                    <div className="flex  justify-between items-center">
+                        <div >
                             <Link href="/">
                                 <a className="font-medium mr-8 mx-16 text-white hover:text-red-400">
                                     Music-Universe
                                 </a>
                             </Link>
-                            <Link href="/">
+                            <Link href="/fanSpace">
                                 <a className="font-medium mr-8 text-white hover:text-red-400">
                                     FanSpace
                                 </a>
@@ -22,6 +22,16 @@ const Navbar = () => {
                             <Link href="/">
                                 <a className="font-medium mr-8  text-white hover:text-red-400">
                                     Nfts
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-medium mr-8  text-white hover:text-red-400">
+                                    Shop
+                                </a>
+                            </Link>
+                            <Link href="/">
+                                <a className="font-medium mr-8  text-white hover:text-red-400">
+                                    3D-World
                                 </a>
                             </Link>
                         </div>

@@ -7,6 +7,8 @@ import { playingTrackState } from "../atoms/playerAtom";
 import { useRecoilState } from "recoil";
 import Body from "./Body";
 import Right from "./Right";
+ 
+import Footer from '@components/_App/Footer';
 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
@@ -37,6 +39,7 @@ function Dashboard() {
       <Sidebar />
       <Body chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
       <Right chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
+      <Footer/>
 
       {showPlayer && (
         <div className="fixed bottom-0 left-0 right-0 z-50">
