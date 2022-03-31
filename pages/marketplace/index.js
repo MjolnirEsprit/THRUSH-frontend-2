@@ -2,7 +2,7 @@ import { BaseLayout } from "@components/MusicCourses/ui/layout";
 import { getAllCourses } from "@content/courses/fetcher";
 import { CourseCard, CourseList } from "@components/MusicCourses/ui/course";
 import { useWalletInfo } from "@components/MusicCourses/hooks/web3";
-import { Button } from "@components/MusicCourses/ui/common";
+import { Button } from "@components/common";
 import { OrderModal } from "@components/MusicCourses/ui/order";
 import { useState } from "react";
 import { MarketHeader } from "@components/MusicCourses/ui/marketplace";

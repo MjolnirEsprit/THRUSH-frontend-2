@@ -1,4 +1,4 @@
-import { Modal } from "@components/MusicCourses/ui/common";
+import { Modal } from "@components/common";
 import { CourseHero, Curriculum, Keypoints } from "@components/MusicCourses/ui/course";
 import { BaseLayout } from "@components/MusicCourses/ui/layout";
 import { getAllCourses } from "@content/courses/fetcher";

@@ -1,4 +1,4 @@
-import { Breadcrumbs } from "@components/MusicCourses/ui/common";
+import { Breadcrumbs } from "@components/common";
 import { EthRates } from "@components/MusicCourses/ui/web3";
 import WalletBar from "@components/MusicCourses/ui/web3/walletbar";
 

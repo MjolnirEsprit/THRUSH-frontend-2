@@ -1,4 +1,4 @@
-import { Button } from "@components/MusicCourses/ui/common";
+import { Button } from "@components/common";
 
 export default function CourseFilter() {
   return (

@@ -1,26 +1,18 @@
-import { Breadcrumbs, Footer, Hero, Navbar } from "@components/MusicCourses/ui/common";
-import { CourseCard, CourseList } from "@components/MusicCourses/ui/course";
-import { BaseLayout } from "@components/MusicCourses/ui/layout";
-import { getAllCourses } from "@content/courses/fetcher";
+import React from 'react';
+import Footer from '@components/common/footer';
+import Content from '@components/common/content';
+import { MainNavbar } from '@components/common';
 
-export default function Home({ courses }) {
-  return (
-    <>
-      <Hero />
-      <CourseList courses={courses}>
-        {(course) => <CourseCard key={course.id} course={course}></CourseCard>}
-      </CourseList>
-    </>
-  );
+const Index = () => {
+    return (
+        <>
+            <MainNavbar />
+
+            <Content/>
+
+            <Footer />
+        </>
+    )
 }
 
-export function getStaticProps() {
-  const { data } = getAllCourses();
-  return {
-    props: {
-      courses: data,
-    },
-  };
-}
-
-Home.Layout = BaseLayout;
+export default Index;
