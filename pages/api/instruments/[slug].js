@@ -12,9 +12,9 @@ import {
   Button,
 } from '@material-ui/core';
 import Layout1 from '@components/_App/Layout';
-import useStyles from '../utils/styles';
+import useStyles from '../../../utils/styles';
 import Instrument from 'models/instrument';
-import db from '../utils/db';
+import db from '../../../utils/db';
 
 
 
