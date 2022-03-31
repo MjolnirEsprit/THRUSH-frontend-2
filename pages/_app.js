@@ -1,13 +1,15 @@
-import 'tailwindcss/tailwind.css'
+import "@styles/globals.css";
 
-import Layout from '../components/_App/Layout';
+const Noop = ({ children }) => <>{children}</>;
 
-const MyApp =  ({ Component, pageProps }) => {
-    return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    )
+function MyApp({ Component, pageProps }) {
+  const Layout = Component.Layout ?? Noop;
+  
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
-export default MyApp
+export default MyApp;

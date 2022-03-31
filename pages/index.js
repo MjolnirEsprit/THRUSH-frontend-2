@@ -1,13 +1,12 @@
 import React from 'react';
-import TopHeader from '../components/_App/TopHeader';
-import Navbar from '@components/_App/Navbar';
-import Footer from '@components/_App/Footer';
-import Content from '@components/_App/Content';
+import Footer from '@components/common/footer';
+import Content from '@components/common/content';
+import { MainNavbar } from '@components/common';
 
 const Index = () => {
     return (
         <>
-            <Navbar />
+            <MainNavbar />
 
             <Content/>
 
