@@ -1,4 +1,4 @@
-import "@styles/globals.css";
+import "../public/styles/globals.css";
 
 const Noop = ({ children }) => <>{children}</>;
 

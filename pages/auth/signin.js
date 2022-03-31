@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
-import Loader from "@components/Music/Loader";
+import Loader from "@components/MusicStreaming/Loader";
 
 function Signin({ providers }) {
   const { data: session } = useSession();

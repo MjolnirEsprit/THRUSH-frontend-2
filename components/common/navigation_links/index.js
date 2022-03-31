@@ -13,17 +13,22 @@ export default function NavLinks() {
       </ActiveLink>
       <ActiveLink href="/marketplace">
         <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-          Marketplace
-        </a>
-      </ActiveLink>
-      <ActiveLink href="/blogs">
-        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-          Blogs
+          Exclusive Course Marketplace
         </a>
       </ActiveLink>
       <ActiveLink href="/instruments">
         <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
           Store
+        </a>
+      </ActiveLink>
+      <ActiveLink href="/fan-space">
+        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
+          Fan Space
+        </a>
+      </ActiveLink>
+      <ActiveLink href="/music-streaming">
+        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
+          Music Streaming
         </a>
       </ActiveLink>
     </section>
