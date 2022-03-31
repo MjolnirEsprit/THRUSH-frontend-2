@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import data from '../../../utils/instrument/data';
+import data from '../../utils/instrument/data';
 import NextLink from 'next/link';
 import Image from 'next/image';
 import {
@@ -13,9 +13,9 @@ import {
   Button,
 } from '@material-ui/core';
 import Layout1 from '@components/_App/Layout';
-import useStyles from '../../../utils/styles';
+import useStyles from '../../utils/styles';
 import Instrument from 'models/instrument';
-import db from '../../../utils/db';
+import db from '../../utils/db';
 
 
 
