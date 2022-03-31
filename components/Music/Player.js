@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import SpotifyPlayer from "react-spotify-web-playback";
 import { useRecoilState } from "recoil";
-import { playingTrackState, playState } from "../atoms/playerAtom";
+import { playingTrackState, playState } from "../../atoms/playerAtom";
 import {
   BsFillPlayFill,
   BsFillSkipEndFill,

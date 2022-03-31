@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { playingTrackState, playState } from "../atoms/playerAtom";
+import { playingTrackState, playState } from "../../atoms/playerAtom";
 
 function RecentlyPlayed({ track, chooseTrack }) {
   const [play, setPlay] = useRecoilState(playState);

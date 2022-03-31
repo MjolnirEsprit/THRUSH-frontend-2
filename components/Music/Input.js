@@ -6,7 +6,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { useRef, useState } from "react";
-import { db, storage } from "../firebase";
+import { db, storage } from "../../firebase";
 import {
   addDoc,
   collection,

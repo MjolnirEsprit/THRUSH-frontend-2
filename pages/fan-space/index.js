@@ -1,13 +1,11 @@
 import Head from "next/head";
-import Feed from "../components/Feed";
-import Sidebar2 from "../components/Sidebar2";
-import Widgets from "../components/Widgets";
 import { getProviders, getSession, useSession } from "next-auth/react";
-import Login from "../components/Login";
-import Modal from "../components/Modal";
-import { modalState } from "../atoms/modalAtom";
+import { modalState } from "../../atoms/modalAtom";
 import { useRecoilState } from "recoil";
-import Navbar from "@components/_App/Navbar";
+import Feed from "@components/Music/Feed";
+import Sidebar2 from "@components/Music/Sidebar2";
+import Widgets from "@components/Music/Widgets";
+import Modal from "@components/Music/Modal";
 
 export default function FanSpace({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
@@ -21,7 +19,7 @@ export default function FanSpace({ trendingResults, followResults, providers }) 
         <title>Fanspace</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div> <Navbar/></div> 
+      <div></div> 
         
       <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
        
