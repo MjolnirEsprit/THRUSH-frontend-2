@@ -19,9 +19,9 @@ const Navbar = () => {
                                     Nav1
                                 </a>
                             </Link>
-                            <Link href="/">
+                            <Link href="/store">
                                 <a className="font-medium mr-8 text-gray-500 hover:text-gray-900">
-                                    Nav2
+                                    store
                                 </a>
                             </Link>
                         </div>
