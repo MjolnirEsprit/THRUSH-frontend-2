@@ -9,9 +9,9 @@ export default function Navbar() {
     <section>
       <div className="relative px-4 pt-6 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center justify-between xs:flex-row">
             <div>
-              <NavLinks/>
+              <NavLinks />
             </div>
           </div>
         </nav>

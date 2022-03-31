@@ -14,10 +14,9 @@ export default function Marketplace({ courses }) {
   const { canPurchaseCourse, account } = useWalletInfo();
 
   //order = course
-  const purchaseCourse = async order => {
+  const purchaseCourse = async (order) => {
     const hexCourseId = web3.utils.utf8ToHex(selectedCourse.id);
-    console.log("hexCourseId",hexCourseId)
-
+    console.log("hexCourseId", hexCourseId);
 
     // hex course ID:
     // 0x31343130343734000000000000000000
@@ -32,14 +31,13 @@ export default function Marketplace({ courses }) {
       { type: "bytes16", value: hexCourseId },
       { type: "address", value: account.data }
     );
-    console.log("courseHash",courseHash)
+    console.log("courseHash", courseHash);
 
     // test@gmail.com
     // af257bcc3cf653863a77012256c927f26d8ab55c5bea3751063d049d0538b902
     const emailHash = web3.utils.sha3(order.email);
-    console.log("emailHash",emailHash)
+    console.log("emailHash", emailHash);
     // af257bcc3cf653863a77012256c927f26d8ab55c5bea3751063d049d0538b9022e0b409e2bf77ce6466df3990199f3a7377f305fef2c55556a8cae5decbdd0e5
-
 
     // proof:
     // b13bdad9cb08b53405c63b05f052a842ec6ab91f6f4239355ff359eb5532b29f
@@ -47,27 +45,24 @@ export default function Marketplace({ courses }) {
       { type: "bytes32", value: emailHash },
       { type: "bytes32", value: courseHash }
     );
-    console.log("proof",proof)
+    console.log("proof", proof);
 
-    const value = web3.utils.toWei(String(order.price))
+    const value = web3.utils.toWei(String(order.price));
 
-    try { 
-      const result = await contract.methods.purchaseCourse(
-        hexCourseId,
-        proof
-      ).send({from: account.data, value})
-      console.log(result)
+    try {
+      const result = await contract.methods
+        .purchaseCourse(hexCourseId, proof)
+        .send({ from: account.data, value });
+      console.log(result);
     } catch {
-      console.error("Purchase course: Operation Has failed")
-      alert("احا")
+      console.error("Purchase course: Operation Has failed");
+      alert("احا");
     }
   };
 
   return (
     <>
-      <div className="py-4">
-        <MarketHeader />
-      </div>
+      <MarketHeader />
 
       <CourseList courses={courses}>
         {(course) => (

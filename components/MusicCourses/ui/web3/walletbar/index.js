@@ -1,32 +1,29 @@
 import { useWalletInfo } from "@components/MusicCourses/hooks/web3";
 import { useWeb3 } from "@components/MusicCourses/providers";
+import { Button } from "@components/MusicCourses/ui/common";
 
 export default function WalletBar() {
   const { requireInstall } = useWeb3();
-  const { account, networkData } = useWalletInfo()
-
+  const { account, networkData } = useWalletInfo();
 
   return (
-    <section className="text-white bg-orange-600 rounded-lg">
+    <section className="rounded-lg bg-orange-600 text-white">
       <div className="p-8">
-        <h1 className="text-2xl">Hello, {account.data}</h1>
-        <h2 className="subtitle mb-5 text-xl">
+        <h1 className="break-words text-base xs:text-xl">
+          Hello, {account.data}
+        </h1>
+        <h2 className="subtitle mb-5 text-sm xs:text-base">
           I hope you are having a great day!
         </h2>
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between">
           <div className="sm:flex sm:justify-center lg:justify-start">
-            <div className="rounded-md shadow">
-              <a
-                href="#"
-                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10"
-              >
-                Learn how to purchase
-              </a>
-            </div>
+            <Button className="mr-2 p-2 text-sm xs:text-lg" variant="white">
+              Learn how to purchase
+            </Button>
           </div>
           <div>
             {networkData.hasInitialResponse && !networkData.isSupported && (
-              <div className="bg-red-600 p-4 rounded-lg">
+              <div className="rounded-lg bg-red-600 p-4">
                 <div>Connected to wrong Network</div>
                 <div>
                   Connect to : {` `}
@@ -35,7 +32,7 @@ export default function WalletBar() {
               </div>
             )}
             {requireInstall && (
-              <div className="bg-yellow-500 p-4 rounded-lg">
+              <div className="rounded-lg bg-yellow-500 p-4">
                 Cannot connect to network. Please install Metamask.
               </div>
             )}

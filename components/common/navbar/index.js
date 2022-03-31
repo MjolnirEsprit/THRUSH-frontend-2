@@ -2,7 +2,7 @@ import { useWeb3 } from "@components/MusicCourses/providers";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useAccount } from "@components/MusicCourses/hooks/web3";
-import { ActiveLink, Button } from "@components/common"
+import { ActiveLink, Button } from "@components/common";
 import NavLinks from "../navigation_links";
 
 export default function Navbar() {
@@ -12,12 +12,17 @@ export default function Navbar() {
 
   return (
     <section>
-      <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
+      <div className="relative px-4 pt-6 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
-          <div className="flex justify-between items-center">
-          <NavLinks/>
-            <div>
-              
+          <div className="flex flex-col items-center justify-between xs:flex-row">
+            <NavLinks />
+
+            <div className="text-center">
+            <ActiveLink href="/wishlist">
+              <a className="mr-1 font-medium text-gray-500 hover:text-gray-900 sm:mr-8">
+                Wishlist
+              </a>
+            </ActiveLink>
               {isLoading ? (
                 <Button disabled={true} onClick={connect}>
                   Loading...
@@ -43,7 +48,7 @@ export default function Navbar() {
       </div>
       {account.data && !pathname.includes("/marketplace") && (
         <div className="flex justify-end pt-1 sm:px-6 lg:px-8">
-          <div className="text-white bg-orange-600 rounded-md p-2">
+          <div className="rounded-md bg-orange-600 p-2 text-white">
             {account.data}
           </div>
         </div>
