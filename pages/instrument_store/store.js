@@ -1,15 +1,15 @@
 import React from 'react';
 import { Box, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid, Typography } from '@material-ui/core';
 import Navbar from '@components/_App/Navbar';
-import db from '../utils/db';
-import Instrument from '../models/instrument';
-import useStyles from '../utils/styles';
+import db from '../../utils/db';
+import Instrument from '../../models/instrument';
+import useStyles from '../../utils/styles';
 import Layout1 from '@components/_App/Layout'
 import NextLink from 'next/link'
 import Filterbar from '@components/Filterbar';
 
 
-function store(props) {
+function Store(props) {
     const {instruments} = props;
     const classes = useStyles();
     return(
@@ -62,7 +62,7 @@ function store(props) {
     )
 }
 
-export default store
+export default Store
 
 export async function getServerSideProps() {
     await db.connect();
