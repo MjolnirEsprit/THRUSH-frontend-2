@@ -10,7 +10,7 @@ const Index = () => {
 
             <Content/>
 
-            <Footer />
+            <Footer></Footer>
         </>
     )
 }

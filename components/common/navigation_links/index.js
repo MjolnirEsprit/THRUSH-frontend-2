@@ -31,6 +31,11 @@ export default function NavLinks() {
           Music Streaming
         </a>
       </ActiveLink>
+        <ActiveLink href="/NFTMarketplace">
+            <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
+                NFT Marketplace Streaming
+            </a>
+        </ActiveLink>
     </section>
   );
 }
