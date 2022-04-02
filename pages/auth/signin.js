@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Loader from "@components/MusicStreaming/Loader";
 
+
 function Signin({ providers }) {
   const { data: session } = useSession();
   const router = useRouter();
@@ -21,10 +22,10 @@ function Signin({ providers }) {
     <div className="bg-black h-screen flex flex-col items-center pt-40 space-y-8">
       <Head>
         <title>Login - Thrush</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="../../public/favicon.ico" />
       </Head>
       <Image
-        src="/public/vercel.svg"
+        src="../../public/vercel.svg"
         height={250}
         width={600}
         objectFit="contain"

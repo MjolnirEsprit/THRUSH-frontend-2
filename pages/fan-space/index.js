@@ -6,6 +6,7 @@ import Feed from "@components/MusicStreaming/Feed";
 import Sidebar2 from "@components/MusicStreaming/Sidebar2";
 import Widgets from "@components/MusicStreaming/Widgets";
 import Modal from "@components/MusicStreaming/Modal";
+import Login from "@components/MusicStreaming/Login";
 
 export default function FanSpace({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
