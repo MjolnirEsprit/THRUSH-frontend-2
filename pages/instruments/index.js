@@ -29,7 +29,7 @@ export default function store(props) {
               {instruments.map((product) => (
                 <Grid item md={4} key={product.name}>
                   <Card className={classes.card}>
-                    <NextLink href={`${product.id}`} passHref>
+                    <NextLink href={`/instruments/${product._id}`} passHref>
                       <CardActionArea>
                         <CardMedia
                           component="img"
