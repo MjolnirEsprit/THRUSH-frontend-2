@@ -2,169 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/bgLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/thrushLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/HelpBanner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/HelpItem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/HelpItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/Homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/NFTCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/nft/GeneralDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/nft/ItemActivity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/nft/NFTImage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/nft/Purchase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/NFTMarketplace/nft/itemActivity/EventItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/sanityClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/277360192_361812459310647_2234075368284127871_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/Reviews.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/SendMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/api/hello.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/collections/[collectionId].js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/help-center.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/NFTMarketplace/nfts/[nftId].js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/banner1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dummyEvents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icon1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/music_note.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/.checksums" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/data-aspects.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/default-layout.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/default-login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/form-builder.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/vision.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/plugins/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/sanity.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/schemas/schema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/static/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/GLTFLoader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/OrbitControls.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/GuitarFinished.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/guitar.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/guitar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/guitar1024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/guitar2.glb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/scene.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/scene.gltf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/GuitarCase_Guitar_Case_AO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/GuitarCase_Guitar_Case_BaseColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/GuitarCase_Guitar_Case_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/GuitarCase_Guitar_Case_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/GuitarCase_Guitar_Case_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/substance_guitar_Guitar_AO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/substance_guitar_Guitar_BaseColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/substance_guitar_Guitar_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/substance_guitar_Guitar_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/public/textures_fbx1/substance_guitar_Guitar_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/actions/reviews.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/api/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/components/Cart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/components/InstModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/components/InstrumentDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/components/ShowInstrument.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/components/ZoomImage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/components/reviewForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/cover9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/reducers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/reducers/reviews.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/src/thrushLogo.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/three.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/three.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/3dreacttt/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/assets/bgLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/assets/coin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/assets/thrushLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/HelpBanner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/HelpItem.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/HelpItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/Homepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/NFTCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/nft/GeneralDetails.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/nft/ItemActivity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/nft/NFTImage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/nft/Purchase.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/components/nft/itemActivity/EventItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/lib/sanityClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/next-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/277360192_361812459310647_2234075368284127871_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/Reviews.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/SendMessage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/api/hello.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/collections/[collectionId].js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/help-center.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/pages/nfts/[nftId].js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/prettier.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/public/banner1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/public/dummyEvents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/public/icon1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/public/music_note.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/config/.checksums" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/config/@sanity/data-aspects.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/config/@sanity/default-layout.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/config/@sanity/default-login.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/config/@sanity/form-builder.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/config/@sanity/vision.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/plugins/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/sanity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/schemas/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/static/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/studio/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nermine-integration/nft-mp/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,6 +98,7 @@
       <workItem from="1648896772126" duration="2165000" />
       <workItem from="1648914995870" duration="313000" />
       <workItem from="1648915444643" duration="1325000" />
+      <workItem from="1648994100030" duration="728000" />
     </task>
     <servers />
   </component>
