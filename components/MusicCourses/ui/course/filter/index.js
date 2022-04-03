@@ -8,7 +8,7 @@ export default function CourseFilter() {
           type="text"
           name="account"
           id="account"
-          className="block w-52 rounded-md border-gray-300 p-4 pl-7 shadow-md focus:border-indigo-500 focus:ring-indigo-500 xs:w-96 sm:text-sm"
+          className="block w-52 rounded-md border-gray-300 p-4 pl-7 shadow-md focus:border-orange-500 focus:ring-orange-500 xs:w-96 sm:text-sm"
           placeholder="0x2341ab..."
         />
         <Button>Search</Button>

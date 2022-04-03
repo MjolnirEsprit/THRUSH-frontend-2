@@ -107,7 +107,7 @@ export default function OrderModal({ course, onClose, onSubmit }) {
                   type="text"
                   name="price"
                   id="price"
-                  className="disabled:opacity-50 w-80 mb-1 focus:ring-indigo-500 shadow-md focus:border-indigo-500 block pl-7 p-4 sm:text-sm border-gray-300 rounded-md"
+                  className="disabled:opacity-50 w-80 mb-1 focus:ring-orange-500 shadow-md focus:border-orange-500 block pl-7 p-4 sm:text-sm border-gray-300 rounded-md"
                 />
                 <p className="text-xs text-gray-700">
                   Price will be verified at the time of the order. If the price
@@ -129,7 +129,7 @@ export default function OrderModal({ course, onClose, onSubmit }) {
                   type="email"
                   name="email"
                   id="email"
-                  className="w-80 focus:ring-indigo-500 shadow-md focus:border-indigo-500 block pl-7 p-4 sm:text-sm border-gray-300 rounded-md"
+                  className="w-80 focus:ring-orange-500 shadow-md focus:border-orange-500 block pl-7 p-4 sm:text-sm border-gray-300 rounded-md"
                   placeholder="x@y.com"
                 />
                 <p className="text-xs text-gray-700 mt-1">
@@ -152,7 +152,7 @@ export default function OrderModal({ course, onClose, onSubmit }) {
                   type="email"
                   name="confirmationEmail"
                   id="confirmationEmail"
-                  className="w-80 focus:ring-indigo-500 shadow-md focus:border-indigo-500 block pl-7 p-4 sm:text-sm border-gray-300 rounded-md"
+                  className="w-80 focus:ring-orange-500 shadow-md focus:border-orange-500 block pl-7 p-4 sm:text-sm border-gray-300 rounded-md"
                   placeholder="x@y.com"
                 />
               </div>
