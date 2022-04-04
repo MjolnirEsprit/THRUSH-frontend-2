@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicStreaming/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicStreaming/Loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +99,9 @@
       <workItem from="1648914995870" duration="313000" />
       <workItem from="1648915444643" duration="1325000" />
       <workItem from="1648994100030" duration="728000" />
+      <workItem from="1649024581281" duration="282000" />
+      <workItem from="1649060600335" duration="3061000" />
+      <workItem from="1649067290480" duration="416000" />
     </task>
     <servers />
   </component>
