@@ -1,14 +1,41 @@
-import { Container,Toolbar, Typography } from '@material-ui/core'
+import { Container, CssBaseline, ThemeProvider, Typography } from '@material-ui/core'
 import React from 'react'
-import useStyles from '@utils/styles'
+import { createTheme} from '@material-ui/core'
+
 
 export default function Layout1({children}) {
-  const classes = useStyles();
+  const theme = createTheme({
+
+    typography: {
+      h1: {
+        fontSize: '1.6rem',
+        fontWeight: 400,
+        margin: '1rem 0',
+      },
+      h2: {
+        fontSize: '1.4rem',
+        fontWeight: 400,
+        margin: '1rem 0',
+      },
+    },
+    palette: {
+      type : 'light',
+      primary: {
+        main: '#db550d',
+      },
+      secondary: {
+        main: '#db550f',
+      },
+    },
+  });
     return (
     <div>
-        <Container className={classes.main}>
-            {children}
-        </Container>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+          <Container >
+              {children}
+          </Container>
+      </ThemeProvider>
     </div>
   )
 }

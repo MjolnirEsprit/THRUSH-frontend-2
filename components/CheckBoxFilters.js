@@ -12,6 +12,10 @@ export default function CheckboxList() {
         <FormControlLabel control={<Checkbox />} label="Keyboards" />
         <FormControlLabel control={<Checkbox />} label="Drums" />
         <FormControlLabel control={<Checkbox />} label="Pedals" />
+        <FormControlLabel control={<Checkbox />} label="Ukuleles" />
+        <FormControlLabel control={<Checkbox />} label="Harmonicas" />
+        <FormControlLabel control={<Checkbox />} label="Ouds" />
+        <FormControlLabel control={<Checkbox />} label="Brass" />
       </FormGroup>
     </List>
   );

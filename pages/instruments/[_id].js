@@ -82,7 +82,7 @@ export default function InstrumentsScreen(props) {
                               </Grid>
                           </ListItem>
                           <ListItem>
-                              <Button fullWidth variant="contained" >
+                              <Button fullWidth variant="contained" color='primary' >
                                   Add to cart
                               </Button>
                           </ListItem>
