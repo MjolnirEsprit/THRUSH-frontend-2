@@ -1,14 +1,10 @@
-import Header from "../../../NERMINE-INTEGRATION/nft-mp/components/NFTMarketplace/Header"
+ 
 import React from "react"
 import { useEffect, useMemo, useState } from 'react'
 import { useWeb3 } from "@3rdweb/hooks"
 import { ThirdwebSDK } from "@3rdweb/sdk"
 import { useRouter } from "next/router"
-import NFTImage from "../../../NERMINE-INTEGRATION/nft-mp/components/NFTMarketplace/nft/NFTImage"
-import GeneralDetails from "../../../NERMINE-INTEGRATION/nft-mp/components/NFTMarketplace/nft/GeneralDetails"
-import ItemActivity from "../../../NERMINE-INTEGRATION/nft-mp/components/NFTMarketplace/nft/ItemActivity"
-import Purchase from "../../../NERMINE-INTEGRATION/nft-mp/components/NFTMarketplace/nft/Purchase"
-
+ 
 const style = {
     wrapper: `flex flex-col items-center container-lg text-[#e5e8eb]`,
     container: `container p-6`,
