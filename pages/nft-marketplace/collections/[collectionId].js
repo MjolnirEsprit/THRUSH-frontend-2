@@ -3,11 +3,11 @@ import { useRouter } from 'next/router';
 import { useWeb3 } from '@3rdweb/hooks'
 import { client } from '../../../lib/sanityClient'
 import { ThirdwebSDK } from '@3rdweb/sdk'
- 
+import Header from '@components/NFTMarketplace/Header'
 import { CgWebsite } from 'react-icons/cg'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { HiDotsVertical } from 'react-icons/hi'
- 
+import NFTCard from '@components/NFTMarketplace/NFTCard'
 
 const style = {
     bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
