@@ -2,7 +2,7 @@ import { Modal } from "@components/common";
 import { CourseHero, Curriculum, Keypoints } from "@components/MusicCourses/ui/course";
 import { BaseLayout } from "@components/MusicCourses/ui/layout";
 import { getAllCourses } from "@content/courses/fetcher";
-import { useAccount, useOwnedCourse } from "@components/hooks/web3";
+import { useAccount, useOwnedCourse } from "@components/MusicCourses/hooks/web3";
 
 export default function Course({course}) {
   const { account } = useAccount()

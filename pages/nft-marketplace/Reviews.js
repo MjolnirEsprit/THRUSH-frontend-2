@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import InputEmoji from 'react-input-emoji'
-import Picker from 'emoji-picker-react'
 
 //mapp to a state
 function Reviews (){

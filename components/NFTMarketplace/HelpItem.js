@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
 
 const style={
   wrapper: `flex justify-center items-center flex-col bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819]`
