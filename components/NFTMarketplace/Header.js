@@ -5,11 +5,10 @@ import thrushLogo from '@assets/thrushLogo.png'
 import {CgProfile} from 'react-icons/cg'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {MdOutlineAccountBalanceWallet} from 'react-icons/md'
-import {PlusCircleIcon} from '@heroicons/react/solid'
-import{useState, useRef, useEffect} from 'react'
+import Home from '../../pages/index'
 
 const style = {
-    wrapper: `bg-[#04111d] w-screen px-[1.2rem] py-[0.8rem] flex `,
+    wrapper: `bg-[#ffffff] w-screen px-[1.2rem] py-[0.8rem] flex `,
     logoContainer: `flex items-center cursor-pointer`,
     logoText: ` ml-[0.8rem] text-[#FD7F2C] font-semibold text-2xl`,
     searchBar: `flex flex-1 mx-[0.8rem] w-max-[520px] items-center bg-[#363840] rounded-[0.8rem] hover:bg-[#4c505c]`,
@@ -37,7 +36,7 @@ const Header = () =>{
                 placeholder= "Search items, collections and accounts"/>
         </div>
         <div className={style.headerItems}>
-            <Link href="/collections/0x660aF8bB64C0D7aC993F786a6D8cD1E03A5C0E06/">
+            <Link href="/collections/$address/">
                 <div className={style.headerItem}>Collections</div>
             </Link>
             <Link href="/help-center">
