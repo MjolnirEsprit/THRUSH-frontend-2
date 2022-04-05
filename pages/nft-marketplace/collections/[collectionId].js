@@ -28,7 +28,7 @@ const style = {
     statValue: `text-3xl font-bold w-full flex items-center justify-center`,
     ethLogo: `h-6 mr-2`,
     statName: `text-lg w-full text-center mt-1 text-black`,
-    description: `text-[#8a939b] text-xl w-max-1/4 flex-wrap mt-4`,
+    description: `text-[#8a939b] font-bold text-xl w-max-1/4 flex-wrap mt-4 mb-4`,
 }
 
 const Collection = () => {
@@ -160,11 +160,9 @@ const Collection = () => {
                     <div className={style.title}>{collection?.title}</div>
                 </div>
                 <div className={style.midRow}>
-                    <div className={style.createdBy}>
-                        Created by {' '}
-                        <span className="text-[#C479DC]">{collection?.creator}</span>
-                    </div>
+                    <div className={style.description}>{collection?.description}</div>
                 </div>
+               
                 <div className={style.midRow}>
                     <div className={style.statsContainer}>
                         <div className={style.collectionStat}>
@@ -199,9 +197,14 @@ const Collection = () => {
                         </div>
                     </div>
                 </div>
+             
                 <div className={style.midRow}>
-                    <div className={style.description}>{collection?.description}</div>
+                    <div className={style.createdBy}>
+                        Created by {' '}
+                        <span className="text-[#C479DC]">{collection?.creator}</span>
+                    </div>
                 </div>
+
             </div>
             <div className="flex flex-wrap">
                 {nfts.map((nftItem, id) => (

@@ -1,7 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react';
 import HelpBanner from '../nft-marketplace/HelpBanner';
 import {FiPlus} from 'react-icons/fi';
-import '../../styles/globals.css';
 
 const HelpCenter = () => {
   const [active, setActive] = useState(false);
