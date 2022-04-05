@@ -1,42 +1,67 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import db from '@utils/db';
 import Instrument from '@models/instrument';
 import Layout1 from '@components/layout';
 import useStyles  from '@utils/styles';
 import {
+    CardMedia,
+     CardActionArea, 
     Grid,
-    Link,
     List,
+    Image,
     ListItem,
     Typography,
     Card,
     Button,
     Box,
-    ThemeProvider
+    ThemeProvider,
+    Fab
   } from '@material-ui/core';
   import NextLink from 'next/link';
   import Navbar from '@components/common/main_navbar';
+  import axios from 'axios';
+  import Store from '@utils/Store'
+
 
 export default function InstrumentsScreen(props) {
+    //const { dispatch } = useContext(Store);
     const {instrument} = props ;
-    const classes= useStyles();
-   
+    const classes= useStyles(); 
     
     if (!instrument){
         return <h1>not found sorry :(</h1>
     }
+
+    const addToCartHandler = async () => {
+        const { data } = await axios.get(`/api/instruments/${instrument._id}`);
+        if (data.stock <= 0){
+            window.alert('Sorry this item is out of stock');
+            return;
+        }
+       // dispatch({ type: 'CART_ADD_ITEM', payload: {...instrument, quantity: 1}})
+    }
+
   return (
     <>
+    <Layout1 title={instrument.name} description={instrument.description}>
     <Navbar />
     <Box 
         sx={{
             borderRadius: 1,
             margin: 30
           }}
-    >
-    <Layout1 title={instrument.name} description={instrument.description}>
-          <Grid container spacing={1}>
+    > 
+         <Grid container spacing={1}>
               <Grid item md={6} xs={12}>
+              <Card className={classes.card}>
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          image={instrument.image}
+                          title={instrument.name}
+                        ></CardMedia>
+                      </CardActionArea>                   
+                  </Card>
               </Grid>
               <Grid item md={3} xs={12}>
                   <List>
@@ -82,7 +107,7 @@ export default function InstrumentsScreen(props) {
                               </Grid>
                           </ListItem>
                           <ListItem>
-                              <Button fullWidth variant="contained" color='primary' >
+                              <Button fullWidth variant="contained" color='primary' onClick={addToCartHandler}>
                                   Add to cart
                               </Button>
                           </ListItem>
@@ -90,8 +115,9 @@ export default function InstrumentsScreen(props) {
                   </Card>
               </Grid>
           </Grid>
-      </Layout1>
       </Box>
+      
+      </Layout1>    
       </>
   )
 }

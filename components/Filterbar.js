@@ -15,9 +15,7 @@ export default function Filterbar() {
             <Grid item >
             <Card >
                     <CardContent>
-                        <Typography className='classes.filterbarTitle'>
-                            Filter Bar
-                        </Typography>
+                        
                     <CardActions>
                     
                     </CardActions>
