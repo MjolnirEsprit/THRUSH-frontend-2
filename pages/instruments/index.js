@@ -63,11 +63,7 @@ export default function store(props) {
                       <CardActionArea>
                         <CardMedia
                           component="img"
-<<<<<<< Updated upstream
-                         // image={require('/public/nf.jpg')}
-=======
                           image={product.image}
->>>>>>> Stashed changes
                           title={product.name}
                         ></CardMedia>
                         <CardContent>
