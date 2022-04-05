@@ -60,8 +60,8 @@ const MakeOffer = ({ isListed, selectedNft, listings, marketPlaceModule }) => {
     }
 
     return (
-        <div className='bg-[#303339] h-20 w-full flex items-center 
-            px-12 rounded-lg border-[#151c22] border'>
+        <div className='bg-[#FAF9F6] h-20 w-full flex items-center 
+            px-12 rounded-lg border-[#E2DFD2] border'>
             <Toaster position='top-center' reverseOrder={false} />
             {isListed === 'true' ? (
                 <>

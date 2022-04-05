@@ -13,8 +13,8 @@ const style = {
     bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
     bannerImage: `w-full object-cover`,
     infoContainer: `w-screen px-4`,
-    midRow: `w-full flex justify-center text-white`,
-    endRow: `w-full flex justify-end text-white`,
+    midRow: `w-full flex justify-center text-black`,
+    endRow: `w-full flex justify-end text-black`,
     profileImg: `w-40 h-40 object-cover rounded-full border-2 border-[#202225] mt-[-4rem]`,
     socialIconsContainer: `flex text-3xl mb-[-2rem]`,
     socialIconsWrapper: `w-44`,
@@ -24,10 +24,10 @@ const style = {
     title: `text-5xl font-bold mb-4`,
     createdBy: `text-lg mb-4`,
     statsContainer: `w-[44vw] flex justify-between py-4 border border-[#151b22] rounded-xl mb-4`,
-    collectionStat: `w-1/4`,
+    collectionStat: `w-1/4 text-black`,
     statValue: `text-3xl font-bold w-full flex items-center justify-center`,
     ethLogo: `h-6 mr-2`,
-    statName: `text-lg w-full text-center mt-1`,
+    statName: `text-lg w-full text-center mt-1 text-black`,
     description: `text-[#8a939b] text-xl w-max-1/4 flex-wrap mt-4`,
 }
 
@@ -193,7 +193,7 @@ const Collection = () => {
                                     alt="eth"
                                     className={style.ethLogo}
                                 />
-                                {collection?.volumeTraded}.5K
+                                {collection?.volumeTraded} K
                             </div>
                             <div className={style.statName}>volume traded</div>
                         </div>
