@@ -1,36 +1,46 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+
 
 //mapp to a state
 function Reviews (){
-  const [state, setState] = useState('');
-  
-  const handleChange= (event) => {
-    this.setState({content: event.target.value});
-  }
-
-  const handleSubmit= (event) => {
-    alert("Your review was successfully submitted: "+ this.state.content);
-    event.preventDefault();
+  const [state, handleSubmit] = useForm("moqrnzlj");
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
   }
 
     return(
         <div>
-          <form onSubmit={this.handleSubmit}>
-            <textarea 
-             rows="20"
-             cols="80"
-             value={this.state.content}
-             onChange={this.handleChange}
-            />
-            <br/>
-            <input type="submit" value="Submit" />
-          </form>
+             <form onSubmit={handleSubmit}>
+      <label htmlFor="email">
+        Email Address
+      </label>
+      <input
+        id="email"
+        type="email" 
+        name="email"
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      <textarea
+        id="message"
+        name="message"
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
+      <button type="submit" disabled={state.submitting}>
+        Submit
+      </button>
+    </form>
         </div>
     );
 }
 
 
- /*does not work check video instead + do front of karaoke nhar thnin perhaps deploy ml model or do another one with spotify + 
- do<nload the spotify mls and test them maa spotify of firas, but gotta deploy em :/ nhar thnin
-*/
 export default Reviews;
