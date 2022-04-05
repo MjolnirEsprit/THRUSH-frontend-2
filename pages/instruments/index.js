@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, 
+import { Box, Button, Fab,
   Card, CardActionArea, 
   CardActions, CardContent, 
   CardMedia, CssBaseline, Grid, 
@@ -26,17 +26,31 @@ export default function store(props) {
       <Grid container >
         <Grid item md={12}> 
           <Card color='primary'>
-            <CardContent>
+          <CardContent>
+          <Box color='primary'
+          sx={{
+            //display: "flex",
+            //flexDirection: "row",
+            //justifyContent:" space-between",
+            borderRadius: 1,
+          }}>
+            
               <Typography component="h1" variant='h1'>Thrush Store</Typography>
+              <div>
+                <Typography >You can find selected items here</Typography>
+                <Button variant="contained" color='primary' > Cart</Button>
+              </div>
+        </Box>
             </CardContent>
           </Card>
         </Grid>
       </Grid>
-        <Box
+        <Box 
           sx={{
+            color:'primary',
             display: "flex",
             flexDirection: "row",
-            borderRadius: 1,
+            borderRadius: 3,
           }}
           className={classes.main}>
           <Filterbar />
@@ -49,14 +63,19 @@ export default function store(props) {
                       <CardActionArea>
                         <CardMedia
                           component="img"
+<<<<<<< Updated upstream
                          // image={require('/public/nf.jpg')}
+=======
+                          image={product.image}
+>>>>>>> Stashed changes
                           title={product.name}
                         ></CardMedia>
                         <CardContent>
                           <Typography>{product.name}</Typography>
                           <CardActions>
                             <Typography>${product.price}</Typography>
-                            <Button color='primary'>Add to cart</Button>
+                            <Button color='primary'
+                            >Add to cart</Button>
                           </CardActions>
                         </CardContent>
                       </CardActionArea>
@@ -68,7 +87,9 @@ export default function store(props) {
           </div>
         </Box>
         </Box>
+        
       </Layout1>
+      
     </>
   );
 }
