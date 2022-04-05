@@ -36,7 +36,7 @@ const Header = () =>{
             <Link href="/nft-marketplace/help-center">
                 <div className={style.headerItem}>Resources</div>
             </Link>
-            <Link href="/Reviews">
+            <Link href="/nft-marketplace/Reviews">
                 <div className={style.headerItem}>Reviews</div>
             </Link>
             <Link href="https://thirdweb.com/dashboard">

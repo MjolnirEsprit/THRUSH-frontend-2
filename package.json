@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.8.1",
     "@firebase/firestore": "^3.4.7",
     "@firebase/storage": "^0.9.4",
+    "@formspree/react": "^2.2.4",
     "@fullhuman/postcss-purgecss": "^3.0.0",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
