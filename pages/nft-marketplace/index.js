@@ -9,13 +9,13 @@ import coin from '../../assets/coin.png'
 import {Footer, MainNavbar, Navbar} from "@components/common";
 
 const style = {
-  wrapper: ``,
+  wrapper: `relative`,
   walletConnectWrapper: `flex flex-col justify-center items-center h-screen w-screen bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819] `,
   button: `border border-[#282b2f] bg-[#fb8a25] p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer text-black`,
-  details: `text-lg text-center text=[#282b2f] font-semibold mt-4`,
+  details: `text-lg text-center text=[#282b2f] font-semibold mt-4 mb-4`,
   header: `flex items-center justify-center mt-12 mb-12`,
-  title: `text-white font-bold w-1/2 text-4xl mt-8 mb-12 text-left italic mt-12`,
-  coinImage: `w-1/2`,
+  title: ` text-white font-bold w-1/2 text-4xl mt-8 mb-12 text-left italic mt-12`,
+ 
 
 }
 
@@ -66,10 +66,7 @@ export default function NFTMarketplace() {
               <br />
               NFT Marketplace
             </div>
-            <div className={style.coinImage}>
-              <Image src={coin} width='340' height='300' alt="" />
-            </div>
-
+  
           </div>
 
           <div className={style.walletConnectWrapper}>
@@ -86,8 +83,9 @@ export default function NFTMarketplace() {
               <br /> be able to run this app.
             </div>
           </div>
+          <Footer/>
         </div>
-    <Footer/>
+  
     </div>
       )}
 </div>

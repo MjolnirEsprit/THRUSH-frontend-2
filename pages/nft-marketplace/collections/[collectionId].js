@@ -35,7 +35,7 @@ const Collection = () => {
     const router = useRouter()
     const { provider } = useWeb3()
     const { collectionId } = router.query
-    const [collection, setCollection] = useState({}) //we need access to the collection
+    const [collection, setCollection] = useState([]) 
     const [nfts, setNfts] = useState([])
     const [listings, setListings] = useState([])
 

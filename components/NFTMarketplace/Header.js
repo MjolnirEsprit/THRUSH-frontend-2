@@ -36,10 +36,10 @@ const Header = () =>{
                 placeholder= "Search items, collections and accounts"/>
         </div>
         <div className={style.headerItems}>
-            <Link href="/collections/$address/">
+            <Link href="/nft-marketplace/collections/0x660aF8bB64C0D7aC993F786a6D8cD1E03A5C0E06/">
                 <div className={style.headerItem}>Collections</div>
             </Link>
-            <Link href="/help-center">
+            <Link href="/nft-marketplace/help-center">
                 <div className={style.headerItem}>Resources</div>
             </Link>
             <Link href="/Reviews">

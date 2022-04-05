@@ -1251,7 +1251,7 @@
     get-random-values "^1.2.2"
     lodash "^4.17.15"
 
-"@sanity/client@^3.2.0":
+"@sanity/client@^3.2.0", "@sanity/client@^3.3.0":
   version "3.3.0"
   resolved "https://registry.npmjs.org/@sanity/client/-/client-3.3.0.tgz#0b01b1ee25f9d12e0fd9d119fe752f0aeb18843a"
   integrity sha512-ecIRsV+IncI1P9I6ZdB3xKLBpWVggqtiY0RLWeT3RWaP4cX6lXzD5fPknaXaBnCxtIr9ZhqZVqpRkyjrUlHe0Q==

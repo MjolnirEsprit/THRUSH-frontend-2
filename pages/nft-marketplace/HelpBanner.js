@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
-import thrushLogo from '../../../../assets/thrushLogo.png'
 import {CgProfile} from 'react-icons/cg'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {MdOutlineAccountBalanceWallet} from 'react-icons/md'
@@ -23,7 +22,6 @@ const HelpBanner = () =>{
     return <div className={style.wrapper}>
         <Link href="/">
             <div className={style.logoContainer}>
-                <Image src={thrushLogo} height={40} width={40} />
                 <div className={style.logoText}>THRUSH</div>
             </div>
         </Link>
