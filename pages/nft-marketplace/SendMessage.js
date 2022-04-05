@@ -4,10 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import { emojiIndex } from 'emoji-mart'
-
-import EmojiPicker from '../components/EmojiPicker'
-
-import '../styles/SendMessage.scss'
+ 
 
 function SendMessage ({ channelName, onSendMessage, theme, useEmojis, emojiSet, disabled }) {
   const [t] = useTranslation()

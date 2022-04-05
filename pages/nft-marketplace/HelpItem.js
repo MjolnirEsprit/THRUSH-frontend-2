@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
 
 const style={
   wrapper: `flex justify-center items-center flex-col bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819]`
@@ -59,7 +58,7 @@ const HelpItem = () => {
             </Grid>
 
 
-            <Grid item xs={3} ml={12} mr={6} display='flex' alignItems="center" justify="center">
+            <Grid item xs={3} ml={12} mr={8} display='flex' alignItems="center" justify="center">
             <Item style={{backgroundColor:"#FFFFFF"}}>
                 <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
                 FAQ
@@ -81,34 +80,20 @@ const HelpItem = () => {
               </Item>
             </Grid>
 
-            <Grid item xs={3} mb={7.7}>
+            <Grid item xs={3} mr={8} mb={8} mt={8}>
             <Item style={{backgroundColor:"#FFFFFF"}}>
                 <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
-                Buy
+                    User Safety
                 </Typography>
-                <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"#000000"}}>
-                Learn how to purchase your first NFT and 
+                <Typography variant="body1" gutterBottom style={{color:"#000000"}}>
+                    Learn more about anti-fraud and user safety processes on
                 </Typography>
               </Item>
             </Grid>
             
-      
       </Grid>
       </Box>
-
-      <div class="card w-96 glass">
-  <figure>
-    <h3>Blabla</h3>
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">Life hack</h2>
-    <p>How to park your car at your garage?</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Learn now!</button>
-    </div>
-  </div>
 </div>
-      </div>
     );
   }
   export default HelpItem;

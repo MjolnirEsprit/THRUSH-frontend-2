@@ -16,7 +16,7 @@ export default function Card({ course, disabled, Footer }) {
           />
         </div>
         <div className="flex-2 p-8 pb-4">
-          <div className="text-sm font-semibold uppercase tracking-wide text-indigo-500">
+          <div className="text-sm font-semibold uppercase tracking-wide text-orange-500">
             {course.type}
           </div>
           <Link href={`/course/${course.slug}`}>

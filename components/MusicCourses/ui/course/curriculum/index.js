@@ -62,7 +62,7 @@ export default function Curriculum({ locked }) {
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                         <a
                           href="#"
-                          className="text-indigo-600 hover:text-indigo-900"
+                          className="text-orange-600 hover:text-orange-900"
                         >
                           {locked ? "Get Access" : "Play"}
                         </a>

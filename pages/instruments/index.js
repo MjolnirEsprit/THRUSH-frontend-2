@@ -49,7 +49,7 @@ export default function store(props) {
                       <CardActionArea>
                         <CardMedia
                           component="img"
-                          image={require('/public/nf.jpg')}
+                         // image={require('/public/nf.jpg')}
                           title={product.name}
                         ></CardMedia>
                         <CardContent>
