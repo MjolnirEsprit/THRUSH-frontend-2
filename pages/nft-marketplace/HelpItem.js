@@ -83,10 +83,10 @@ const HelpItem = () => {
             <Grid item xs={3} mr={8} mb={8} mt={8}>
             <Item style={{backgroundColor:"#FFFFFF"}}>
                 <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
-                    User Safety
+                    Getting started
                 </Typography>
                 <Typography variant="body1" gutterBottom style={{color:"#000000"}}>
-                    Learn more about anti-fraud and user safety processes on
+                    Learn how to what you can do on THRUSH NFT Marketplace
                 </Typography>
               </Item>
             </Grid>
