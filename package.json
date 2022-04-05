@@ -44,6 +44,7 @@
     "framer-motion": "^2.9.4",
     "heroicons": "^1.0.6",
     "jquery": "^3.6.0",
+    "js-cookie": "^3.0.1",
     "js-image-zoom": "^0.7.0",
     "magnify-3d": "^1.0.4",
     "material-ui-image": "^3.3.2",

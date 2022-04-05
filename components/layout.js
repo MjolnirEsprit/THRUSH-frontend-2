@@ -1,9 +1,13 @@
 import { Container, CssBaseline, ThemeProvider, Typography } from '@material-ui/core'
-import React from 'react'
-import { createTheme} from '@material-ui/core'
+import React, { useContext } from 'react'
+import { createTheme} from '@material-ui/core';
+import { Store } from '../utils/Store';
+import Cookies from 'js-cookie';
 
 
 export default function Layout1({children}) {
+  const { state, dispatch } = useContext(Store);
+  const { darkMode } = state;
   const theme = createTheme({
 
     typography: {
@@ -19,7 +23,7 @@ export default function Layout1({children}) {
       },
     },
     palette: {
-      type : 'light',
+      type : darkMode ? 'dark' : 'light',
       primary: {
         main: '#db550d',
       },
@@ -28,6 +32,11 @@ export default function Layout1({children}) {
       },
     },
   });
+  const darkModeChangeHandler = () => {
+    dispatch({ type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON' });
+    const newDarkMode = !darkMode;
+    Cookies.set('darkMode', newDarkMode ? 'ON' : 'OFF');
+  };
     return (
     <div>
       <ThemeProvider theme={theme}>

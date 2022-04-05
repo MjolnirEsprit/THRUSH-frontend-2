@@ -2,6 +2,7 @@ import "../public/styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
+import { StoreProvider } from "../utils/Store";
 
 const supportedChainIds = [4]; //Chain ID 4 represents Rinkeby network
 const connectors = {
@@ -20,7 +21,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       <SessionProvider session={session}>
         <RecoilRoot>
           <Layout>
+            <StoreProvider>
             <Component {...pageProps} />
+            </StoreProvider>
           </Layout>
         </RecoilRoot>
       </SessionProvider>
