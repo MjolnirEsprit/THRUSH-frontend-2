@@ -3,7 +3,6 @@ import db from '@utils/db';
 import Instrument from '@models/instrument';
 import Layout1 from '@components/layout';
 import useStyles  from '@utils/styles';
-import ImageZoom from 'react-image-zooom';
 import {
     CardMedia,
      CardActionArea, 
@@ -56,12 +55,11 @@ export default function InstrumentsScreen(props) {
               <Grid item md={6} xs={12}>
               <Card className={classes.card}>
                       <CardActionArea>
-                        <ImageZoom
+                        <CardMedia
                           component="img"
-                          src={instrument.image}
+                          image={instrument.image}
                           title={instrument.name}
-                          zoom="200"
-                        />
+                        ></CardMedia>
                       </CardActionArea>                   
                   </Card>
               </Grid>
