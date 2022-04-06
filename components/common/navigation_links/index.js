@@ -33,7 +33,7 @@ export default function NavLinks() {
       </ActiveLink>
         <ActiveLink href="/nft-marketplace">
             <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-                NFT Marketplace Streaming
+                NFT Marketplace
             </a>
         </ActiveLink>
     </section>
