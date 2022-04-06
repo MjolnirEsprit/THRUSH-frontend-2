@@ -2,9 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/Alert.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/Link.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/Nav.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/NavLink.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/Spinner.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/account/Layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/account/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/users/AddEdit.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/users/Layout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserAuth/users/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/api/api-handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/api/error-handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/api/jwt-middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/api/omit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/api/users-repo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/fetch-wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/account/login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/account/register.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/api/users/[id].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/api/users/authenticate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/api/users/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/api/users/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/users/add.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/users/edit/[id].jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/user-auth/users/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/alert.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/config/.checksums" beforeDir="false" afterPath="$PROJECT_DIR$/studio/config/.checksums" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Nermine-integration/studio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/UserAuth" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -46,9 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\UserAuth" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\user-auth" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\services" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\Nermine-integration\studio" />
-      <recent name="C:\Coding\THRUSH-frontend-2\components\_App" />
-      <recent name="C:\Coding\pi-2022\music-courses-prototype\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components" />
@@ -105,6 +140,7 @@
       <workItem from="1649078127213" duration="1432000" />
       <workItem from="1649107269759" duration="942000" />
       <workItem from="1649189726888" duration="3665000" />
+      <workItem from="1649214838039" duration="2634000" />
     </task>
     <servers />
   </component>

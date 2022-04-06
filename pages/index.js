@@ -9,8 +9,6 @@ const Index = () => {
             <MainNavbar />
 
             <Content/>
-
-            <Footer></Footer>
         </>
     )
 }
