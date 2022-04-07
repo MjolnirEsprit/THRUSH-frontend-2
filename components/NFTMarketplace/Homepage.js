@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router'
 import Image from "next/image";
-import nft from '../../assets/nft.jpg'
+import nft from '../../public/assets/nft.jpg'
 
 
 const style = {

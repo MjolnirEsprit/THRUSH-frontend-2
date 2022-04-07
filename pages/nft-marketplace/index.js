@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { client } from '../../lib/sanityClient'
 import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
-import coin from '../../assets/coin.png'
+import coin from '../../public/assets/coin.png'
 import {Footer, MainNavbar, Navbar} from "@components/common";
 
 const style = {

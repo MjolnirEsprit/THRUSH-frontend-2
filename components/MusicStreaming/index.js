@@ -1,13 +1,14 @@
 import Head from "next/head";
-import Feed from "../components/Feed";
-import Sidebar2 from "../components/Sidebar2";
-import Widgets from "../components/Widgets";
+
 import { getProviders, getSession, useSession } from "next-auth/react";
-import Login from "../components/Login";
-import Modal from "../components/Modal";
-import { modalState } from "../atoms/modalAtom";
 import { useRecoilState } from "recoil";
-import Navbar from "@components/_App/Navbar";
+import {MainNavbar} from "../common";
+import Sidebar2 from "./Sidebar2";
+import Feed from "./Feed";
+import Widgets from "./Widgets";
+import Modal from "./Modal";
+import Login from "./Login";
+import { modalState } from "../../atoms/modalAtom";
 
 export default function Home({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
@@ -21,10 +22,10 @@ export default function Home({ trendingResults, followResults, providers }) {
         <title>Fanspace</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div> <Navbar/></div> 
-        
+      <div></div>
+      <MainNavbar/>
+
       <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
-       
         <Sidebar2/>
         <Feed />
         <Widgets
