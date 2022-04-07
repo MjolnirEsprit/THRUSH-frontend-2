@@ -22,7 +22,6 @@ export default function Home({ trendingResults, followResults, providers }) {
         <title>Fanspace</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div></div>
       <MainNavbar/>
 
       <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
