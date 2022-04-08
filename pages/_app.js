@@ -1,4 +1,4 @@
-import "../public/styles/globals.css";
+import "@styles/globals.css";
 import { SessionProvider } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";

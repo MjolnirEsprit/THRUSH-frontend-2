@@ -1,5 +1,3 @@
-
-
 import courses from "./index.json"
 
 export const getAllCourses = () => {

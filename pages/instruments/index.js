@@ -8,12 +8,13 @@ import Navbar from '@components/common/main_navbar';
 import db from '@utils/db';
 import Instrument from '@models/instrument';
 import useStyles from '@utils/styles';
-import Layout1 from '@components/MusicCourses/layout'
+import Layout1 from '@components/layout'
 import NextLink from 'next/link'
-import Filterbar from '@components/MusicCourses/Filterbar';
+import Filterbar from '@components/Filterbar';
 
 export default function store(props) {
   const { instruments } = props;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
   return (
     <>      

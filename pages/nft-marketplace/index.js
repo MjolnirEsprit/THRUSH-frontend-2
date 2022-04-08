@@ -1,11 +1,11 @@
-import Header from '@components/MusicCourses/NFTMarketplace/Header'
-import Homepage from '@components/MusicCourses/NFTMarketplace/Homepage'
+import Header from '@components/NFTMarketplace/Header'
+import Homepage from '@components/NFTMarketplace/Homepage'
 import { useWeb3 } from '@3rdweb/hooks'
 import { useEffect } from 'react'
 import { client } from '../../lib/sanityClient'
 import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
-import coin from '../../public/assets/coin.png'
+import coin from '@public/assets/coin.png'
 import {Footer, MainNavbar, Navbar} from "@components/common";
 
 const style = {
@@ -62,7 +62,7 @@ export default function NFTMarketplace() {
         <div className={style.homepage}>
           <div className={style.header}>
             <div className={style.title}>
-              Welcome to Thrush's
+              Welcome to Thrush
               <br />
               NFT Marketplace
             </div>

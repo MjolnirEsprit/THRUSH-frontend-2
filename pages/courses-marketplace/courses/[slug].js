@@ -1,5 +1,5 @@
 import { useAccount, useOwnedCourse } from "@components/MusicCourses/hooks/web3";
-import { useWeb3 } from "@components/MusicCourses/MusicCourses/providers";
+import { useWeb3 } from "@components/MusicCourses/providers";
 import { Message, Modal } from "@components/MusicCourses/ui/common";
 import {
   CourseHero,

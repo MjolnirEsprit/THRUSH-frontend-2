@@ -1,9 +1,8 @@
 import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Image from "next/image";
 import { useEffect } from "react";
-import Loader from "@components/MusicCourses/MusicStreaming/Loader";
+import Loader from "@components/common/Loader";
 
 
 function Signin({ providers }) {
@@ -14,7 +13,7 @@ function Signin({ providers }) {
     if (session) {
       router.push("/");
     }
-  }, [session]);
+  }, [router, session]);
 
   if (session) return <Loader />;
 

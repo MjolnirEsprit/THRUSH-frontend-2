@@ -1,7 +1,7 @@
 import {Slider, Card, CardActions, CardContent, Grid,Typography, Box} from '@material-ui/core'
 import React from 'react'
 import useStyles from 'utils/styles'
-import CheckBoxList from '@components/MusicCourses/CheckBoxFilters'
+import CheckBoxList from '@components/CheckBoxFilters'
 
 function valuetext(value) {
     return `${value}$`;

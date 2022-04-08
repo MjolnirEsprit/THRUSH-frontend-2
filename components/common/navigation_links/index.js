@@ -11,7 +11,7 @@ export default function NavLinks() {
           Home
         </a>
       </ActiveLink>
-      <ActiveLink href="/marketplace">
+      <ActiveLink href="/courses-marketplace">
         <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
           Exclusive Course Marketplace
         </a>
