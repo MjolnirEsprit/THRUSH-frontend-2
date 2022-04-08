@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
-import Loader from "@components/MusicStreaming/Loader";
+import Loader from "@components/MusicCourses/MusicStreaming/Loader";
 
 
 function Signin({ providers }) {

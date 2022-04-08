@@ -2,8 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useManagedCourses.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/Managed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/Owned.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contracts/CourseMarketplace.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keys.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/courses-marketplace/courses/[slug].js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/courses-marketplace/hooks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/managed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/truffle-contract.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/courseMarketplace.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/utils/exceptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/hash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/toast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/hooks/useEthPrice.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/hooks/useEthPrice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/hooks/web3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/hooks/web3/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/setupHooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/setupHooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useNetwork.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useNetwork.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/hero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/link/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/link/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/loader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/loader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/message/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/message/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/navbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/common/navbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/curriculum/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/curriculum/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/filter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/filter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/hero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/keypoints/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/keypoints/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/layout/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/layout/base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/order/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/order/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/order/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/order/modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/web3/ethRates/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/web3/ethRates/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/web3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/web3/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/web3/walletbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/web3/walletbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/courses/fetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/courses/fetcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/courses/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/content/courses/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/[slug].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/marketplace/courses/manage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/marketplace/courses/owned.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/marketplace/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/marketplace_home/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contracts/CourseMarketplace.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/contracts/CourseMarketplace.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/contracts/Migrations.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/contracts/Migrations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loadContract.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loadContract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/normalize.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normalize.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,20 +112,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/UserAuth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/MusicCourses" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\UserAuth" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\MusicCourses" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\user-auth" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\services" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\Nermine-integration\studio" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\utils" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\UserAuth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\public" />
@@ -127,7 +197,8 @@
       <workItem from="1649189726888" duration="3665000" />
       <workItem from="1649214838039" duration="4031000" />
       <workItem from="1649346153146" duration="2654000" />
-      <workItem from="1649351623902" duration="326000" />
+      <workItem from="1649351623902" duration="3678000" />
+      <workItem from="1649423272837" duration="1433000" />
     </task>
     <servers />
   </component>
@@ -144,5 +215,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

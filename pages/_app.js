@@ -3,6 +3,9 @@ import { SessionProvider } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import { StoreProvider } from "../utils/Store";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const supportedChainIds = [4]; //Chain ID 4 represents Rinkeby network
 const connectors = {
@@ -22,7 +25,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <RecoilRoot>
           <Layout>
             <StoreProvider>
-            <Component {...pageProps} />
+              <ToastContainer />
+              <Component {...pageProps} />
             </StoreProvider>
           </Layout>
         </RecoilRoot>

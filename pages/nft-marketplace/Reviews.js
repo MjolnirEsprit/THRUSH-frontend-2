@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import Header from '@components/NFTMarketplace/Header';
+import Header from '@components/MusicCourses/NFTMarketplace/Header';
 
 const style= {
   contact: `min-h-screen w-screen pt-24 pr-12 pb-12 pl-12 bg-white `,

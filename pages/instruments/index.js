@@ -8,9 +8,9 @@ import Navbar from '@components/common/main_navbar';
 import db from '@utils/db';
 import Instrument from '@models/instrument';
 import useStyles from '@utils/styles';
-import Layout1 from '@components/layout'
+import Layout1 from '@components/MusicCourses/layout'
 import NextLink from 'next/link'
-import Filterbar from '@components/Filterbar';
+import Filterbar from '@components/MusicCourses/Filterbar';
 
 export default function store(props) {
   const { instruments } = props;

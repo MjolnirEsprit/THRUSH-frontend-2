@@ -1,5 +1,7 @@
+
+
 import { Web3Provider } from "@components/MusicCourses/providers"
-import { Navbar, Footer } from "@components/common"
+import { Navbar, Footer } from "@components/MusicCourses/ui/common"
 
 export default function BaseLayout({children}) {
   return (

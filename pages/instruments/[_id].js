@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import db from '@utils/db';
 import Instrument from '@models/instrument';
-import Layout1 from '@components/layout';
+import Layout1 from '@components/MusicCourses/layout';
 import useStyles  from '@utils/styles';
 import {
     CardMedia,

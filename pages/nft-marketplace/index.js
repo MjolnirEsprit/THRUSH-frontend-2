@@ -1,5 +1,5 @@
-import Header from '@components/NFTMarketplace/Header'
-import Homepage from '@components/NFTMarketplace/Homepage'
+import Header from '@components/MusicCourses/NFTMarketplace/Header'
+import Homepage from '@components/MusicCourses/NFTMarketplace/Homepage'
 import { useWeb3 } from '@3rdweb/hooks'
 import { useEffect } from 'react'
 import { client } from '../../lib/sanityClient'

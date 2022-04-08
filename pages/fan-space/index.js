@@ -2,11 +2,11 @@ import Head from "next/head";
 import { getProviders, getSession, useSession } from "next-auth/react";
 import { modalState } from "../../atoms/modalAtom";
 import { useRecoilState } from "recoil";
-import Feed from "@components/MusicStreaming/Feed";
-import Sidebar2 from "@components/MusicStreaming/Sidebar2";
-import Widgets from "@components/MusicStreaming/Widgets";
-import Modal from "@components/MusicStreaming/Modal";
-import Login from "@components/MusicStreaming/Login";
+import Feed from "@components/MusicCourses/MusicStreaming/Feed";
+import Sidebar2 from "@components/MusicCourses/MusicStreaming/Sidebar2";
+import Widgets from "@components/MusicCourses/MusicStreaming/Widgets";
+import Modal from "@components/MusicCourses/MusicStreaming/Modal";
+import Login from "@components/MusicCourses/MusicStreaming/Login";
 
 export default function FanSpace({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();

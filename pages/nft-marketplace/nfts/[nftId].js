@@ -3,10 +3,10 @@ import { useEffect, useMemo, useState } from 'react'
 import { useWeb3 } from "@3rdweb/hooks"
 import { ThirdwebSDK } from "@3rdweb/sdk"
 import { useRouter } from "next/router"
-import Header from '@components/NFTMarketplace/Header' 
-import NFTImage from '@components/NFTMarketplace/nft/NFTImage'
-import GeneralDetails from '@components/NFTMarketplace/nft/GeneralDetails'
-import Purchase from '@components/NFTMarketplace/nft/Purchase'
+import Header from '@components/MusicCourses/NFTMarketplace/Header' 
+import NFTImage from '@components/MusicCourses/NFTMarketplace/nft/NFTImage'
+import GeneralDetails from '@components/MusicCourses/NFTMarketplace/nft/GeneralDetails'
+import Purchase from '@components/MusicCourses/NFTMarketplace/nft/Purchase'
 
 const style = {
     wrapper: `flex flex-col items-center container-lg text-[#e5e8eb]`,
