@@ -5,6 +5,7 @@ import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import { StoreProvider } from "../utils/Store";
 import { ToastContainer } from "react-toastify";
 
+
 import "react-toastify/dist/ReactToastify.css";
 
 const supportedChainIds = [4]; //Chain ID 4 represents Rinkeby network

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Box, Button, Fab,
   Card, CardActionArea, 
   CardActions, CardContent, 
@@ -11,9 +11,18 @@ import useStyles from '@utils/styles';
 import Layout1 from '@components/layout'
 import NextLink from 'next/link'
 import Filterbar from '@components/Filterbar';
+import axios from 'axios';
 
 export default function store(props) {
   const { instruments } = props;
+  const [listInstruments, setlistInstruments] = useState([]);
+
+  useEffect(()=> {
+    axios.get("http://localhost:3000/api/v1/instruments").then((response) => {
+      setlistInstruments(response.data);
+    })
+  },[])
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
   return (
@@ -57,7 +66,7 @@ export default function store(props) {
           <Filterbar />
           <div>
             <Grid container spacing={2}>
-              {instruments.map((product) => (
+              {listInstruments.map((product) => (
                 <Grid item md={4} key={product.name}>
                   <Card className={classes.card}>
                     <NextLink href={`/instruments/${product._id}`} passHref>

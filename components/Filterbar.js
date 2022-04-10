@@ -3,9 +3,7 @@ import React from 'react'
 import useStyles from 'utils/styles'
 import CheckBoxList from '@components/CheckBoxFilters'
 
-function valuetext(value) {
-    return `${value}$`;
-  }
+
 
 export default function Filterbar() {
     const classes = useStyles();
@@ -16,10 +14,10 @@ export default function Filterbar() {
             <Card >
                     <CardContent>
                         
-                    <CardActions>
-                    
-                    </CardActions>
-                    <CheckBoxList />
+                      <CardActions>
+                      
+                      </CardActions>
+                      <CheckBoxList />
                     </CardContent>
             </Card>
             </Grid>

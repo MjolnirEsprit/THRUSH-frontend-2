@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import db from '@utils/db';
 import Instrument from '@models/instrument';
 import Layout1 from '@components/layout';
@@ -21,10 +21,13 @@ import {
   import Navbar from '@components/common/main_navbar';
   import axios from 'axios';
   import Store from '@utils/Store'
+import { useRouter } from 'next/router';
 
 
 export default function InstrumentsScreen(props) {
-    //const { dispatch } = useContext(Store);
+    const [cart, setCart] = useState([]);
+    const router = useRouter();
+    const { dispatch } = useContext(Store);
     const {instrument} = props ;
     const classes= useStyles(); 
     
@@ -32,13 +35,10 @@ export default function InstrumentsScreen(props) {
         return <h1>not found sorry :(</h1>
     }
 
-    const addToCartHandler = async () => {
-        const { data } = await axios.get(`/api/instruments/${instrument._id}`);
-        if (data.stock <= 0){
-            window.alert('Sorry this item is out of stock');
-            return;
-        }
-       // dispatch({ type: 'CART_ADD_ITEM', payload: {...instrument, quantity: 1}})
+    const addToCartHandler = (product) => {
+        setCart([...cart, product]);
+        console.log(cart);
+        //router.push('/instruments/cart');
     }
 
   return (
@@ -73,7 +73,7 @@ export default function InstrumentsScreen(props) {
                       </ListItem>
                       <ListItem>
                           <Typography>
-                              Rating: {instrument.rating} stars ({instrument.numReviews} reviews)
+                              Rating: {instrument.rating} stars ({instrument.reviews} reviews)
                           </Typography>
                       </ListItem>
                       <ListItem>
@@ -107,7 +107,7 @@ export default function InstrumentsScreen(props) {
                               </Grid>
                           </ListItem>
                           <ListItem>
-                              <Button fullWidth variant="contained" color='primary' onClick={addToCartHandler}>
+                              <Button fullWidth variant="contained" color='primary' onClick={()=> addToCartHandler(instrument)}>
                                   Add to cart
                               </Button>
                           </ListItem>
