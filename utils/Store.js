@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 import React, { createContext, useReducer } from 'react';
 
-export const Store = React.createContext();
+const Store = createContext();
 const initialState = {
   darkMode: Cookies.get('darkMode') === 'ON' ? true : false,
   cart: {
@@ -38,3 +38,5 @@ export function StoreProvider(props) {
   const value = { state, dispatch };
   return <Store.Provider value={value}>{props.children}</Store.Provider>;
 }
+
+export default Store;

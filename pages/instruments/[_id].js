@@ -22,12 +22,12 @@ import {
   import axios from 'axios';
   import Store from '@utils/Store'
 import { useRouter } from 'next/router';
-
+import { CartContext } from '../../Helper/Context';
 
 export default function InstrumentsScreen(props) {
-    const [cart, setCart] = useState([]);
+    const {cartItems, setCartItems} = useContext(CartContext)
     const router = useRouter();
-    const { dispatch } = useContext(Store);
+    //const { dispatch } = useContext(Store);
     const {instrument} = props ;
     const classes= useStyles(); 
     
@@ -36,9 +36,10 @@ export default function InstrumentsScreen(props) {
     }
 
     const addToCartHandler = (product) => {
-        setCart([...cart, product]);
-        console.log(cart);
-        //router.push('/instruments/cart');
+        console.log(product);
+        setCartItems([...cartItems, product]);
+        console.log(cartItems);
+        router.push('/instruments/cart');
     }
 
   return (
@@ -67,7 +68,7 @@ export default function InstrumentsScreen(props) {
                   <List>
                       <ListItem>
                           <Typography component="h1">{instrument.name}</Typography>
-                      </ListItem>
+                      </ListItem> 
                       <ListItem>
                           <Typography>Price: {instrument.price}</Typography>
                       </ListItem>
