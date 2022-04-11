@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Layout1 from '@components/Layout';
-import { Store } from '@utils/Store';
 import NextLink from 'next/link';
 import Image from 'next/image';
 import {
@@ -34,10 +33,6 @@ import Navbar from '@components/common/main_navbar';
 export default function CartScreen() {
   const {cartItems, setCartItems} = useContext(CartContext);
   const classes = useStyles();
-  //const { state } = useContext(Store);
-  /*const {
-    cart: { cartItems },
-  } = state;*/
 
   return (
     <Layout1 title="Shopping Cart">
@@ -48,26 +43,70 @@ export default function CartScreen() {
         
           <div>
             <Grid container spacing={2}>
-              {cartItems.map((product) => (
-                <Grid item md={4} key={product.name}>
-                  <Card className={classes.card}>
-                      <CardActionArea>
-                        <CardMedia
-                          component="img"
-                          image={product.image}
-                          title={product.name}
-                        ></CardMedia>
-                        <CardContent>
-                          <Typography>{product.name}</Typography>
-                          <CardActions>
-                            <Typography>${product.price}</Typography>
-                          </CardActions>
-                        </CardContent>
-                      </CardActionArea>
-       
-                  </Card>
-                </Grid>
-              ))}
+              <Grid item md={9} xs={12}>
+                <TableContainer>
+                  <Table>
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>Image</TableCell>
+                        <TableCell>Name</TableCell>
+                        <TableCell align="right">Price</TableCell>
+                        <TableCell align="right">Action</TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {cartItems.map((item) => (
+                        <TableRow key={item._id}>
+                          <TableCell>
+                            <NextLink href={`/instruments/${item._id}`} passHref>
+                              <Link>
+                                <Image
+                                src={item.image}
+                                alt={item.name}
+                                width={50}
+                                height={50}
+                              ></Image>
+                              </Link>
+                            </NextLink>
+                          </TableCell>
+                          <TableCell>
+                            <NextLink href={`/instruments/${item._id}`} passHref>
+                              <Link>
+                              <Typography>{item.name}</Typography>
+                              </Link>
+                            </NextLink>
+                          </TableCell>
+                          <TableCell align="right">
+                            ${item.price}
+                          </TableCell>
+                          <TableCell align="right">
+                        <Button variant="contained" color="secondary">
+                          x
+                        </Button>
+                      </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </Grid>
+              <Grid md={3} xs={12}>
+            <Card>
+              <List>
+                <ListItem>
+                  <Typography variant="h2">
+                    Subtotal  : $
+                    {cartItems.reduce((a, c) => a + c.price, 0)}
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <Button variant="contained" color="primary" fullWidth>
+                    Check Out
+                  </Button>
+                </ListItem>
+              </List>
+            </Card>
+          </Grid>
             </Grid>
           </div>
       

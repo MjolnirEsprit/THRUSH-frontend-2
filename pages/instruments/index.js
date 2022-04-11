@@ -12,8 +12,10 @@ import Layout1 from '@components/layout'
 import NextLink from 'next/link'
 import Filterbar from '@components/Filterbar';
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 export default function store(props) {
+  const router = useRouter();
   const { instruments } = props;
   const [listInstruments, setlistInstruments] = useState([]);
 
@@ -23,8 +25,12 @@ export default function store(props) {
     })
   },[])
 
+  const GoToProviderPage = () =>{
+    router.push('/instruments/addInstrument');
+  }
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
+  
   return (
     <>      
       <Layout1>
@@ -36,21 +42,24 @@ export default function store(props) {
       <Grid container >
         <Grid item md={12}> 
           <Card color='primary'>
-          <CardContent>
-          <Box color='primary'
-          sx={{
-            //display: "flex",
-            //flexDirection: "row",
-            //justifyContent:" space-between",
-            borderRadius: 1,
-          }}>
-            
+            <CardContent>
               <Typography component="h1" variant='h1'>Thrush Store</Typography>
-              <div>
-                <Typography >You can find selected items here</Typography>
-                <Button variant="contained" color='primary' > Cart</Button>
-              </div>
-        </Box>
+              <Box color='primary'
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent:" space-between",
+                  borderRadius: 1,
+                }}>          
+                  <div>               
+                    <Typography >You can find selected items here</Typography>
+                    <Button variant="contained" color='primary' > Cart</Button>
+                  </div>
+                  <div>
+                    <Typography >You can sell instruments here</Typography>
+                    <Button variant="contained" color='primary' onClick={()=> GoToProviderPage()}> Sell Instruments</Button>
+                  </div>
+              </Box>
             </CardContent>
           </Card>
         </Grid>
@@ -74,14 +83,12 @@ export default function store(props) {
                         <CardMedia
                           component="img"
                           image={product.image}
-                          title={product.name}
-                        ></CardMedia>
+                          title={product.name}></CardMedia>
                         <CardContent>
                           <Typography>{product.name}</Typography>
                           <CardActions>
                             <Typography>${product.price}</Typography>
-                            <Button color='primary'
-                            >Add to cart</Button>
+                            <Button color='primary'>Add to cart</Button>
                           </CardActions>
                         </CardContent>
                       </CardActionArea>
@@ -94,8 +101,7 @@ export default function store(props) {
         </Box>
         </Box>
         
-      </Layout1>
-      
+      </Layout1> 
     </>
   );
 }
