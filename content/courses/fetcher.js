@@ -1,7 +1,7 @@
 import courses from "./index.json"
 import axios from 'axios';
 
-export const getAllCourses = () => {
+export default function getAllCourse() {
   return {
     data: courses,
     courseMap: courses.reduce((a, c, i) => {

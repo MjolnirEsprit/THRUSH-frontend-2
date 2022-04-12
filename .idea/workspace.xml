@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/content/courses/fetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/content/courses/fetcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +43,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/components/MusicCourses" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />

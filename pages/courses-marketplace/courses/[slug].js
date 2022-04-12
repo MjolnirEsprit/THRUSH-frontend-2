@@ -8,8 +8,11 @@ import {
 } from "@components/MusicCourses/ui/course";
 import { BaseLayout } from "@components/MusicCourses/ui/layout";
 import { getAllCourses } from "@content/courses/fetcher";
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
 export default function Course({course}) {
+
   const { isLoading } = useWeb3()
   const { account } = useAccount()
   const { ownedCourse } = useOwnedCourse(course, account.data)
