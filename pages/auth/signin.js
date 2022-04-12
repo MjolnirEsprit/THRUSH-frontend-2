@@ -18,7 +18,7 @@ function Signin({ providers }) {
   if (session) return <Loader />;
 
   return (
-    <div className="bg-black h-screen flex flex-col items-center pt-40 space-y-8">
+    <div className="h-screen flex flex-col items-center pt-40 space-y-8">
       <Head>
         <title>Login - Thrush</title>
         <link rel="icon" href="../../public/favicon.ico" />

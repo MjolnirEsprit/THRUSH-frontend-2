@@ -1,19 +1,23 @@
-const SIZES = {
-  sm: "w-6 h-6",
-  md: "w-8 h-8",
-  lg: "w-12 h-12"
+import { ThreeBounce } from "better-react-spinkit";
+import Image from "next/image";
+
+export default function Loader() {
+    return (
+        <div>
+            <div className="pt-40 flex flex-col items-center space-y-4">
+        <span className="relative w-[400px] h-[250px] lg:w-[550px] lg:h-[240px]">
+          <Image
+              src="/public/vercel.svg"
+              height={250}
+              width={600}
+              objectFit="contain"
+              className="animate-pulse"
+          />
+        </span>
+                <ThreeBounce size={23} color="#884115" />
+            </div>
+        </div>
+    );
 }
 
-export default function Loader({size = "md"}) {
 
-    return (
-      <div className={`sk-fading-circle ${SIZES[size]}`}>
-        { Array.from({length: 12}).map((_, i) =>
-          <div
-            key={`dot-${i}`}
-            className={`sk-circle${i + 1} sk-circle`}
-          />
-        )}
-      </div>
-    )
-  }

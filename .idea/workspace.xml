@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/common/loader_eth/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/layout/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/base/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/courses/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/courses/[slug].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/managed.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/managed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auth/[...nextauth].js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/instruments/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/instruments/seed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicStreaming/Loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/loader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/loader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +72,11 @@
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\UserAuth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\api" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\api" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\common" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\public" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\content\users" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.lint">
@@ -140,7 +142,7 @@
       <workItem from="1649351623902" duration="3678000" />
       <workItem from="1649423272837" duration="1433000" />
       <workItem from="1649585036492" duration="594000" />
-      <workItem from="1649795282378" duration="1611000" />
+      <workItem from="1649795282378" duration="4148000" />
     </task>
     <servers />
   </component>
