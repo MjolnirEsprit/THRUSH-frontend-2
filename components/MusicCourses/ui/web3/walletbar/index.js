@@ -1,7 +1,7 @@
 
 import { useWalletInfo } from "@components/MusicCourses/hooks/web3"
 import { useWeb3 } from "@components/MusicCourses/providers"
-import { Button } from "@components/MusicCourses/ui/common"
+import { Button } from "@components/common"
 
 
 export default function WalletBar() {

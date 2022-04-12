@@ -1,5 +1,5 @@
 
-import { Loader } from "@components/MusicCourses/ui/common"
+import { Loader } from "@components/common"
 import Link from "next/link"
 
 const lectures = [

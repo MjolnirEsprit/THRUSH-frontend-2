@@ -5,7 +5,7 @@ import { Store } from '../utils/Store';
 import Cookies from 'js-cookie';
 
 
-export default function Layout1({children}) {
+export default function Layout1 ({children}) {
   const { state, dispatch } = useContext(Store);
   const { darkMode } = state;
   const theme = createTheme({

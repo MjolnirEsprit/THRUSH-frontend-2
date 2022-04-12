@@ -1,4 +1,4 @@
-import { Button } from "@components/MusicCourses/ui/common"
+import { Button } from "@components/common"
 import { useState } from "react"
 
 const OPTIONS = ["all", "purchased", "activated", "deactivated"]

@@ -1,5 +1,5 @@
 
-import { ActiveLink } from "@components/MusicCourses/ui/common"
+import { ActiveLink } from "@components/common"
 import React from "react"
 
 const BreadcrumbItem = ({item, index}) => {

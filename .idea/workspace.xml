@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="" />
+    <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/content/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/footer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/hero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/link/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/loader/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/message/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/modal/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/common/navbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/curriculum/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/curriculum/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/filter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/filter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/layout/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/marketplace/header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/order/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/order/modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/web3/ethRates/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/web3/ethRates/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/web3/walletbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/web3/walletbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,11 +85,11 @@
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\UserAuth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\common" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\public" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\content\users" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
     </key>
   </component>
   <component name="RunManager" selected="npm.lint">
@@ -131,6 +155,7 @@
       <workItem from="1649351623902" duration="3678000" />
       <workItem from="1649423272837" duration="1433000" />
       <workItem from="1649585036492" duration="594000" />
+      <workItem from="1649795282378" duration="771000" />
     </task>
     <servers />
   </component>

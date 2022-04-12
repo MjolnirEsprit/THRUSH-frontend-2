@@ -1,6 +1,6 @@
 import { useWeb3 } from "@components/MusicCourses/providers";
 import Link from "next/link";
-import { ActiveLink, Button } from "@components/MusicCourses/ui/common";
+import { ActiveLink, Button } from "@components/common";
 import { useAccount } from "@components/MusicCourses/hooks/web3";
 import { useRouter } from "next/router";
 import NavLinks from "@components/common/navigation_links";

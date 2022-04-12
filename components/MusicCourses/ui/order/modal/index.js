@@ -1,7 +1,7 @@
 
 
 import { useEthPrice } from "@components/MusicCourses/hooks/useEthPrice";
-import { Modal, Button } from "@components/MusicCourses/ui/common";
+import { Modal, Button } from "@components/common";
 import { useEffect, useState } from "react";
 
 const defaultOrder = {

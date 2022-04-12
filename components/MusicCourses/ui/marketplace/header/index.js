@@ -1,7 +1,7 @@
 
 
 import { useAccount } from "@components/MusicCourses/hooks/web3";
-import { Breadcrumbs } from "@components/MusicCourses/ui/common";
+import { Breadcrumbs } from "@components/common";
 import { EthRates, WalletBar } from "@components/MusicCourses/ui/web3";
 
 const LINKS = [{
