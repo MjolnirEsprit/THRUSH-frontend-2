@@ -1,41 +1,60 @@
 import { useRouter } from "next/router";
 import { ActiveLink } from "@components/common";
+import Image from "next/image";
+import thrushLogo from '@public/assets/thrushLogo.png'
+
+const style = {
+  logoContainer: `flex items-center cursor-pointer mr-12`,
+  logoText: ` ml-[0.8rem] text-[#FD7F2C] font-semibold text-2xl`,
+  headerItems: ` flex items-center justify-end flex items-center justify-center space-x-12`,
+  headerItem: `text-white px-4 space-x-8 font-bold text-white hover:text-[#8a939b] cursor-pointer`
+}
 
 export default function NavLinks() {
   const { pathname } = useRouter();
 
   return (
-    <section>
+    <>
       <ActiveLink href="/">
-        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-          Home
-        </a>
+        <div className={style.logoContainer}>
+          <Image src={thrushLogo} height={40} width={40} />
+          <div className={style.logoText}>THRUSH</div>
+        </div>
       </ActiveLink>
-      <ActiveLink href="/courses-marketplace">
-        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-          Exclusive Course Marketplace
-        </a>
-      </ActiveLink>
-      <ActiveLink href="/instruments">
-        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-          Store
-        </a>
-      </ActiveLink>
-      <ActiveLink href="/fan-space">
-        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-          Fan Space
-        </a>
-      </ActiveLink>
-      <ActiveLink href="/music-streaming">
-        <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-          Music Streaming
-        </a>
-      </ActiveLink>
-        <ActiveLink href="/nft-marketplace">
-            <a className="mr-8 font-medium text-gray-500 hover:text-gray-900">
-                NFT Marketplace
-            </a>
+      <div className={style.headerItems}>
+        <ActiveLink href="/courses-marketplace">
+          <a className={style.headerItem}>
+            Exclusive Course Marketplace
+          </a>
         </ActiveLink>
-    </section>
+        <ActiveLink href="/instruments">
+          <a className={style.headerItem}>
+            Store
+          </a>
+        </ActiveLink>
+        <ActiveLink href="/fan-space">
+          <a className={style.headerItem}>
+            Fan Space
+          </a>
+        </ActiveLink>
+        <ActiveLink href="/music-streaming">
+          <a className={style.headerItem}>
+            Music Streaming
+          </a>
+        </ActiveLink>
+        <ActiveLink href="/nft-marketplace">
+          <a className={style.headerItem}>
+            NFT Marketplace
+          </a>
+        </ActiveLink>
+        {/* 
+      <ActiveLink href="/nft-marketplace">
+          <a className={style.headerItem}>
+          Karaoke
+          </a>
+        </ActiveLink>
+        */}
+      </div>
+    </>
   );
 }

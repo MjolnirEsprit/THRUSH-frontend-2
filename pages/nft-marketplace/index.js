@@ -1,4 +1,4 @@
-import Header from '@components/NFTMarketplace/Header'
+import Navbar from "@components/common/main_navbar";
 import Homepage from '@components/NFTMarketplace/Homepage'
 import { useWeb3 } from '@3rdweb/hooks'
 import { useEffect } from 'react'
@@ -6,7 +6,7 @@ import { client } from '../../lib/sanityClient'
 import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
 import coin from '@public/assets/coin.png'
-import {Footer, MainNavbar, Navbar} from "@components/common";
+import {Footer, MainNavbar} from "@components/common";
 
 const style = {
   wrapper: `relative`,
@@ -54,7 +54,7 @@ export default function NFTMarketplace() {
     <Toaster position="top-center" reverseOrder={false} />
     {address ? (
       <>
-      <Header/>
+      <Navbar/>
       <Homepage />
       </>
     ):(
