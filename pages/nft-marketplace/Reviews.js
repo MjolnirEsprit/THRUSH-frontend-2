@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import Header from "@components/NFTMarketplace/Header";
+import Navbar from "@components/common/main_navbar";
 
 const style = {
   contact: `min-h-screen w-screen pt-24 pr-12 pb-12 pl-12 bg-white `,
@@ -13,7 +13,7 @@ function Reviews() {
   if (state.succeeded) {
     return (
       <>
-        <Header />
+        <Navbar />
         <div className="flex min-h-screen w-screen flex-col items-center justify-center pt-24 pr-12 pb-12 pl-12">
           <img
             height="100"
