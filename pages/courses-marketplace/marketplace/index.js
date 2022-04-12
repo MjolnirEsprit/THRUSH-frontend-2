@@ -10,6 +10,7 @@ import { useState } from "react"
 import { MarketHeader } from "@components/MusicCourses/ui/marketplace"
 import { useWeb3 } from "@components/MusicCourses/providers"
 import { withToast } from "@utils/toast"
+import {Navbar} from "@components/common";
 
 export default function Marketplace({courses}) {
   const { web3, contract, requireInstall } = useWeb3()
@@ -97,6 +98,7 @@ export default function Marketplace({courses}) {
 
   return (
     <>
+      <Navbar />
       <MarketHeader />
       <CourseList
         courses={courses}

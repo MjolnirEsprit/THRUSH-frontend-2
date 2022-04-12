@@ -1,18 +1,19 @@
+import { Web3Provider } from "@components/MusicCourses/providers";
+import { Navbar, Footer, MainNavbar } from "@components/common";
 
 
-import { Web3Provider } from "@components/MusicCourses/providers"
-import { Navbar, Footer } from "@components/common"
+export default function BaseLayout({ children }) {
 
-export default function BaseLayout({children}) {
+
   return (
-    <Web3Provider>
-      <div className="max-w-7xl mx-auto px-4">
-        <Navbar />
-        <div className="fit">
-          {children}
-        </div>
-      </div>
-      <Footer />
-    </Web3Provider>
-  )
+    <div>
+        <Web3Provider>
+          <div>
+            <MainNavbar />
+            <div className="fit">{children}</div>
+            <Footer />
+          </div>
+        </Web3Provider>
+    </div>
+  );
 }

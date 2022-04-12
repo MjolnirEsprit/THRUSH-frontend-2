@@ -2,16 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/common/loader_eth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/StoreLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auth/[...nextauth].js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/instruments/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/instruments/seed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MusicStreaming/Loader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/loader/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/loader/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Instruments/InstrumentCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Instruments/InstrumentCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicStreaming/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicStreaming/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicStreaming/Feed.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicStreaming/Feed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/layout/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/navbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/auth/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/fan-space/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fan-space/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/music-streaming/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/music-streaming/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nft-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nft-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +68,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -142,7 +151,7 @@
       <workItem from="1649351623902" duration="3678000" />
       <workItem from="1649423272837" duration="1433000" />
       <workItem from="1649585036492" duration="594000" />
-      <workItem from="1649795282378" duration="4148000" />
+      <workItem from="1649795282378" duration="11361000" />
     </task>
     <servers />
   </component>

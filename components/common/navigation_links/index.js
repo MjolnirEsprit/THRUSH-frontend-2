@@ -24,12 +24,12 @@ export default function NavLinks() {
       <div className={style.headerItems}>
         <ActiveLink href="/courses-marketplace">
           <a className={style.headerItem}>
-            Exclusive Course Marketplace
+            Music Course Marketplace
           </a>
         </ActiveLink>
         <ActiveLink href="/instruments">
           <a className={style.headerItem}>
-            Store
+            Instruments Marketplace
           </a>
         </ActiveLink>
         <ActiveLink href="/fan-space">

@@ -1,4 +1,3 @@
-import Navbar from "@components/common/main_navbar";
 import Homepage from '@components/NFTMarketplace/Homepage'
 import { useWeb3 } from '@3rdweb/hooks'
 import { useEffect } from 'react'
@@ -6,7 +5,9 @@ import { client } from '../../lib/sanityClient'
 import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
 import coin from '@public/assets/coin.png'
-import {Footer, MainNavbar} from "@components/common";
+import MusicStreaming from "../music-streaming";
+import {BaseLayout} from "@components/common/layout";
+
 
 const style = {
   wrapper: `relative`,
@@ -54,14 +55,13 @@ export default function NFTMarketplace() {
     <Toaster position="top-center" reverseOrder={false} />
     {address ? (
       <>
-      <Navbar/>
       <Homepage />
       </>
     ):(
-      <div className={style.walletConnectWrapper}>
-        <div className={style.homepage}>
-          <div className={style.header}>
-            <div className={style.title}>
+      <div>
+        <div>
+          <div>
+            <div>
               Welcome to Thrush
               <br />
               NFT Marketplace
@@ -69,7 +69,7 @@ export default function NFTMarketplace() {
   
           </div>
 
-          <div className={style.walletConnectWrapper}>
+          <div>
 
             <button
               className={style.button}
@@ -83,7 +83,6 @@ export default function NFTMarketplace() {
               <br /> be able to run this app.
             </div>
           </div>
-          <Footer/>
         </div>
   
     </div>
@@ -92,3 +91,5 @@ export default function NFTMarketplace() {
   )
 
 }
+
+NFTMarketplace.Layout = BaseLayout;

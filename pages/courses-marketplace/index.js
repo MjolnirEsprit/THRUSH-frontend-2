@@ -26,9 +26,9 @@ export function getStaticProps() {
   const { data } = getAllCourses()
   return {
     props: {
-      courses: data
-    }
-  }
+      courses: data,
+    },
+  };
 }
 
 Home.Layout = BaseLayout

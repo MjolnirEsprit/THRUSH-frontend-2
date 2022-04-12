@@ -1,9 +1,8 @@
+import Dashboard from "@components/MusicStreaming/Dashboard";
+import { BaseLayout } from "@components/common/layout";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import Head from "next/head";
-import Dashboard from "@components/MusicStreaming/Dashboard";
-import Loader from "@components/MusicStreaming/Loader";
-import Navbar from '@components/common/main_navbar';
+import { Loader } from "@components/common";
 
 export default function MusicStreaming() {
   const router = useRouter();
@@ -20,14 +19,10 @@ export default function MusicStreaming() {
   }
 
   return (
-    <div className="">
-      <Head>
-        <title>Thrush - Dashboard</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
+    <>
       <Dashboard />
-       
-    </div>
+    </>
   );
 }
+
+MusicStreaming.Layout = BaseLayout;

@@ -1,10 +1,9 @@
 import "@styles/globals.css";
-import { SessionProvider } from "next-auth/react";
+import {SessionProvider, useSession} from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import { StoreProvider } from "../utils/Store";
 import { ToastContainer } from "react-toastify";
-
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -15,7 +14,11 @@ const connectors = {
 const Noop = ({ children }) => <>{children}</>;
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+
+
   const Layout = Component.Layout ?? Noop;
+
+
 
   return (
     <ThirdwebWeb3Provider
