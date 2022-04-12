@@ -1,7 +1,7 @@
 
-import { Hero } from "@components/MusicCourses/ui/common"
+import { Hero } from "@components/common"
 import { CourseList, CourseCard } from "@components/MusicCourses/ui/course"
-import { BaseLayout } from "@components/MusicCourses/ui/layout"
+import { BaseLayout } from "@components/common/layout"
 import { getAllCourses } from "@content/courses/fetcher"
 
 export default function Home({courses}) {

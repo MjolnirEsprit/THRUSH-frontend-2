@@ -1,15 +1,14 @@
 import { useAccount, useOwnedCourse } from "@components/MusicCourses/hooks/web3";
 import { useWeb3 } from "@components/MusicCourses/providers";
-import { Message, Modal } from "@components/MusicCourses/ui/common";
+import { Message, Modal } from "@components/common";
 import {
   CourseHero,
   Curriculum,
   Keypoints
 } from "@components/MusicCourses/ui/course";
-import { BaseLayout } from "@components/MusicCourses/ui/layout";
+import { BaseLayout } from "@components/common/layout";
 import { getAllCourses } from "@content/courses/fetcher";
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+
 
 export default function Course({course}) {
 

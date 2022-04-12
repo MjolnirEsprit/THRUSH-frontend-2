@@ -4,7 +4,6 @@ import { createTheme} from '@material-ui/core';
 import { Store } from '../utils/Store';
 import Cookies from 'js-cookie';
 
-
 export default function Layout1 ({children}) {
   const { state, dispatch } = useContext(Store);
   const { darkMode } = state;

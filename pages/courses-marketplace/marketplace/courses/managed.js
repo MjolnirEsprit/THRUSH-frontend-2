@@ -2,9 +2,9 @@
 
 import { useAdmin, useManagedCourses } from "@components/MusicCourses/hooks/web3";
 import { useWeb3 } from "@components/MusicCourses/providers";
-import { Button, Message } from "@components/MusicCourses/ui/common";
+import { Button, Message } from "@components/common";
 import { CourseFilter, ManagedCourseCard } from "@components/MusicCourses/ui/course";
-import { BaseLayout } from "@components/MusicCourses/ui/layout";
+import { BaseLayout } from "@components/common/layout";
 import { MarketHeader } from "@components/MusicCourses/ui/marketplace";
 import { normalizeOwnedCourse } from "@utils/normalize";
 import { withToast } from "@utils/toast";

@@ -1,9 +1,9 @@
 
 
 import { useAccount, useOwnedCourses } from "@components/MusicCourses/hooks/web3"
-import { Button, Message } from "@components/MusicCourses/ui/common"
+import { Button, Message } from "@components/common"
 import { OwnedCourseCard } from "@components/MusicCourses/ui/course"
-import { BaseLayout } from "@components/MusicCourses/ui/layout"
+import { BaseLayout } from "@components/common/layout"
 import { MarketHeader } from "@components/MusicCourses/ui/marketplace"
 import { getAllCourses } from "@content/courses/fetcher"
 import { useRouter } from "next/router"

@@ -1,7 +1,7 @@
 
 
 import { useAccount } from "@components/MusicCourses/hooks/web3";
-import { Breadcrumbs } from "@components/common";
+import { BreadCrumbs } from "@components/common";
 import { EthRates, WalletBar } from "@components/MusicCourses/ui/web3";
 
 const LINKS = [{
@@ -25,7 +25,7 @@ export default function Header() {
       </div>
       <EthRates />
       <div className="flex flex-row-reverse p-4 sm:px-6 lg:px-8">
-        <Breadcrumbs
+        <BreadCrumbs
           isAdmin={account.isAdmin}
           items={LINKS}
         />
