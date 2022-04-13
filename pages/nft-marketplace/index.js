@@ -81,6 +81,7 @@ export default function NFTMarketplace() {
             <div className={style.details}>
               You need Chrome to
               <br /> be able to run this app.
+              <br /> or connect to Rinkeby testnet
             </div>
           </div>
         </div>

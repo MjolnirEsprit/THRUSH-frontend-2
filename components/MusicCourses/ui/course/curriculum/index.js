@@ -1,5 +1,5 @@
 
-import { Loader } from "@components/common"
+import { LoaderEth } from "@components/common"
 import Link from "next/link"
 
 const lectures = [
@@ -60,7 +60,7 @@ export default function Curriculum({locked, courseState, isLoading}) {
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                         {
                           isLoading ?
-                          <Loader /> :
+                          <LoaderEth /> :
                           locked ?
                             <>
                               { courseState === "deactivated" &&

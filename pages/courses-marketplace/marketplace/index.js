@@ -4,7 +4,7 @@ import { CourseCard, CourseList } from "@components/MusicCourses/ui/course"
 import { BaseLayout } from "@components/common/layout"
 import { getAllCourses } from "@content/courses/fetcher"
 import { useOwnedCourses, useWalletInfo } from "@components/MusicCourses/hooks/web3"
-import { Button, Loader } from "@components/common"
+import { Button, LoaderEth } from "@components/common"
 import { OrderModal } from "@components/MusicCourses/ui/order"
 import { useState } from "react"
 import { MarketHeader } from "@components/MusicCourses/ui/marketplace"
@@ -129,7 +129,7 @@ export default function Marketplace({courses}) {
                     size="sm"
                     disabled={true}
                     variant="lightPurple">
-                    <Loader size="sm" />
+                    <LoaderEth size="sm" />
                   </Button>
                 )
               }
@@ -173,7 +173,7 @@ export default function Marketplace({courses}) {
                             variant="purple">
                             { isBusy ?
                               <div className="flex">
-                                <Loader size="sm" />
+                                <LoaderEth size="sm" />
                                 <div className="ml-2">In Progress</div>
                               </div> :
                               <div>Fund to Activate</div>
@@ -195,7 +195,7 @@ export default function Marketplace({courses}) {
                   variant="lightPurple">
                   { isBusy ?
                    <div className="flex">
-                      <Loader size="sm" />
+                      <LoaderEth size="sm" />
                       <div className="ml-2">In Progress</div>
                    </div> :
                   <div>Purchase</div>

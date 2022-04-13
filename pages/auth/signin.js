@@ -2,8 +2,7 @@ import { getProviders, signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { useEffect } from "react";
-import Loader from "@components/common/Loader";
-
+import { Loader } from "@components/common";
 
 function Signin({ providers }) {
   const { data: session } = useSession();
@@ -18,17 +17,15 @@ function Signin({ providers }) {
   if (session) return <Loader />;
 
   return (
-    <div className="h-screen flex flex-col items-center pt-40 space-y-8">
+    <div className="flex h-screen flex-col items-center space-y-8 pt-40">
       <Head>
         <title>Login - Thrush</title>
         <link rel="icon" href="../../public/favicon.ico" />
       </Head>
-       {Object.values(providers).map((provider)=> (
-      
-
+      {Object.values(providers).map((provider) => (
         <div key={provider.name}>
           <button
-            className="text-white py-4 px-6 rounded-full bg-[#d16d02] transition duration-300 ease-out border border-transparent uppercase font-bold text-xs md:text-base tracking-wider hover:scale-105 hover:bg-[#e57600]"
+            className="rounded-full border border-transparent bg-[#d16d02] py-4 px-6 text-xs font-bold uppercase tracking-wider text-white transition duration-300 ease-out hover:scale-105 hover:bg-[#e57600] md:text-base"
             onClick={() => signIn(provider.id)}
           >
             Sign in To Thrush

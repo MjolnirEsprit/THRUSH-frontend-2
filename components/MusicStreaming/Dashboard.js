@@ -34,7 +34,6 @@ export default function Dashboard() {
   return (
     <main className="flex min-h-screen min-w-max lg:pb-24">
       <Body chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
-      <Right chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
 
       {showPlayer && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-transparent">

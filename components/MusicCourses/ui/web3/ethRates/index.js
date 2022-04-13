@@ -1,6 +1,6 @@
 
 import { useEthPrice, COURSE_PRICE } from "@components/MusicCourses/hooks/useEthPrice"
-import { Loader } from "@components/common"
+import { LoaderEth } from "@components/common"
 import Image from "next/image"
 
 export default function EthRates() {
@@ -23,7 +23,7 @@ export default function EthRates() {
               </span>
             </> :
             <div className="w-full flex justify-center">
-              <Loader size="md" />
+              <LoaderEth size="md" />
             </div>
           }
         </div>
@@ -47,7 +47,7 @@ export default function EthRates() {
               </span>
             </> :
             <div className="w-full flex justify-center">
-              <Loader size="md" />
+              <LoaderEth size="md" />
             </div>
           }
         </div>

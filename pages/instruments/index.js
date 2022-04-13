@@ -13,16 +13,14 @@ import {
   ThemeProvider,
   Typography,
 } from "@material-ui/core";
-import db from "@utils/db";
-import Instrument from "@models/instrument";
 import useStyles from "@utils/styles";
 import {BaseLayout} from "@components/common/layout";
 import NextLink from "next/link";
 import Filterbar from "@components/Filterbar";
 import axios from "axios";
+import StoreLayout from "@components/StoreLayout";
 
 export default function store(props) {
-  const { instruments } = props;
   const [listInstruments, setlistInstruments] = useState([]);
 
   useEffect(() => {
@@ -107,15 +105,4 @@ export default function store(props) {
       </BaseLayout>
     </>
   );
-}
-
-export async function getServerSideProps() {
-  await db.connect();
-  const instruments = await Instrument.find({}).lean();
-  await db.disconnect();
-  return {
-    props: {
-      instruments: instruments.map(db.convertDocToObj),
-    },
-  };
 }
