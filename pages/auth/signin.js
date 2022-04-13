@@ -23,6 +23,9 @@ function Signin({ providers }) {
         <link rel="icon" href="../../public/favicon.ico" />
       </Head>
       {Object.values(providers).map((provider) => (
+
+
+          
         <div key={provider.name}>
           <button
             className="rounded-full border border-transparent bg-[#d16d02] py-4 px-6 text-xs font-bold uppercase tracking-wider text-white transition duration-300 ease-out hover:scale-105 hover:bg-[#e57600] md:text-base"

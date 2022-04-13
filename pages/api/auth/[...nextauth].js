@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import SpotifyProvider from "next-auth/providers/spotify";
+import GoogleProvider from 'next-auth/providers/google'
 
 /**
  * Takes a token, and returns a new token with updated
@@ -48,6 +49,11 @@ async function refreshAccessToken(token) {
 
 export default NextAuth({
   providers: [
+    GoogleProvider({
+      clientId: "38074057238-jg7gmmnv5u7si971h3m9pf59qdd3eclu.apps.googleusercontent.com",
+      clientSecret: "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",
+      authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth?prompt=consent&access_type=offline&response_type=code',
+    }),
     SpotifyProvider({
       clientId: process.env.SPOTIFY_CLIENT_ID,
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
@@ -55,6 +61,10 @@ export default NextAuth({
         "https://accounts.spotify.com/authorize?scope=user-read-email,playlist-read-private,user-read-email,streaming,user-read-private,user-library-read,user-library-modify,user-read-playback-state,user-modify-playback-state,user-read-recently-played,user-follow-read",
     }),
   ],
+  jwt: {
+    encryption: true
+  },
+  secret: "secret token",
 
   callbacks: {
     async jwt({ token, user, account }) {
