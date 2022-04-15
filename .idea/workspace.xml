@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/helpers/fetch-wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/account/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/account/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/alert.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/layout/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/MusicCourses" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -57,11 +69,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\MusicCourses" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\services" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\MusicCourses" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\utils" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\UserAuth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\api" />
@@ -135,6 +147,8 @@
       <workItem from="1649423272837" duration="1433000" />
       <workItem from="1649585036492" duration="594000" />
       <workItem from="1649795282378" duration="11688000" />
+      <workItem from="1650037053720" duration="286000" />
+      <workItem from="1650037350605" duration="1352000" />
     </task>
     <servers />
   </component>

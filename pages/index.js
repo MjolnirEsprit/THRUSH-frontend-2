@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { Loader } from "@components/common";
 import { BaseLayout } from "@components/common/layout";
+import { userService } from "services";
 
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
@@ -14,6 +15,7 @@ import { signOut, useSession } from "next-auth/react";
 
 export default function Index() {
   const router = useRouter();
+  /*
   const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
@@ -26,6 +28,8 @@ export default function Index() {
     return <Loader />;
   }
 
+   */
+
   return (
     <div className="">
       <Head>
@@ -33,6 +37,7 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
+        <h1>Hi {userService.userValue?.firstName}!</h1>
         <Content />
       </div>
     </div>
