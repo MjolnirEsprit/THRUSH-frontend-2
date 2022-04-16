@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/course.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/courses/fetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/fetcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/courses/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/courses/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/users/users.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/truffle-contract.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/truffle-contract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/user.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/instrument/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/instrument/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loadContract.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loadContract.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -56,6 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />

@@ -51,12 +51,15 @@ function logout() {
     Router.push('/account/login');
 }
 
-function register(user) {
+function register(name, email, password, passwordConfirm) {
     let res = axios({
         method: 'POST',
         url: `${baseUrl}/signup`,
         data: {
-            user
+            name,
+            email,
+            password,
+            passwordConfirm
         }
     });
     return res

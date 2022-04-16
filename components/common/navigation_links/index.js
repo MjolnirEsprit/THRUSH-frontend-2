@@ -4,6 +4,8 @@ import Image from "next/image";
 import thrushLogo from "@public/assets/thrushLogo.png";
 import { signOut, useSession } from "next-auth/react";
 import { LogoutIcon } from "@heroicons/react/outline";
+import { userService } from 'services';
+
 const style = {
   logoContainer: `flex items-center cursor-pointer mr-12`,
   logoText: ` ml-[0.8rem] text-[#FD7F2C] font-semibold text-2xl`,
@@ -11,8 +13,13 @@ const style = {
   headerItem: `text-white px-4 space-x-8 font-bold text-white hover:text-[#8a939b] cursor-pointer`,
 };
 
+
 export default function NavLinks() {
   const { pathname } = useRouter();
+
+  function logout() {
+    userService.logout();
+  }
 
   return (
     <>
@@ -41,9 +48,14 @@ export default function NavLinks() {
 
         <button className={style.headerItem} onClick={() => signOut({ redirect: false })}>
           <LogoutIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+          Unlink your spotify
+        </button>
+
+        <button className={style.headerItem} onClick={logout}>
+          <LogoutIcon className="mr-2 h-5 w-5" aria-hidden="true" />
           Log out
         </button>
-        {/* 
+        {/*
       <ActiveLink href="/nft-marketplace">
           <a className={style.headerItem}>
           Karaoke

@@ -28,7 +28,8 @@
       "@models/*": ["models/*"],
       "@public/*": ["public/*"],
       "@assets/*": ["assets/*"],
-      "@helpers/*": ["helpers/*"]
+      "@helpers/*": ["helpers/*"],
+      "@services/*":["services/*"]
     }
   },
   "include": [
