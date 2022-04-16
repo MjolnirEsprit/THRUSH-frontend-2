@@ -2,7 +2,7 @@
 import { Hero } from "@components/common"
 import { CourseList, CourseCard } from "@components/MusicCourses/ui/course"
 import { BaseLayout } from "@components/common/layout"
-import { getAllCourses } from "@content/courses/fetcher"
+import { getAllCourses } from "@helpers/fetcher"
 
 export default function Home({courses}) {
   return (

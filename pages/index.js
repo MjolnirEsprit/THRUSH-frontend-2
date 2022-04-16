@@ -19,7 +19,7 @@ export default function Index() {
   const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push("/api/auth/signin");
+      router.push("../auth/signin");
     },
   });
 
@@ -29,15 +29,9 @@ export default function Index() {
   }
 
   return (
-    <div className="">
-      <Head>
-        <title>Thrush - Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>
-        <h1>Hi {userService.userValue?.firstName}!</h1>
-        <Content />
-      </div>
+    <div>
+      <h1>Hi {userService.userValue?.firstName}!</h1>
+      <Content />
     </div>
   );
 }

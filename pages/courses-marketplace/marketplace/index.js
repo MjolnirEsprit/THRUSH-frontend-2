@@ -2,7 +2,7 @@
 
 import { CourseCard, CourseList } from "@components/MusicCourses/ui/course"
 import { BaseLayout } from "@components/common/layout"
-import { getAllCourses } from "@content/courses/fetcher"
+import { getAllCourses } from "@helpers/fetcher"
 import { useOwnedCourses, useWalletInfo } from "@components/MusicCourses/hooks/web3"
 import { Button, LoaderEth } from "@components/common"
 import { OrderModal } from "@components/MusicCourses/ui/order"
