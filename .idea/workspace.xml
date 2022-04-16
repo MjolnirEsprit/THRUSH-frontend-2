@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/helpers/fetch-wrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/account/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/account/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/alert.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/user.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/layout/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/base/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth-custom/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +67,11 @@
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\auth" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\api" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\api" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\common" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\public" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\content\users" />
     </key>
   </component>
   <component name="RunManager" selected="npm.lint">

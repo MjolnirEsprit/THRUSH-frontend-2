@@ -15,7 +15,7 @@ import { signOut, useSession } from "next-auth/react";
 
 export default function Index() {
   const router = useRouter();
-  /*
+
   const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
@@ -27,8 +27,6 @@ export default function Index() {
   if (status === "loading") {
     return <Loader />;
   }
-
-   */
 
   return (
     <div className="">

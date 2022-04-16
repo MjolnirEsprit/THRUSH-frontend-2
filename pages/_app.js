@@ -1,12 +1,12 @@
 import "@styles/globals.css";
-import {SessionProvider, useSession} from "next-auth/react";
+import { SessionProvider, useSession } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import { StoreProvider } from "../utils/Store";
 import { ToastContainer } from "react-toastify";
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { userService } from 'services';
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { userService } from "services";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -29,16 +29,16 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 
     // on route change start - hide page content by setting authorized to false
     const hideContent = () => setAuthorized(false);
-    router.events.on('routeChangeStart', hideContent);
+    router.events.on("routeChangeStart", hideContent);
 
     // on route change complete - run auth check
-    router.events.on('routeChangeComplete', authCheck)
+    router.events.on("routeChangeComplete", authCheck);
 
     // unsubscribe from events in useEffect return function
     return () => {
-      router.events.off('routeChangeStart', hideContent);
-      router.events.off('routeChangeComplete', authCheck);
-    }
+      router.events.off("routeChangeStart", hideContent);
+      router.events.off("routeChangeComplete", authCheck);
+    };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -46,13 +46,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   function authCheck(url) {
     // redirect to login page if accessing a private page and not logged in
     setUser(userService.userValue);
-    const publicPaths = ['/account/login', '/account/register'];
-    const path = url.split('?')[0];
+    const publicPaths = ["/account/login", "/account/register"];
+    const path = url.split("?")[0];
     if (!userService.userValue && !publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
-        pathname: '/account/login',
-        query: { returnUrl: router.asPath }
+        pathname: "/account/login",
+        query: { returnUrl: router.asPath },
       });
     } else {
       setAuthorized(true);
@@ -64,16 +64,16 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       supportedChainIds={supportedChainIds}
       connectors={connectors}
     >
+      <SessionProvider>
         <RecoilRoot>
           <Layout>
             <StoreProvider>
               <ToastContainer />
-              {authorized &&
-                  <Component {...pageProps} />
-              }
+              {authorized && <Component {...pageProps} />}
             </StoreProvider>
           </Layout>
         </RecoilRoot>
+      </SessionProvider>
     </ThirdwebWeb3Provider>
   );
 }
