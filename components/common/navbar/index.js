@@ -12,14 +12,14 @@ export default function Navbar() {
 
   return (
     <section>
-      <div className="relative px-4 pt-6 sm:px-6 lg:px-8">
+      <div className="relative  px-4 pt-6 sm:px-6 lg:px-8 ">
         <nav className="relative" aria-label="Global">
           <div className="flex flex-col items-center justify-between xs:flex-row">
             <NavLinks />
 
             <div className="text-center">
             <ActiveLink href="/wishlist">
-              <a className="mr-1 font-medium text-gray-500 hover:text-gray-900 sm:mr-8">
+              <a className="mr-1 font-medium text-white hover:text-gray-900 sm:mr-8">
                 Wishlist
               </a>
             </ActiveLink>

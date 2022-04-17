@@ -7,6 +7,8 @@ import { playingTrackState } from "../../atoms/playerAtom";
 import { useRecoilState } from "recoil";
 import Body from "./Body";
 import Right from "./Right";
+import Sidebar2 from "./Sidebar2";
+ 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
 });
@@ -33,7 +35,7 @@ function Dashboard() {
 
   return (
     <main className="flex min-h-screen min-w-max bg-black lg:pb-24">
-      <Sidebar />
+       <Sidebar/>
       <Body chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
       <Right chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
 

@@ -7,6 +7,7 @@ import Sidebar2 from "@components/MusicStreaming/Sidebar2";
 import Widgets from "@components/MusicStreaming/Widgets";
 import Modal from "@components/MusicStreaming/Modal";
 import Login from "@components/MusicStreaming/Login";
+import { MainNavbar } from '@components/common';
 
 export default function FanSpace({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
@@ -20,10 +21,11 @@ export default function FanSpace({ trendingResults, followResults, providers }) 
         <title>Fanspace</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div></div> 
+      <div>
+      <MainNavbar/> </div> 
         
       <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
-       
+        
         <Sidebar2/>
         <Feed />
         <Widgets
