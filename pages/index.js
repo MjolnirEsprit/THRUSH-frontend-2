@@ -28,9 +28,12 @@ export default function Index() {
     return <Loader />;
   }
 
+  console.log(userService.userValue?.user.name)
+
   return (
     <div>
-      <h1>Hi {userService.userValue?.firstName}!</h1>
+      <h1>Hi {userService.userValue?.user.name}!</h1>
+      <h3>Your token is {userService.tokenValue}</h3>
       <Content />
     </div>
   );

@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/account/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/account/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/auth/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/user.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/loadContract.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loadContract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +139,8 @@
       <workItem from="1649795282378" duration="11688000" />
       <workItem from="1650037053720" duration="286000" />
       <workItem from="1650037350605" duration="1352000" />
+      <workItem from="1650201105692" duration="461000" />
+      <workItem from="1650223955575" duration="380000" />
     </task>
     <servers />
   </component>
