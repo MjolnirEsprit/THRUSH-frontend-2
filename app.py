@@ -54,7 +54,7 @@ def copy_to_clipboard():
 #Function to create an error/warning pop-up
 def pop_up_warning(msg):
     pop_up = tk.Tk()
-    pop_up.iconbitmap('./assets/media/error.ico')
+    pop_up.iconbitmap('.public/assets/media/error.ico')
     pop_up.title("Warning")
     pop_up_lbl = tk.Label(pop_up, text=msg, font='Arial 16', padx=20, pady=10)
     pop_up_lbl.pack()

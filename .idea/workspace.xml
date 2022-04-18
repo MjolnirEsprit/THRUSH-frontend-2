@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/bgLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/coin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/error.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/functions/lyric_scraper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/media/error.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/nft.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/thrushLogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -54,13 +63,13 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\services" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\MusicCourses" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\utils" />
