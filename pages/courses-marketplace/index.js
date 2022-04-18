@@ -2,16 +2,18 @@
 import { Hero } from "@components/common"
 import { CourseList, CourseCard } from "@components/MusicCourses/ui/course"
 import { BaseLayout } from "@components/common/layout"
-import {courseService} from "../../services/course.service";
-import {useEffect, useState} from "react";
+import { courseService } from "@services/course.service";
+import { useEffect, useState } from "react";
+import {getAllCourses} from "@helpers/fetcher";
 
-export default function Home() {
+export default function Home({courses}) {
     const [courses1, setCourses] = useState(null);
-
 
     useEffect(() => {
 
         let isApiSubscribed = true;
+
+        console.log('called courses use effect')
 
         courseService.getAll().then((x) => {
             if (isApiSubscribed) {
@@ -28,6 +30,7 @@ export default function Home() {
     }, []);
 
     console.log(courses1)
+
     return (
     <>
       <Hero />
@@ -46,6 +49,15 @@ export default function Home() {
     </>
 
   )
+}
+
+export function getStaticProps() {
+    const { data } = getAllCourses()
+    return {
+        props: {
+            courses: data
+        }
+    }
 }
 
 Home.Layout = BaseLayout
