@@ -1,15 +1,16 @@
-import Dashboard from "@components/MusicStreaming/Dashboard";
-import { BaseLayout } from "@components/common/layout";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import { Loader } from "@components/common";
+import Head from "next/head";
+import Dashboard from "@components/MusicStreaming/Dashboard";
+import Loader from "@components/MusicStreaming/Loader";
+import Navbar from '@components/common/main_navbar';
 
 export default function MusicStreaming() {
   const router = useRouter();
   const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push("/api/auth/signin");
+      router.push("../auth/signin");
     },
   });
 
@@ -19,10 +20,14 @@ export default function MusicStreaming() {
   }
 
   return (
-    <>
+    <div className="">
+      <Head>
+        <title>Thrush - Dashboard</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Navbar />
       <Dashboard />
-    </>
+       
+    </div>
   );
 }
-
-MusicStreaming.Layout = BaseLayout;

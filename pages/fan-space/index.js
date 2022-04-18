@@ -7,12 +7,7 @@ import Sidebar2 from "@components/MusicStreaming/Sidebar2";
 import Widgets from "@components/MusicStreaming/Widgets";
 import Modal from "@components/MusicStreaming/Modal";
 import Login from "@components/MusicStreaming/Login";
-<<<<<<< HEAD
 import { MainNavbar } from '@components/common';
-=======
-import MusicStreaming from "../music-streaming";
-import {BaseLayout} from "@components/common/layout";
->>>>>>> ae7694df399cd538b0b7334ee57c8c1d1b7ab319
 
 export default function FanSpace({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
@@ -22,7 +17,6 @@ export default function FanSpace({ trendingResults, followResults, providers }) 
 
   return (
     <div className="">
-<<<<<<< HEAD
       <Head>
         <title>Fanspace</title>
         <link rel="icon" href="/favicon.ico" />
@@ -33,12 +27,11 @@ export default function FanSpace({ trendingResults, followResults, providers }) 
       <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto">
         
         <Sidebar2/>
-=======
-
-      <main className="flex mx-auto">
-
->>>>>>> ae7694df399cd538b0b7334ee57c8c1d1b7ab319
         <Feed />
+        <Widgets
+          trendingResults={trendingResults}
+          followResults={followResults}
+        />
 
         {isOpen && <Modal />}
       </main>
@@ -65,5 +58,3 @@ export async function getServerSideProps(context) {
     },
   };
 }
-
-FanSpace.Layout = BaseLayout;

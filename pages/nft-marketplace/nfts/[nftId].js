@@ -1,13 +1,10 @@
+ 
 import React from "react"
 import { useEffect, useMemo, useState } from 'react'
 import { useWeb3 } from "@3rdweb/hooks"
 import { ThirdwebSDK } from "@3rdweb/sdk"
 import { useRouter } from "next/router"
-import Header from '@components/NFTMarketplace/Header' 
-import NFTImage from '@components/NFTMarketplace/nft/NFTImage'
-import GeneralDetails from '@components/NFTMarketplace/nft/GeneralDetails'
-import Purchase from '@components/NFTMarketplace/nft/Purchase'
-
+ 
 const style = {
     wrapper: `flex flex-col items-center container-lg text-[#e5e8eb]`,
     container: `container p-6`,
@@ -82,7 +79,7 @@ const Nft = () => {
                             />
                         </div>
                     </div>
-
+                    <ItemActivity/>
                 </div>
             </div>
         </div>

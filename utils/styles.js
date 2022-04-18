@@ -23,10 +23,7 @@ const useStyles = makeStyles({
         fontSize: 50
     },
 
-    fabCart:{
-        margin: 30
-        
-    }    
+    
 
 })
 

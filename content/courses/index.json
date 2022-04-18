@@ -1,0 +1,66 @@
+[
+  {
+    "id": "1410474",
+    "type": "Music Course",
+    "title": "Music one - Full Guide",
+    "description": "details about the course ",
+    "coverImage": "https://thrangra.sirv.com/Next_TypeScript_Shopify_Final.jpg",
+    "author": "Mahdi Behi",
+    "link": "",
+    "slug": "",
+    "wsl": [
+      "Listen",
+      "Learn",
+      "Perform"
+    ],
+    "createdAt": ""
+  },
+  {
+    "id": "845954",
+    "type": "Music Course",
+    "title": "Music two - Full Guide",
+    "description": "details about the course ",
+    "coverImage": "https://thrangra.sirv.com/Next_TypeScript_Shopify_Final.jpg",
+    "author": "Mahdi Behi",
+    "link": "",
+    "slug": "",
+    "wsl": [
+      "Listen",
+      "Learn",
+      "Perform"
+    ],
+    "createdAt": ""
+  },
+  {
+    "id": "4775587",
+    "type": "Music Course",
+    "title": "Music three - Full Guide",
+    "description": "details about the course ",
+    "coverImage": "https://thrangra.sirv.com/Next_TypeScript_Shopify_Final.jpg",
+    "author": "Mahdi Behi",
+    "link": "",
+    "slug": "",
+    "wsl": [
+      "Listen",
+      "Learn",
+      "Perform"
+    ],
+    "createdAt": ""
+  },
+  {
+    "id": "887555",
+    "type": "Music Course",
+    "title": "Music four - Full Guide",
+    "description": "details about the course ",
+    "coverImage": "https://thrangra.sirv.com/Next_TypeScript_Shopify_Final.jpg",
+    "author": "Mahdi Behi",
+    "link": "",
+    "slug": "",
+    "wsl": [
+      "Listen",
+      "Learn",
+      "Perform"
+    ],
+    "createdAt": ""
+  }
+]

@@ -1,17 +1,13 @@
+import Image from "next/image";
+import Link from "next/link";
 
-
-import Image from "next/image"
-import Link from "next/link"
-import { AnimateKeyframes } from "react-simple-animate"
-
-export default function Card({course, disabled, Footer, state}) {
+export default function Card({ course, disabled, Footer }) {
   return (
-    <div
-      className="bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div className="overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
       <div className="flex h-full">
-        <div className="flex-1 h-full next-image-wrapper">
+        <div className="next-image-wrapper h-full flex-1">
           <Image
-            className={`object-cover ${disabled && "filter grayscale"}`}
+            className={`object-cover ${disabled && "grayscale filter"}`}
             src={course.coverImage}
             layout="responsive"
             width="200"
@@ -19,55 +15,24 @@ export default function Card({course, disabled, Footer, state}) {
             alt={course.title}
           />
         </div>
-        <div className="p-8 pb-4 flex-2">
-          <div className="flex items-center">
-            <div
-              className="uppercase mr-2 tracking-wide text-sm text-orange-500 font-semibold">
-              {course.type}
-            </div>
-            <div>
-              { state === "activated" &&
-                <div className="text-xs text-black bg-green-200 p-1 px-3 rounded-full">
-                  Activated
-                </div>
-              }
-              { state === "deactivated" &&
-                <div className="text-xs text-black bg-red-200 p-1 px-3 rounded-full">
-                  Deactivated
-                </div>
-              }
-              { state === "purchased" &&
-                <AnimateKeyframes
-                  play
-                  duration={2}
-                  keyframes={["opacity: 0.2", "opacity: 1"]}
-                  iterationCount="infinite"
-                >
-                  <div className="text-xs text-black bg-yellow-200 p-1 px-3 rounded-full">
-                    Pending
-                  </div>
-                </AnimateKeyframes>
-              }
-            </div>
+        <div className="flex-2 p-8 pb-4">
+          <div className="text-sm font-semibold uppercase tracking-wide text-orange-500">
+            {course.type}
           </div>
-
-          <Link href={`/courses-marketplace/courses/${course.slug}`}>
+          <Link href={`/course/${course.slug}`}>
             <a
-              className="h-12 block mt-1 text-sm sm:text-base leading-tight font-medium text-black hover:underline">
+              href="#"
+              className="mt-1 block h-12 text-sm font-medium leading-tight text-black hover:underline sm:text-lg"
+            >
               {course.title}
             </a>
           </Link>
-          <p
-            className="mt-2 mb-4 text-sm sm:text-base text-gray-500">
+          <p className="mt-2 text-sm text-gray-500 sm:text-base">
             {course.description.substring(0, 70)}...
           </p>
-          { Footer &&
-            <div className="mt-2">
-              <Footer />
-            </div>
-          }
+          {Footer && <Footer></Footer>}
         </div>
       </div>
     </div>
-  )
+  );
 }

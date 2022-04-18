@@ -1,7 +1,3 @@
-
-import { LoaderEth } from "@components/common"
-import Link from "next/link"
-
 const lectures = [
   "How to init App",
   "How to get a help",
@@ -9,11 +5,11 @@ const lectures = [
   "Programing in C++",
   "How to write For Loops",
   "Safe operator",
-]
+];
 
-export default function Curriculum({locked, courseState, isLoading}) {
-
-  const statusClass = "px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
+export default function Curriculum({ locked }) {
+  const statusClass =
+    "px-2 inline-flex text-xs leading-5 font-semibold rounded-full";
   return (
     <section className="max-w-5xl mx-auto">
       <div className="flex flex-col">
@@ -23,10 +19,16 @@ export default function Curriculum({locked, courseState, isLoading}) {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
                       Section 1
                     </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
                       Status
                     </th>
                     <th scope="col" className="relative px-6 py-3">
@@ -35,7 +37,7 @@ export default function Curriculum({locked, courseState, isLoading}) {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  { lectures.map(lec =>
+                  {lectures.map((lec) => (
                     <tr key={lec}>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
@@ -49,47 +51,24 @@ export default function Curriculum({locked, courseState, isLoading}) {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
                           className={
-                            locked ?
-                             `bg-red-100 text-red-800 ${statusClass}` :
-                             `bg-green-100 text-green-800 ${statusClass}`
+                            locked
+                              ? ` bg-red-100 text-red-800 ${statusClass}`
+                              : ` bg-green-100 text-green-800 ${statusClass}`
                           }
                         >
-                          { locked ? "Locked" : "Unlocked" }
+                          {locked ? "Locked" : "Unlocked"}
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        {
-                          isLoading ?
-                          <LoaderEth /> :
-                          locked ?
-                            <>
-                              { courseState === "deactivated" &&
-                                <Link href="/marketplace">
-                                  <a
-                                    className="text-orange-600 hover:text-orange-900">
-                                    Get Access
-                                  </a>
-                                </Link>
-                              }
-                              { courseState === "purchased" &&
-                                <Link href="/faq">
-                                  <a
-                                    className="text-yellow-500 hover:text-yellow-900">
-                                    Waiting for activation...
-                                  </a>
-                                </Link>
-                              }
-                            </> :
-                            <Link href="/watch">
-                              <a
-                                className="text-orange-600 hover:text-orange-900">
-                                Watch
-                              </a>
-                            </Link>
-                        }
+                        <a
+                          href="#"
+                          className="text-orange-600 hover:text-orange-900"
+                        >
+                          {locked ? "Get Access" : "Play"}
+                        </a>
                       </td>
                     </tr>
-                  )}
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -97,5 +76,5 @@ export default function Curriculum({locked, courseState, isLoading}) {
         </div>
       </div>
     </section>
-  )
+  );
 }

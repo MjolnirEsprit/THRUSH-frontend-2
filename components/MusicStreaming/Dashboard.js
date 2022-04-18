@@ -13,7 +13,7 @@ const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
 });
 
-export default function Dashboard() {
+function Dashboard() {
   const { data: session } = useSession();
   const { accessToken } = session;
 
@@ -37,9 +37,10 @@ export default function Dashboard() {
     <main className="flex min-h-screen min-w-max bg-black lg:pb-24">
        <Sidebar/>
       <Body chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
+      <Right chooseTrack={chooseTrack} spotifyApi={spotifyApi} />
 
       {showPlayer && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-transparent">
+        <div className="fixed bottom-0 left-0 right-0 z-50">
           <Player accessToken={accessToken} trackUri={playingTrack.uri} />
         </div>
       )}
@@ -47,3 +48,4 @@ export default function Dashboard() {
   );
 }
 
+export default Dashboard;

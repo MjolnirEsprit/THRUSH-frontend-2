@@ -17,21 +17,11 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["thrangra.sirv.com", "rb.gy"],
+    domains: ["thrangra.sirv.com",'rb.gy'],
+     
   },
   i18n: {
     locales: ["en", "ar"],
     defaultLocale: "en",
-  },
-  reactStrictMode: true,
-  serverRuntimeConfig: {
-    secret:
-      "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING",
-  },
-  publicRuntimeConfig: {
-    apiUrl:
-      process.env.NODE_ENV === "development"
-        ? "http://localhost:2000/api/v1" // development api
-        : "http://localhost:2000/api/v1", // production api
   },
 };

@@ -1,39 +1,18 @@
-import React from "react";
-import Content from "@components/common/content";
-import { MainNavbar } from "@components/common";
-import { useRouter } from "next/router";
-import Head from "next/head";
-import { Loader } from "@components/common";
-import { BaseLayout } from "@components/common/layout";
-import { userService } from "services";
+import React from 'react';
+import Footer from '@components/common/footer';
+import Content from '@components/common/content';
+import { MainNavbar } from '@components/common';
 
-import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
-import { LogoutIcon } from "@heroicons/react/outline";
-import { signOut, useSession } from "next-auth/react";
+const Index = () => {
+    return (
+        <>
+            <MainNavbar />
 
-export default function Index() {
-  const router = useRouter();
+            <Content/>
 
-  const { status, data: session } = useSession({
-    required: true,
-    onUnauthenticated() {
-      router.push("../auth/signin");
-    },
-  });
-
-  // Loading animation...
-  if (status === "loading") {
-    return <Loader />;
-  }
-
-  return (
-    <div>
-      <h1>Hi {userService.userValue?.firstName}!</h1>
-      <Content />
-    </div>
-  );
+            <Footer></Footer>
+        </>
+    )
 }
 
-Index.Layout = BaseLayout;
+export default Index;
