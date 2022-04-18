@@ -1,9 +1,12 @@
-import courses from "./index.json";
+import courses from "../data/courses";
+import {userService} from "../services";
+import {courseService} from "../services/course.service";
 
 export const getAllCourses = () => {
 
+
+
   return {
-    //TODO get data frm mongodb
     data: courses,
     courseMap: courses.reduce((a, c, i) => {
       a[c.id] = c;
