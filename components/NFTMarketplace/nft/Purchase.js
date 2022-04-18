@@ -60,8 +60,8 @@ const MakeOffer = ({ isListed, selectedNft, listings, marketPlaceModule }) => {
     }
 
     return (
-        <div className='bg-[#303339] h-20 w-full flex items-center 
-            px-12 rounded-lg border-[#151c22] border'>
+        <div className='bg-[#FAF9F6] h-20 w-1/2 flex items-center 
+            px-12 rounded-lg border-[#E2DFD2] border'>
             <Toaster position='top-center' reverseOrder={false} />
             {isListed === 'true' ? (
                 <>
@@ -74,10 +74,7 @@ const MakeOffer = ({ isListed, selectedNft, listings, marketPlaceModule }) => {
                         <IoMdWallet className={style.buttonIcon} />
                         <div className={style.buttonText}>Buy now</div>
                     </div>
-                    <div className={`${style.button} border border-[#151c22] bg-[#363840] hover:bg-[#4c505c]`}>
-                        <HiTag className={style.buttonIcon} />
-                        <div className={style.buttonText}>Make Offer</div>
-                    </div>
+            
                 </>
             ) : (
                 <div className={`${style.button} bg-[#fb8a25] hover:bg-[#FBA055]`}>

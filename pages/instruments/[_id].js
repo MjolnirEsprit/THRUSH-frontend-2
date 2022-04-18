@@ -1,42 +1,65 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import db from '@utils/db';
 import Instrument from '@models/instrument';
-import Layout1 from '@components/layout';
+import {BaseLayout} from '@components/common/layout';
 import useStyles  from '@utils/styles';
 import {
+    CardMedia,
+     CardActionArea, 
     Grid,
-    Link,
     List,
+    Image,
     ListItem,
     Typography,
     Card,
     Button,
     Box,
-    ThemeProvider
+    ThemeProvider,
+    Fab
   } from '@material-ui/core';
   import NextLink from 'next/link';
   import Navbar from '@components/common/main_navbar';
+  import axios from 'axios';
+  import Store from '@utils/Store'
+import { useRouter } from 'next/router';
+
 
 export default function InstrumentsScreen(props) {
+    const [cart, setCart] = useState([]);
+    const router = useRouter();
     const {instrument} = props ;
-    const classes= useStyles();
-   
+    const classes= useStyles(); 
     
     if (!instrument){
         return <h1>not found sorry :(</h1>
     }
+
+    const addToCartHandler = (product) => {
+        setCart([...cart, product]);
+        console.log(cart);
+        //router.push('/instruments/cart');
+    }
+
   return (
     <>
-    <Navbar />
+    <BaseLayout>
     <Box 
         sx={{
             borderRadius: 1,
             margin: 30
           }}
-    >
-    <Layout1 title={instrument.name} description={instrument.description}>
-          <Grid container spacing={1}>
+    > 
+         <Grid container spacing={1}>
               <Grid item md={6} xs={12}>
+              <Card className={classes.card}>
+                      <CardActionArea>
+                        <CardMedia
+                          component="img"
+                          image={instrument.image}
+                          title={instrument.name}
+                        ></CardMedia>
+                      </CardActionArea>                   
+                  </Card>
               </Grid>
               <Grid item md={3} xs={12}>
                   <List>
@@ -48,7 +71,7 @@ export default function InstrumentsScreen(props) {
                       </ListItem>
                       <ListItem>
                           <Typography>
-                              Rating: {instrument.rating} stars ({instrument.numReviews} reviews)
+                              Rating: {instrument.rating} stars ({instrument.reviews} reviews)
                           </Typography>
                       </ListItem>
                       <ListItem>
@@ -82,7 +105,7 @@ export default function InstrumentsScreen(props) {
                               </Grid>
                           </ListItem>
                           <ListItem>
-                              <Button fullWidth variant="contained" color='primary' >
+                              <Button fullWidth variant="contained" color='primary' onClick={()=> addToCartHandler(instrument)}>
                                   Add to cart
                               </Button>
                           </ListItem>
@@ -90,8 +113,9 @@ export default function InstrumentsScreen(props) {
                   </Card>
               </Grid>
           </Grid>
-      </Layout1>
       </Box>
+      
+      </BaseLayout>    
       </>
   )
 }

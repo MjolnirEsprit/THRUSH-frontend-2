@@ -1,25 +1,24 @@
-import Header from '@components/NFTMarketplace/Header'
 import Homepage from '@components/NFTMarketplace/Homepage'
 import { useWeb3 } from '@3rdweb/hooks'
 import { useEffect } from 'react'
 import { client } from '../../lib/sanityClient'
 import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
-import coin from '../../assets/coin.png'
-import {Footer, MainNavbar, Navbar} from "@components/common";
+import coin from '@public/assets/coin.png'
+import MusicStreaming from "../music-streaming";
+import {BaseLayout} from "@components/common/layout";
+
 
 const style = {
-  wrapper: ` `,
-  walletConnectWrapper: `flex flex-col justify-center items-center`,
-  button: `border border-[#282b2f] bg-[#fb8a25] p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer text-black mt-4`,
-  details: `text-lg text-center text-white font-semibold mt-6 mb-4`,
-  homepage: `flex flex-col items-center justify-center bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819]`,
+  wrapper: `relative`,
+  walletConnectWrapper: `flex flex-col justify-center items-center h-screen w-screen bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819] `,
+  button: `border border-[#282b2f] bg-[#fb8a25] p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer text-black`,
+  details: `text-lg text-center text=[#282b2f] font-semibold mt-4 mb-4`,
   header: `flex items-center justify-center mt-12 mb-12`,
-  title: `text-white font-bold w-1/2 text-4xl mt-8 mb-12 text-left italic mt-12`,
-  coinImage: `w-1/2`,
+  title: ` text-white font-bold w-1/2 text-4xl mt-8 mb-12 text-left italic mt-12`,
+ 
 
 }
-
 
 export default function NFTMarketplace() {
   const { address, connectWallet } = useWeb3() //gives us access to address and to the cnnect wallet
@@ -52,22 +51,25 @@ export default function NFTMarketplace() {
     ; (() => console.log('minmin'))()
 
   return (
-<>
-    <MainNavbar/>
-        <div className={style.homepage}>
-          <div className={style.header}>
-            <div className={style.title}>
-              Welcome to Thrush's
+    <div className={style.wrapper}>
+    <Toaster position="top-center" reverseOrder={false} />
+    {address ? (
+      <>
+      <Homepage />
+      </>
+    ):(
+      <div>
+        <div>
+          <div>
+            <div>
+              Welcome to Thrush
               <br />
               NFT Marketplace
             </div>
-            <div className={style.coinImage}>
-              <Image src={coin} width='340' height='300' alt="" />
-            </div>
-
+  
           </div>
 
-          <div className={style.walletConnectWrapper}>
+          <div>
 
             <button
               className={style.button}
@@ -79,11 +81,16 @@ export default function NFTMarketplace() {
             <div className={style.details}>
               You need Chrome to
               <br /> be able to run this app.
+              <br /> or connect to Rinkeby testnet
             </div>
           </div>
         </div>
-    <Footer/>
-</>
+  
+    </div>
+      )}
+</div>
   )
 
 }
+
+NFTMarketplace.Layout = BaseLayout;

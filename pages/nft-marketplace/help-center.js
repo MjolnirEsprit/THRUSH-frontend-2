@@ -1,6 +1,6 @@
 import * as React from 'react';
-import HelpBanner from '@components/NFTMarketplace/HelpBanner';
-import HelpItem from '@components/NFTMarketplace/HelpItem';
+import HelpBanner from './HelpBanner';
+import HelpItem from './HelpItem';
 
 
 const HelpCenter = () => {

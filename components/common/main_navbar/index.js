@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import { ActiveLink } from "@components/common";
 import NavLinks from "../navigation_links";
+
 
 export default function Navbar() {
   const { pathname } = useRouter();
