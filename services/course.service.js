@@ -1,17 +1,13 @@
-import { BehaviorSubject } from 'rxjs';
 import getConfig from 'next/config';
-import Router from 'next/router';
 
 import { fetchWrapper } from 'helpers';
-import axios from "axios";
 
 const { publicRuntimeConfig } = getConfig();
-const baseUrl = `${publicRuntimeConfig.apiUrl}/instruments`;
+const baseUrl = `${publicRuntimeConfig.apiUrl}/courses`;
 
 export const courseService = {
     getAll,
     getById,
-    update,
     delete: _delete
 };
 

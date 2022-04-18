@@ -25,9 +25,20 @@ export default function store(props) {
   const [listInstruments, setlistInstruments] = useState([]);
 
   useEffect(() => {
+
+    let isApiSubscribed = true;
+
     axios.get("http://localhost:2000/api/v1/instruments").then((response) => {
-      setlistInstruments(response.data);
+      if (isApiSubscribed) {
+        // handle success
+        setlistInstruments(response.data);
+
+      }
     });
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
   }, []);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks

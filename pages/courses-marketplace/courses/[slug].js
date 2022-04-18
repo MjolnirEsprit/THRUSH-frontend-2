@@ -7,7 +7,7 @@ import {
   Keypoints
 } from "@components/MusicCourses/ui/course";
 import { BaseLayout } from "@components/common/layout";
-import { getAllCourses } from "@content/courses/fetcher";
+import { getAllCourses } from "@helpers/fetcher";
 
 
 export default function Course({course}) {

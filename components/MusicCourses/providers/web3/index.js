@@ -32,29 +32,39 @@ export default function Web3Provider({children}) {
   )
 
   useEffect(() => {
-    const loadProvider = async () => {
+    let isApiSubscribed = true;
 
-      const provider = await detectEthereumProvider()
-      if (provider) {
-        const web3 = new Web3(provider)
-        const contract = await loadContract("CourseMarketplace", web3)
+    if (isApiSubscribed) {
+      // handle success
+        const loadProvider = async () => {
 
-        setListeners(provider)
-        setWeb3Api(
-          createWeb3State({
-            web3,
-            provider,
-            contract,
-            isLoading: false
-          })
-        )
-      } else {
-        setWeb3Api(api => ({...api, isLoading: false}))
-        console.error("Please, install Metamask.")
-      }
+            const provider = await detectEthereumProvider()
+            if (provider) {
+                const web3 = new Web3(provider)
+                const contract = await loadContract("CourseMarketplace", web3)
+
+                setListeners(provider)
+                setWeb3Api(
+                    createWeb3State({
+                        web3,
+                        provider,
+                        contract,
+                        isLoading: false
+                    })
+                )
+            } else {
+                setWeb3Api(api => ({...api, isLoading: false}))
+                console.error("Please, install Metamask.")
+            }
+        }
+
+        loadProvider()
     }
+      return () => {
+          // cancel the subscription
+          isApiSubscribed = false;
+      };
 
-    loadProvider()
   }, [])
 
   const _web3Api = useMemo(() => {
