@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/Dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/Deposits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/Orders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/Title.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/listItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/Dashboard" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -55,23 +65,23 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Coding\pi-2022\THRUSH-frontend-2\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\Dashboard" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\dashboard" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\assets" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\services" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\MusicCourses" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\Dashboard" />
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\assets" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\helpers" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\auth" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\api" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\api" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\common" />
     </key>
   </component>
   <component name="RunManager" selected="npm.lint">
@@ -151,6 +161,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/components/Dashboard/Title.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

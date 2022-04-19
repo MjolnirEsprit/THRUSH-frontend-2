@@ -24,7 +24,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const Layout = Component.Layout ?? Noop;
 
   useEffect(() => {
-
     let isApiSubscribed = true;
 
     if (isApiSubscribed) {
