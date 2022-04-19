@@ -29,7 +29,7 @@ function login(email, password){
         url: `${baseUrl}/login`,
         data: {
             email,
-            password
+            password,
         }
     });
     return res
@@ -59,7 +59,8 @@ function register(name, email, password, passwordConfirm) {
             name,
             email,
             password,
-            passwordConfirm
+            passwordConfirm,
+            "role": "user"
         }
     });
     return res

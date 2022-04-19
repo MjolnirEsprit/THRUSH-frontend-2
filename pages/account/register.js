@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useRouter } from 'next/router';
-
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -21,8 +20,8 @@ function Copyright(props) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
             {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
+            <Link color="inherit" href="">
+                Thrush
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -30,7 +29,29 @@ function Copyright(props) {
     );
 }
 
-const theme = createTheme();
+const theme = createTheme({
+    palette: {
+        primary: {
+            // light: will be calculated from palette.primary.main,
+            main: '#ff4400',
+            // dark: will be calculated from palette.primary.main,
+            // contrastText: will be calculated to contrast with palette.primary.main
+        },
+        secondary: {
+            light: '#0066ff',
+            main: '#0044ff',
+            // dark: will be calculated from palette.secondary.main,
+            contrastText: '#ffcc00',
+        },
+        // Used by `getContrastText()` to maximize the contrast between
+        // the background and the text.
+        contrastThreshold: 3,
+        // Used by the functions below to shift a color's luminance by approximately
+        // two indexes within its tonal palette.
+        // E.g., shift from Red 500 to Red 300 or Red 700.
+        tonalOffset: 0.2,
+    },
+});
 
 
 export default function Register() {
@@ -132,13 +153,14 @@ export default function Register() {
                             type="submit"
                             fullWidth
                             variant="contained"
+                            color="primary"
                             sx={{ mt: 3, mb: 2 }}
                         >
                             Sign Up
                         </Button>
                         <Grid container justifyContent="flex-end">
                             <Grid item>
-                                <Link href="#" variant="body2">
+                                <Link href="/account/login" variant="body2">
                                     Already have an account? Sign in
                                 </Link>
                             </Grid>
@@ -149,71 +171,4 @@ export default function Register() {
             </Container>
         </ThemeProvider>
     );
-
-    /*
-    // form validation rules 
-    const validationSchema = Yup.object().shape({
-        email: Yup.string()
-            .required('Email is required'),
-        name: Yup.string()
-            .required('Name is required'),
-        password: Yup.string()
-            .required('Password is required')
-            .min(6, 'Password must be at least 6 characters'),
-        passwordConfirm: Yup.string()
-            .required('Confirming password is required')
-    });
-    const formOptions = { resolver: yupResolver(validationSchema) };
-
-    // get functions to build form with useForm() hook
-    const { register, handleSubmit, formState } = useForm(formOptions);
-    const { errors } = formState;
-
-    function onSubmit(user) {
-        return userService.register(user)
-            .then(() => {
-                alertService.success('Registration successful', { keepAfterRouteChange: true });
-                router.push('login');
-            })
-            .catch(alertService.error);
-    }
-
-    return (
-        <Layout>
-            <div className="card">
-                <h4 className="card-header">Register</h4>
-                <div className="card-body">
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="form-group">
-                            <label>email</label>
-                            <input name="email" type="text" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} />
-                            <div className="invalid-feedback">{errors.email?.message}</div>
-                        </div>
-                        <div className="form-group">
-                            <label>name</label>
-                            <input name="name" type="text" {...register('name')} className={`form-control ${errors.name ? 'is-invalid' : ''}`} />
-                            <div className="invalid-feedback">{errors.name?.message}</div>
-                        </div>
-                        <div className="form-group">
-                            <label>Password</label>
-                            <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
-                            <div className="invalid-feedback">{errors.password?.message}</div>
-                        </div>
-                        <div className="form-group">
-                            <label>Confirm Password</label>
-                            <input name="passwordConfirm" type="password" {...register('passwordConfirm')} className={`form-control ${errors.passwordConfirm ? 'is-invalid' : ''}`} />
-                            <div className="invalid-feedback">{errors.passwordConfirm?.message}</div>
-                        </div>
-                        <button disabled={formState.isSubmitting} className="btn btn-primary">
-                            {formState.isSubmitting && <span className="spinner-border spinner-border-sm mr-1"></span>}
-                            Register
-                        </button>
-                        <Link href="/account/login" className="btn btn-link">Cancel</Link>
-                    </form>
-                </div>
-            </div>
-        </Layout>
-    );
-
-     */
 }

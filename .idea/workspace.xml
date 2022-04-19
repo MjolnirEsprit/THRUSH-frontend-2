@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Dashboard/Chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Dashboard/Deposits.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Dashboard/Orders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Dashboard/Title.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Dashboard/listItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/user.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
