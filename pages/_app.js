@@ -24,20 +24,30 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const Layout = Component.Layout ?? Noop;
 
   useEffect(() => {
-    // on initial load - run auth check
-    authCheck(router.asPath);
 
-    // on route change start - hide page content by setting authorized to false
-    const hideContent = () => setAuthorized(false);
-    router.events.on("routeChangeStart", hideContent);
+    let isApiSubscribed = true;
 
-    // on route change complete - run auth check
-    router.events.on("routeChangeComplete", authCheck);
+    if (isApiSubscribed) {
+      // on initial load - run auth check
+      authCheck(router.asPath);
 
-    // unsubscribe from events in useEffect return function
+      // on route change start - hide page content by setting authorized to false
+      const hideContent = () => setAuthorized(false);
+      router.events.on("routeChangeStart", hideContent);
+
+      // on route change complete - run auth check
+      router.events.on("routeChangeComplete", authCheck);
+
+      // unsubscribe from events in useEffect return function
+      return () => {
+        router.events.off("routeChangeStart", hideContent);
+        router.events.off("routeChangeComplete", authCheck);
+      };
+    }
+
     return () => {
-      router.events.off("routeChangeStart", hideContent);
-      router.events.off("routeChangeComplete", authCheck);
+      // cancel the subscription
+      isApiSubscribed = false;
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
