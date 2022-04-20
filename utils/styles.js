@@ -26,8 +26,16 @@ const useStyles = makeStyles({
     fabCart:{
         margin: 30
         
-    }    
+    }, 
 
+    wrapper :{
+        padding: "5 20"
+        
+    },
+
+    wFieldset :{
+        margin: "20 0"
+    }
 })
 
 

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import db from '@utils/db';
 import Instrument from '@models/instrument';
-import {BaseLayout} from '@components/common/layout';
+import Layout1 from '@components/layout';
 import useStyles  from '@utils/styles';
 import {
     CardMedia,
@@ -22,11 +22,12 @@ import {
   import axios from 'axios';
   import Store from '@utils/Store'
 import { useRouter } from 'next/router';
-
+import { CartContext } from '../../Helper/Context';
 
 export default function InstrumentsScreen(props) {
-    const [cart, setCart] = useState([]);
+    const {cartItems, setCartItems} = useContext(CartContext)
     const router = useRouter();
+    //const { dispatch } = useContext(Store);
     const {instrument} = props ;
     const classes= useStyles(); 
     
@@ -35,14 +36,15 @@ export default function InstrumentsScreen(props) {
     }
 
     const addToCartHandler = (product) => {
-        setCart([...cart, product]);
-        console.log(cart);
-        //router.push('/instruments/cart');
+        setCartItems([...cartItems, product]);
+        router.push('/instruments/cart');
+        alert('Item added to cart!')
     }
 
   return (
     <>
-    <BaseLayout>
+    <Layout1 title={instrument.name} description={instrument.description}>
+    <Navbar />
     <Box 
         sx={{
             borderRadius: 1,
@@ -65,7 +67,7 @@ export default function InstrumentsScreen(props) {
                   <List>
                       <ListItem>
                           <Typography component="h1">{instrument.name}</Typography>
-                      </ListItem>
+                      </ListItem> 
                       <ListItem>
                           <Typography>Price: {instrument.price}</Typography>
                       </ListItem>
@@ -115,7 +117,7 @@ export default function InstrumentsScreen(props) {
           </Grid>
       </Box>
       
-      </BaseLayout>    
+      </Layout1>    
       </>
   )
 }

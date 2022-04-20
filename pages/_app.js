@@ -1,3 +1,4 @@
+import {useState} from "react";
 import "@styles/globals.css";
 import { SessionProvider, useSession } from "next-auth/react";
 import { RecoilRoot } from "recoil";
@@ -7,8 +8,12 @@ import { ToastContainer } from "react-toastify";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { userService } from "services";
+import {CartContext} from "../Helper/Context"
 
 import "react-toastify/dist/ReactToastify.css";
+
+
+
 
 const supportedChainIds = [4]; //Chain ID 4 represents Rinkeby network
 const connectors = {
@@ -22,6 +27,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const [authorized, setAuthorized] = useState(false);
 
   const Layout = Component.Layout ?? Noop;
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     let isApiSubscribed = true;
@@ -76,10 +82,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       <SessionProvider>
         <RecoilRoot>
           <Layout>
-            <StoreProvider>
+          <CartContext.Provider value={{cartItems, setCartItems}} >
               <ToastContainer />
               {authorized && <Component {...pageProps} />}
-            </StoreProvider>
+          </CartContext.Provider>
           </Layout>
         </RecoilRoot>
       </SessionProvider>
@@ -88,3 +94,5 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 }
 
 export default MyApp;
+/*
+*/
