@@ -9,7 +9,6 @@ import {getAllCourses} from "../../helpers/fetcher";
 export default function Home({courses}) {
     const [courses1, setCourses] = useState(null);
 
-    /*
     useEffect(() => {
 
         let isApiSubscribed = true;
@@ -27,15 +26,14 @@ export default function Home({courses}) {
         };
 
     }, []);
-     */
 
-    console.log(courses)
+    console.log(courses1)
     return (
     <>
       <Hero />
 
       <CourseList
-        courses={courses}
+        courses={courses1}
       >
       {course =>
         <CourseCard
