@@ -9,6 +9,7 @@ import Modal from "@components/MusicStreaming/Modal";
 import Login from "@components/MusicStreaming/Login";
 import MusicStreaming from "../music-streaming";
 import {BaseLayout} from "@components/common/layout";
+ 
 
 export default function FanSpace({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
@@ -20,9 +21,10 @@ export default function FanSpace({ trendingResults, followResults, providers }) 
     <div className="">
 
       <main className="flex mx-auto">
-
+         
+         
         <Feed />
-
+       
         {isOpen && <Modal />}
       </main>
     </div>

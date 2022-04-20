@@ -18,9 +18,9 @@ function Sidebar2() {
   const { data: session } = useSession();
 
   return (
-    <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
+    <div className="hidden bg-black sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
        
-      <div className="space-y-2.5 mt-4 mb-2.5 xl:ml-24">
+      <div className="bg-black space-y-2.5 mt-4 mb-2.5 xl:ml-24">
         <SidebarLink text="Home" Icon={HomeIcon} active />
         <SidebarLink text="Explore" Icon={HashtagIcon} />
         <SidebarLink text="Notifications" Icon={BellIcon} />
@@ -29,7 +29,7 @@ function Sidebar2() {
         <SidebarLink text="Profile" Icon={UserIcon} />
         <SidebarLink text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
-      <button className="hidden xl:inline ml-auto bg-[#884115] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#884115]">
+      <button  className="hidden bg-blackxl:inline ml-auto bg-[#884115] text-white rounded-full w-56 h-[52px] text-lg font-bold shadow-md hover:bg-[#884115]">
         Welcome
       </button>
       <div
