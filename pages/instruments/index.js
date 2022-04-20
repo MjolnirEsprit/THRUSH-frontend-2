@@ -20,8 +20,10 @@ export default function store(props) {
   const [listInstruments, setlistInstruments] = useState([]);
 
   useEffect(()=> {
-    axios.get("http://localhost:3000/api/v1/instruments").then((response) => {
+    
+    axios.get("http://localhost:2000/api/v1/instruments").then((response) => {
       setlistInstruments(response.data);
+      
     })
   },[])
 
