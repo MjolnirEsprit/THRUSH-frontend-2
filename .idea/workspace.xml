@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/[_id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/[_id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/addInstrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/addInstrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

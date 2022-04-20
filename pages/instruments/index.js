@@ -8,11 +8,12 @@ import Navbar from '@components/common/main_navbar';
 import db from '@utils/db';
 import Instrument from '@models/instrument';
 import useStyles from '@utils/styles';
-import Layout1 from '@components/layout'
 import NextLink from 'next/link'
 import Filterbar from '@components/Filterbar';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import Home from "../courses-marketplace";
+import {BaseLayout} from "../../components/common/layout";
 
 export default function store(props) {
   const router = useRouter();
@@ -35,8 +36,6 @@ export default function store(props) {
   
   return (
     <>      
-      <Layout1>
-      <Navbar />
       <Box sx={{
             borderRadius: 1,
             margin: 30
@@ -102,8 +101,6 @@ export default function store(props) {
           </div>
         </Box>
         </Box>
-        
-      </Layout1> 
     </>
   );
 }
@@ -117,3 +114,5 @@ export async function getServerSideProps() {
     },
   };
 }
+
+store.Layout = BaseLayout
