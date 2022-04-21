@@ -5,16 +5,38 @@ import { Button, Message } from "@components/common"
 import { OwnedCourseCard } from "@components/MusicCourses/ui/course"
 import { BaseLayout } from "@components/common/layout"
 import { MarketHeader } from "@components/MusicCourses/ui/marketplace"
-import { getAllCourses } from "@helpers/fetcher"
 import { useRouter } from "next/router"
 import Link from "next/link"
 import { useWeb3 } from "@components/MusicCourses/providers"
+import {useEffect, useState} from "react";
+import {courseService} from "@services/course.service";
 
-export default function OwnedCourses({courses}) {
+export default function OwnedCourses() {
   const router = useRouter()
   const { requireInstall } = useWeb3()
   const { account } = useAccount()
+
+  const [courses, setCourses] = useState([]);
+
   const { ownedCourses } = useOwnedCourses(courses, account.data)
+
+  useEffect(() => {
+
+    let isApiSubscribed = true;
+
+    courseService.getAll().then((x) => {
+      if (isApiSubscribed) {
+        // handle success
+        setCourses(x.data.courses);
+      }
+    });
+
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
+
+  }, []);
 
   return (
     <>
@@ -61,15 +83,6 @@ export default function OwnedCourses({courses}) {
       </section>
     </>
   )
-}
-
-export function getStaticProps() {
-  const { data } = getAllCourses()
-  return {
-    props: {
-      courses: data
-    }
-  }
 }
 
 OwnedCourses.Layout = BaseLayout

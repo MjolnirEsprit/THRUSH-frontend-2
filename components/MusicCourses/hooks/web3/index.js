@@ -1,4 +1,3 @@
-
 import { useHooks } from "@components/MusicCourses/providers/web3"
 import { useEffect } from "react"
 import { useWeb3 } from "@components/MusicCourses/providers"
