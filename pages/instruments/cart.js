@@ -31,6 +31,12 @@ export default function CartScreen() {
   const { cartItems, setCartItems } = useContext(CartContext);
   const classes = useStyles();
 
+  const removeHandler = (instrumentToRemove) => {
+    setCartItems(
+      cartItems.filter((instrument)=> instrument !== instrumentToRemove)
+    )
+  }
+
   return (
     <>
       <Typography component="h1" variant="h1" color="primary">
@@ -73,8 +79,8 @@ export default function CartScreen() {
                       </TableCell>
                       <TableCell align="right">${item.price}</TableCell>
                       <TableCell align="right">
-                        <Button variant="contained" color="secondary">
-                          x
+                        <Button variant="contained" color="secondary" onClick={()=> removeHandler(item)}>
+                          Remove
                         </Button>
                       </TableCell>
                     </TableRow>

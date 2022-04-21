@@ -36,10 +36,10 @@ export default function InstrumentsScreen(props) {
   }
 
   const addToCartHandler = (product) => {
-    setCartItems([...cartItems, product]);
-    router.push("/instruments/cart");
-    alert("Item added to cart!");
-  };
+    setCartItems([...cartItems, {...product}]);
+
+    alert('Item added to cart!')
+}
 
   return (
     <>

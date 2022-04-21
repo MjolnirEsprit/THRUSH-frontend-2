@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { Box, Button, Fab,
   Card, CardActionArea, 
   CardActions, CardContent, 
@@ -19,7 +19,7 @@ export default function store(props) {
   const router = useRouter();
   const { instruments } = props;
   const [listInstruments, setlistInstruments] = useState([]);
-
+const { cartItems, setCartItems } = useContext(CartContext);
   useEffect(()=> {
     
     axios.get("http://localhost:2000/api/v1/instruments").then((response) => {
@@ -30,6 +30,18 @@ export default function store(props) {
 
   const GoToProviderPage = () =>{
     router.push('/instruments/addInstrument');
+  }
+
+  const addToCartHandler = (product) => {
+    setCartItems([...cartItems, {...product}]);
+
+    alert('Item added to cart!')
+}
+
+
+
+  const GoToCart = () =>{
+    router.push('/instruments/cart');
   }
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
@@ -54,7 +66,7 @@ export default function store(props) {
                 }}>          
                   <div>               
                     <Typography >You can find selected items here</Typography>
-                    <Button variant="contained" color='primary' > Cart</Button>
+                    <Button variant="contained" color='primary' onClick={()=> GoToCart()}> Cart</Button>
                   </div>
                   <div>
                     <Typography >You can sell instruments here</Typography>
@@ -89,7 +101,7 @@ export default function store(props) {
                           <Typography>{product.name}</Typography>
                           <CardActions>
                             <Typography>${product.price}</Typography>
-                            <Button color='primary'>Add to cart</Button>
+                            <Button color='primary' onClick={() => addToCartHandler(instrument)}>Add to cart</Button>
                           </CardActions>
                         </CardContent>
                       </CardActionArea>
