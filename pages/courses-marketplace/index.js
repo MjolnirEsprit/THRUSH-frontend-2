@@ -33,7 +33,7 @@ export default function Home({courses}) {
       <Hero />
 
       <CourseList
-        courses={courses1}
+        courses={courses}
       >
       {course =>
         <CourseCard
