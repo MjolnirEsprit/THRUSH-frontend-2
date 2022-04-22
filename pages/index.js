@@ -16,11 +16,6 @@ export default function Index() {
     },
   });
 
-  // Loading animation...
-  if (status === "loading") {
-    return <Loader />;
-  }
-
   console.log(userService.userValue?.user.name)
 
   if (userService.userValue?.user.role == "admin") {

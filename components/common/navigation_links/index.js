@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { ActiveLink } from "@components/common";
 import Image from "next/image";
-import thrushLogo from "@public/assets/thrushLogo.png";
+import thrushLogo from "@assets/thrushLogo.png";
 import { signOut, useSession } from "next-auth/react";
 import { LogoutIcon } from "@heroicons/react/outline";
 import { userService } from 'services';

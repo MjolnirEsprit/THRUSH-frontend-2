@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MusicCourses/hooks/web3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/hooks/web3/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/fetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/fetcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/bgLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/coin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/error.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/functions/lyric_scraper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/media/error.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/nft.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/thrushLogo.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,11 +80,11 @@
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\Dashboard" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\assets" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\helpers" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\auth" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\api" />
     </key>
   </component>
   <component name="RunManager" selected="npm.lint">
