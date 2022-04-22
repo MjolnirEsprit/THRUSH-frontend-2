@@ -7,13 +7,14 @@ import Navbar from "@components/common/main_navbar";
 import NFTImage from '@components/NFTMarketplace/nft/NFTImage'
 import GeneralDetails from '@components/NFTMarketplace/nft/GeneralDetails'
 import Purchase from '@components/NFTMarketplace/nft/Purchase'
+import Footer from "@components/common/footer";
 
 const style = {
     wrapper: `flex flex-col items-center container-lg text-[#e5e8eb]`,
-    container: `container p-6`,
+    container: `container p-6 mt-20`,
     topContent: `flex`,
-    nftImgContainer: `flex-1 mr-4`,
-    detailsContainer: `flex-[2] ml-4`,
+    nftImgContainer: `flex-1 mr-4 mb-20`,
+    detailsContainer: `flex-[2] ml-4`
 }
 
 const Nft = () => {
@@ -64,6 +65,7 @@ const Nft = () => {
     }, [marketPlaceModule])
 
     return (
+        <>
         <div>
             <Navbar />
             <div className={style.wrapper}>
@@ -86,6 +88,10 @@ const Nft = () => {
                 </div>
             </div>
         </div>
+        <div class="footer">
+          <Footer />
+        </div>
+       </>
 
     )
 }
