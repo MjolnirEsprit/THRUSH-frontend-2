@@ -6,9 +6,10 @@ export default function Navbar() {
   const { pathname } = useRouter();
 
   return (
-    <div className="flex z-50 absolute bg-black">
+    <div className="flex bg-black px-[0.2rem] py-[0.8rem]">
       <NavLinks>
       </NavLinks>
+      
     </div>
   );
 }

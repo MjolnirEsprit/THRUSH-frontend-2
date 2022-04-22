@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useWeb3 } from "@3rdweb/hooks"
 import { ThirdwebSDK } from "@3rdweb/sdk"
 import { useRouter } from "next/router"
-import Navbar from "@components/common/main_navbar";
+import Header from '@components/NFTMarketplace/Header' 
 import NFTImage from '@components/NFTMarketplace/nft/NFTImage'
 import GeneralDetails from '@components/NFTMarketplace/nft/GeneralDetails'
 import Purchase from '@components/NFTMarketplace/nft/Purchase'
@@ -65,7 +65,7 @@ const Nft = () => {
 
     return (
         <div>
-            <Navbar />
+            <Header />
             <div className={style.wrapper}>
                 <div className={style.container}>
                     <div className={style.topContent}>

@@ -6,7 +6,8 @@ import toast, { Toaster } from 'react-hot-toast'
 import Image from 'next/image'
 import coin from '@public/assets/coin.png'
 import MusicStreaming from "../music-streaming";
-import Navbar from "@components/common/main_navbar";
+import {BaseLayout} from "@components/common/layout";
+
 
 const style = {
   wrapper: `relative`,
@@ -50,11 +51,9 @@ export default function NFTMarketplace() {
     ; (() => console.log('minmin'))()
 
   return (
-    <>
-    < Navbar/>
     <div className={style.wrapper}>
-      <Toaster position="top-center" reverseOrder={false} />
-      {address ? (
+    <Toaster position="top-center" reverseOrder={false} />
+    {address ? (
       <>
       <Homepage />
       </>
@@ -81,8 +80,8 @@ export default function NFTMarketplace() {
 
             <div className={style.details}>
               You need Chrome to
-              <br /> be able to run this app
-              <br /> or Connect to either Rinkeby network.
+              <br /> be able to run this app.
+              <br /> or connect to Rinkeby testnet
             </div>
           </div>
         </div>
@@ -90,7 +89,8 @@ export default function NFTMarketplace() {
     </div>
       )}
 </div>
-</>
   )
 
 }
+
+NFTMarketplace.Layout = BaseLayout;
