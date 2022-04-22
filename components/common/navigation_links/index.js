@@ -5,8 +5,6 @@ import thrushLogo from "@public/assets/thrushLogo.png";
 import { signOut, useSession } from "next-auth/react";
 import { LogoutIcon } from "@heroicons/react/outline";
 import { userService } from 'services';
-import React, { useState, useRef, useEffect } from 'react';
-
 
 const style = {
   logoContainer: `flex items-center cursor-pointer`,
