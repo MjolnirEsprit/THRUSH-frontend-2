@@ -11,7 +11,7 @@ import React, { useState, useRef, useEffect } from 'react';
 const style = {
   logoContainer: `flex items-center cursor-pointer`,
   logoText: ` ml-[0.8rem] text-[#FD7F2C] font-semibold text-2xl`,
-  headerWrap: ` z-500 relative bg-black p-1 flex items-center justify-center space-x-12`,
+  headerWrap: ` z-500 relative bg-black pt-1 pb-0.5 flex items-center justify-center space-x-12`,
   headerItems: ` flex items-center justify-center space-x-12`,
   headerItem: `text-white font-bold text-white hover:text-[#8a939b] px-4 space-x-8 cursor-pointer p-1`,
   dropElem: `border-solid cursor-pointer block px-4 py-2 text-white hover:bg-[#ffaa54]`
