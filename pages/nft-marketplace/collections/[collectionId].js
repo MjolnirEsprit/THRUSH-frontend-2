@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useWeb3 } from '@3rdweb/hooks'
 import { client } from '../../../lib/sanityClient'
 import { ThirdwebSDK } from '@3rdweb/sdk'
-import Header from '@components/NFTMarketplace/Header'
+import Navbar from "@components/common/main_navbar";
 import { CgWebsite } from 'react-icons/cg'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { HiDotsVertical } from 'react-icons/hi'
@@ -111,7 +111,7 @@ const Collection = () => {
 
     return (//scrollbars hiden
         <div className='overflow-hidden'>
-            <Header />
+            <Navbar />
             <div className={style.bannerImageContainer}>
                 <img
                     className={style.bannerImage}

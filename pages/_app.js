@@ -8,9 +8,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { userService } from "services";
 import {CartContext} from "../Helper/Context"
-
 import "react-toastify/dist/ReactToastify.css";
-
 
 
 
@@ -93,5 +91,3 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 }
 
 export default MyApp;
-/*
-*/

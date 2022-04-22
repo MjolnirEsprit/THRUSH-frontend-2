@@ -29,7 +29,7 @@ function Reviews() {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <div className="flex min-h-screen w-screen flex-col items-center justify-center pt-8 pr-12 pb-12 pl-12">
         <div className="w-full max-w-xs ">
           <form

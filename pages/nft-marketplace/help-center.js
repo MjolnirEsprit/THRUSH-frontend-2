@@ -1,12 +1,12 @@
 import * as React from 'react';
-import HelpBanner from './HelpBanner';
+import Navbar from "@components/common/main_navbar";
 import HelpItem from './HelpItem';
 
 
 const HelpCenter = () => {
   return (
     <div>
-      <HelpBanner/>
+      <Navbar/>
       <HelpItem/>
    </div>
   );
