@@ -6,8 +6,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 const style={
-  wrapper: `flex justify-center items-center flex-col`,
-  header: `bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819]`
+  wrapper: `flex justify-center items-center flex-col bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819]`
 }
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -24,13 +23,11 @@ const HelpItem = () => {
       <div className={style.wrapper}>
       <Box mt={12} sx={{ flexGrow: 1 }}>
         <Grid container direction="row" alignItems="center" justify="center" spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            <Grid item xs={3} ml= {14} mr={6}>
-              <Item style={{backgroundColor:"#FFFFFF", marginTop: 44 }}>
-            
+            <Grid item  xs={3} ml={12} mr={8}>
+              <Item style={{backgroundColor:"#FFFFFF"}}>
                 <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
                     Create
                 </Typography>
-               
                 <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"#000000"}}>
                 Learn how to make your first NFT + NFT collections to start selling and sharing
                 </Typography>
@@ -38,11 +35,11 @@ const HelpItem = () => {
             </Grid>
 
             <Grid item xs={3} mr={8}>
-            <Item className={style.header} style={{backgroundColor:"#FFFFFF", marginTop:40}}>
-                <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold', color: 'white'}} gutterBottom component="div">
+            <Item style={{backgroundColor:"#FFFFFF"}}>
+                <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
                     Sell
                 </Typography>
-                <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"white"}}> 
+                <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"#000000"}}> 
                 Learn how list your NFTs for sale and understand the different ways to list your NFTs
                 </Typography>
               </Item>
@@ -50,7 +47,7 @@ const HelpItem = () => {
 
 
             <Grid item xs={3}>
-            <Item style={{backgroundColor:"#FFFFFF", marginTop:40}}>
+            <Item style={{backgroundColor:"#FFFFFF"}}>
                 <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
                 Buy
                 </Typography>
@@ -61,12 +58,12 @@ const HelpItem = () => {
             </Grid>
 
 
-            <Grid item xs={3} ml={14} mr={6} display='flex' alignItems="center" justify="center">
-            <Item className={style.header} style={{backgroundColor:"#FFFFFF"}}>
-                <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold', color: 'white'}} gutterBottom component="div">
+            <Grid item xs={3} ml={12} mr={8} display='flex' alignItems="center" justify="center">
+            <Item style={{backgroundColor:"#FFFFFF"}}>
+                <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
                 FAQ
                 </Typography>
-                <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"white"}}>
+                <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"#000000"}}>
                     Learn answers to frequently asked questions
                 </Typography>
               </Item>
@@ -77,19 +74,19 @@ const HelpItem = () => {
                 <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
                     User Safety
                 </Typography>
-                <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"#000000"}}>
+                <Typography variant="body1" gutterBottom style={{color:"#000000"}}>
                     Learn more about anti-fraud and user safety processes on
                 </Typography>
               </Item>
             </Grid>
 
             <Grid item xs={3} mr={8} mb={8} mt={8}>
-            <Item className={style.header} style={{backgroundColor:"#FFFFFF"}}>
-                <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold', color: 'white'}} gutterBottom component="div">
+            <Item style={{backgroundColor:"#FFFFFF"}}>
+                <Typography variant="overline" style={{fontSize: 22, fontWeight: 'bold'}} gutterBottom component="div">
                     Getting started
                 </Typography>
-                <Typography variant="body1" gutterBottom style={{fontSize: 18, color:"white"}}>
-                    What you can do on THRUSH NFT Marketplace
+                <Typography variant="body1" gutterBottom style={{color:"#000000"}}>
+                    Learn how to what you can do on THRUSH NFT Marketplace
                 </Typography>
               </Item>
             </Grid>

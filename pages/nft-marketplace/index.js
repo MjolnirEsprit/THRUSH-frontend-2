@@ -1,20 +1,21 @@
-import Homepage from '@components/NFTMarketplace/Homepage';
-import { useWeb3 } from '@3rdweb/hooks';
-import { useEffect } from 'react';
-import { client } from '../../lib/sanityClient';
-import toast, { Toaster } from 'react-hot-toast';
+import Homepage from '@components/NFTMarketplace/Homepage'
+import { useWeb3 } from '@3rdweb/hooks'
+import { useEffect } from 'react'
+import { client } from '../../lib/sanityClient'
+import toast, { Toaster } from 'react-hot-toast'
+import Image from 'next/image'
+import coin from '@public/assets/coin.png'
 import MusicStreaming from "../music-streaming";
 import Navbar from "@components/common/main_navbar";
-import Footer from "@components/common/footer"; 
 
 const style = {
   wrapper: `relative`,
   walletConnectWrapper: `flex flex-col justify-center items-center h-screen w-screen bg-gradient-to-r from-[#e65c00] via-[#FF512F] to-[#F09819] `,
-  button: `flex border border-[#282b2f] bg-[#fb8a25] p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer text-black`,
-  details: `text-lg text-center text=[#282b2f] font-semibold mt-4 mb-20`,
+  button: `border border-[#282b2f] bg-[#fb8a25] p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer text-black`,
+  details: `text-lg text-center text=[#282b2f] font-semibold mt-4 mb-4`,
   header: `flex items-center justify-center mt-12 mb-12`,
   title: ` text-white font-bold w-1/2 text-4xl mt-8 mb-12 text-left italic mt-12`,
-
+ 
 
 }
 
@@ -50,37 +51,46 @@ export default function NFTMarketplace() {
 
   return (
     <>
-      < Navbar />
-      <div className={style.wrapper}>
-        <Toaster position="top-center" reverseOrder={false} />
-        {address ? (
-          <>
-            <Homepage />
-          </>
-        ) : (
+    < Navbar/>
+    <div className={style.wrapper}>
+      <Toaster position="top-center" reverseOrder={false} />
+      {address ? (
+      <>
+      <Homepage />
+      </>
+    ):(
+      <div>
+        <div>
           <div>
-            <div className=" pt-72 flex flex-col justify-center items-center">
-              <button
-                className={style.button}
-                onClick={() => connectWallet('injected')}
-              >
-                Connect Wallet
-              </button>
+            <div>
+              Welcome to Thrush
+              <br />
+              NFT Marketplace
             </div>
-              <div className={style.details}>
-                You need Chrome to
-                <br /> be able to run this app
-                <br /> or connect to Rinkeby network.
-              </div>
-          </div>
-        )
-        }
-      </div>
-      <div class="footer">
-        <Footer />
-      </div>
-    </>
   
+          </div>
+
+          <div>
+
+            <button
+              className={style.button}
+              onClick={() => connectWallet('injected')}
+            >
+              Connect Wallet
+            </button>
+
+            <div className={style.details}>
+              You need Chrome to
+              <br /> be able to run this app
+              <br /> or Connect to either Rinkeby network.
+            </div>
+          </div>
+        </div>
+  
+    </div>
+      )}
+</div>
+</>
   )
 
 }

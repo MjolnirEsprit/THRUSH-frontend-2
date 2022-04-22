@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Navbar from "@components/common/main_navbar";
-import Footer from "@components/common/footer";
 
 const style = {
   contact: `min-h-screen w-screen pt-24 pr-12 pb-12 pl-12 bg-white `,
@@ -32,9 +31,9 @@ function Reviews() {
     <>
       <Navbar />
       <div className="flex min-h-screen w-screen flex-col items-center justify-center pt-8 pr-12 pb-12 pl-12">
-        <div className="w-full max-w-xs mt-20">
+        <div className="w-full max-w-xs ">
           <form
-            className=" mb-4 rounded bg-white px-8 pt-6 pb-8 shadow-md"
+            className="mb-4 rounded bg-white px-8 pt-6 pb-8 shadow-md"
             onSubmit={handleSubmit}
           >
             <div className="mb-4">
@@ -86,9 +85,6 @@ function Reviews() {
             &copy;2020 THRUSH All rights reserved.
           </p>
         </div>
-      </div>
-      <div class="footer">
-        <Footer />
       </div>
     </>
   );

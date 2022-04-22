@@ -8,10 +8,9 @@ import { CgWebsite } from 'react-icons/cg'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { HiDotsVertical } from 'react-icons/hi'
 import NFTCard from '@components/NFTMarketplace/NFTCard'
-import Footer from "@components/common/footer";
 
 const style = {
-    bannerImageContainer: `mt-20 h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
+    bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
     bannerImage: `w-full object-cover`,
     infoContainer: `w-screen px-4`,
     midRow: `w-full flex justify-center text-black`,
@@ -111,7 +110,6 @@ const Collection = () => {
     console.log(router.query.collectionId)
 
     return (//scrollbars hiden
-        <>
         <div className='overflow-hidden'>
             <Navbar />
             <div className={style.bannerImageContainer}>
@@ -208,7 +206,7 @@ const Collection = () => {
                 </div>
 
             </div>
-            <div className=" mb-20 flex flex-wrap">
+            <div className="flex flex-wrap">
                 {nfts.map((nftItem, id) => (
                     <NFTCard
                         key={id}
@@ -219,10 +217,6 @@ const Collection = () => {
                 ))}
             </div>
         </div>
-        <div class="footer">
-           <Footer />
-        </div>
-        </>
     )
 }
 export default Collection;
