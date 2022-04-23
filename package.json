@@ -71,6 +71,7 @@
     "material-ui-image": "^3.3.2",
     "moment": "^2.29.1",
     "mongoose": "^5.10.14",
+    "mui-datatables": "^4.2.2",
     "next": "^12.1.5",
     "next-auth": "^4.3.1",
     "next-connect": "^0.10.1",
@@ -84,6 +85,7 @@
     "react": "^17.0.2",
     "react-accessible-accordion": "^3.3.5",
     "react-chartjs-2": "^4.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^17.0.2",
     "react-filepond": "^7.1.1",
     "react-hook-form": "^7.29.0",
@@ -111,6 +113,8 @@
     "requests": "^0.3.0",
     "rxjs": "^7.3.0",
     "sass": "^1.44.0",
+    "simple-peer": "^9.11.1",
+    "socket.io-client": "^4.4.1",
     "spotify-web-api-node": "^5.0.2",
     "styled-components": "^5.3.3",
     "sweetalert2": "^10.16.9",
@@ -125,10 +129,7 @@
     "use-axios-client": "^2.0.0",
     "web-vitals": "^2.1.0",
     "web3": "^1.7.1",
-    "yup": "^0.32.9",
-    "react-copy-to-clipboard": "^5.1.0",
-    "simple-peer": "^9.11.1",
-    "socket.io-client": "^4.4.1"
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@types/dat.gui": "^0.7.7",

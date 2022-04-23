@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { BaseLayout } from "@components/common/layout";
 import { useSession } from "next-auth/react";
-import DashboardContent from "@components/Dashboard/Dashboard";
+import DashboardContent from "@components/Dashboard/DashboardContent";
 
 export default function Dashboard() {
     const router = useRouter();
