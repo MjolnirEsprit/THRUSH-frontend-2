@@ -1,7 +1,9 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import { Line, Doughnut } from "react-chartjs-2";
 import MUIDataTable from "mui-datatables";
+import axios from "axios";
+import { userService } from "../../services";
 
 const columns = [
   {
@@ -46,10 +48,32 @@ const options = {
 };
 
 export default function DataTable() {
+  const [listUsers, setlistUsers] = useState([]);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    let isApiSubscribed = true;
+    userService
+      .getAll("http://localhost:2000/api/v1/users")
+      .then((response) => {
+        if (isApiSubscribed) {
+          // handle success
+          setlistUsers(response.data);
+        }
+      });
+
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
+  }, []);
+
+  console.log(listUsers.data);
+
   return (
     <MUIDataTable
       title={"Employee List"}
-      data={data}
+      data={listUsers.data}
       columns={columns}
       options={options}
     />
