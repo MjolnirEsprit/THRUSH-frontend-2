@@ -14,8 +14,6 @@ function Signin({ providers }) {
     }
   }, [router, session]);
 
-  if (session) return <Loader />;
-
   return (
 
 

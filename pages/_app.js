@@ -2,17 +2,12 @@ import "@styles/globals.css";
 import { SessionProvider, useSession } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
-import { StoreProvider } from "../utils/Store";
 import { ToastContainer } from "react-toastify";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { userService } from "services";
 import {CartContext} from "../Helper/Context"
-
 import "react-toastify/dist/ReactToastify.css";
-
-
-
 
 const supportedChainIds = [4]; //Chain ID 4 represents Rinkeby network
 const connectors = {
