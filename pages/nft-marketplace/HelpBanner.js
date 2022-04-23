@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
-import thrushLogo from '@public/assets/thrushLogo.png'
+import thrushLogo from '@assets/thrushLogo.png'
 import {MdOutlineAccountBalanceWallet} from 'react-icons/md'
 
 const style = {

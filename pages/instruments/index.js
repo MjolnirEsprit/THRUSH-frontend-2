@@ -16,10 +16,13 @@ import Home from "../courses-marketplace";
 import {BaseLayout} from "../../components/common/layout";
 
 export default function store(props) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   const { instruments } = props;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [listInstruments, setlistInstruments] = useState([]);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(()=> {
     
     axios.get("http://localhost:2000/api/v1/instruments").then((response) => {

@@ -219,7 +219,7 @@ const Collection = () => {
                 ))}
             </div>
         </div>
-        <div class="footer">
+        <div className="footer">
            <Footer />
         </div>
         </>

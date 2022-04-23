@@ -2,6 +2,7 @@ import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import Navbar from "@components/common/main_navbar";
 import Footer from "@components/common/footer";
+import Image from "next/image";
 
 const style = {
   contact: `min-h-screen w-screen pt-24 pr-12 pb-12 pl-12 bg-white `,
@@ -16,7 +17,7 @@ function Reviews() {
       <>
         <Navbar />
         <div className="flex min-h-screen w-screen flex-col items-center justify-center pt-24 pr-12 pb-12 pl-12">
-          <img
+          <Image
             height="100"
             width="100"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Emoji_u263a.svg/1200px-Emoji_u263a.svg.png"
@@ -30,9 +31,11 @@ function Reviews() {
 
   return (
     <>
+      {/*
       <Header />
+    */}
       <div className="flex min-h-screen w-screen flex-col items-center justify-center pt-8 pr-12 pb-12 pl-12">
-        <div className="w-full max-w-xs mt-20">
+        <div className="mt-20 w-full max-w-xs">
           <form
             className=" mb-4 rounded bg-white px-8 pt-6 pb-8 shadow-md"
             onSubmit={handleSubmit}
@@ -87,7 +90,7 @@ function Reviews() {
           </p>
         </div>
       </div>
-      <div class="footer">
+      <div className="footer">
         <Footer />
       </div>
     </>

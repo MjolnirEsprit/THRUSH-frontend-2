@@ -10,7 +10,7 @@ const HelpCenter = () => {
       <HelpBanner/>
       <HelpItem/>
     </div>
-    <div class="footer">
+    <div className="footer">
       <Footer />
     </div>
     </>

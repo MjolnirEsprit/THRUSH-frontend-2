@@ -88,7 +88,7 @@ const Nft = () => {
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <div className="footer">
           <Footer />
         </div>
        </>

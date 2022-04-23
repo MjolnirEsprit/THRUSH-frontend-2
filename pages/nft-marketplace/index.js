@@ -76,7 +76,7 @@ export default function NFTMarketplace() {
         )
         }
       </div>
-      <div class="footer">
+      <div className="footer">
         <Footer />
       </div>
     </>

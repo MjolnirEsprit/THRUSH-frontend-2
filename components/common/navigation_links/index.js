@@ -4,9 +4,9 @@ import Image from "next/image";
 import thrushLogo from "@assets/thrushLogo.png";
 import { signOut, useSession } from "next-auth/react";
 import { LogoutIcon } from "@heroicons/react/outline";
-import { userService } from 'services';
-import React, { useState, useRef, useEffect } from 'react';
-
+import { userService } from "services";
+import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 const style = {
   logoContainer: `flex items-center cursor-pointer`,
@@ -14,9 +14,8 @@ const style = {
   headerWrap: ` z-500 relative bg-black pt-1 pb-0.5 flex items-center justify-center space-x-12`,
   headerItems: ` flex items-center justify-center space-x-12`,
   headerItem: `text-white font-bold text-white hover:text-[#8a939b] px-4 space-x-8 cursor-pointer p-1`,
-  dropElem: `border-solid cursor-pointer block px-4 py-2 text-white hover:bg-[#ffaa54]`
+  dropElem: `border-solid cursor-pointer block px-4 py-2 text-white hover:bg-[#ffaa54]`,
 };
-
 
 export default function NavLinks() {
   const { pathname } = useRouter();
@@ -37,7 +36,6 @@ export default function NavLinks() {
     window.addEventListener("click", handleClick);
     return () => window.removeEventListener("click", handleClick);
   }, [open]);
-
 
   return (
     <>
@@ -62,21 +60,46 @@ export default function NavLinks() {
           <a className={style.headerItem}>Music Streaming</a>
         </ActiveLink>
         <div>
-          <button style={{ color: 'white', fontWeight: 'bold' }} onClick={() => setOpen(open => !open)} >NFT Marketplace  </button>
+          <button
+            style={{ color: "white", fontWeight: "bold" }}
+            onClick={() => setOpen((open) => !open)}
+          >
+            NFT Marketplace{" "}
+          </button>
           <div className={style.dropdowMenu}>
             {open && (
-              <div ref={dropdown} class="absolute mt-2 py-1 w-48 bg-[#FD7F2C] rounded-lg shadow-xl">
-
-                <a href="/nft-marketplace" className={style.dropElem}>Homepage</a>
-                <hr class="dropdown-divider"></hr>
-                <a href="https://thirdweb.com/dashboard" className={style.dropElem} >Create</a>
-                <hr class="dropdown-divider"></hr>
-                <a href="/nft-marketplace/collections/0x660aF8bB64C0D7aC993F786a6D8cD1E03A5C0E06/" className={style.dropElem} >Collections</a>
-                <hr class="dropdown-divider"></hr>
-                <a href="/nft-marketplace/help-center" className={style.dropElem} >Resources</a>
-                <hr class="dropdown-divider"></hr>
-                <a href="/nft-marketplace/Reviews" className={style.dropElem} >Reviews</a>
-
+              <div
+                ref={dropdown}
+                className="absolute mt-2 w-48 rounded-lg bg-[#FD7F2C] py-1 shadow-xl"
+              >
+                <Link href="/nft-marketplace" className={style.dropElem}>
+                  Homepage
+                </Link>
+                <hr className="dropdown-divider"></hr>
+                <Link
+                  href="https://thirdweb.com/dashboard"
+                  className={style.dropElem}
+                >
+                  Create
+                </Link>
+                <hr className="dropdown-divider"></hr>
+                <Link
+                  href="/nft-marketplace/collections/0x660aF8bB64C0D7aC993F786a6D8cD1E03A5C0E06/"
+                  className={style.dropElem}
+                >
+                  Collections
+                </Link>
+                <hr className="dropdown-divider"></hr>
+                <Link
+                  href="/nft-marketplace/help-center"
+                  className={style.dropElem}
+                >
+                  Resources
+                </Link>
+                <hr className="dropdown-divider"></hr>
+                <Link href="/nft-marketplace/Reviews" className={style.dropElem}>
+                  Reviews
+                </Link>
               </div>
             )}
           </div>
@@ -86,7 +109,10 @@ export default function NavLinks() {
           <a className={style.headerItem}> Karaoke </a>
         </ActiveLink>
 
-        <button className={style.headerItem} onClick={() => signOut({ redirect: false })}>
+        <button
+          className={style.headerItem}
+          onClick={() => signOut({ redirect: false })}
+        >
           <LogoutIcon className="mr-2 h-5 w-5" aria-hidden="true" />
           Unlink your spotify
         </button>
@@ -95,7 +121,6 @@ export default function NavLinks() {
           <LogoutIcon className="mr-2 h-5 w-5" aria-hidden="true" />
           Log out
         </button>
-
       </div>
     </>
   );
