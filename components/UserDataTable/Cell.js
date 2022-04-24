@@ -124,6 +124,7 @@ export default function Cell({
                     style={{ marginTop: '-0.5rem' }}
                   >
                     {options.map(option => (
+                        // eslint-disable-next-line react/jsx-key
                       <div
                         className="cursor-pointer mr-5 mt-5"
                         onClick={() => handleOptionClick(option)}

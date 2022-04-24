@@ -270,6 +270,7 @@ export default function Header({
                       }}
                     >
                       {types.map(type => (
+                          // eslint-disable-next-line react/jsx-key
                         <button className="sort-button" onClick={type.onClick}>
                           <span className="svg-icon svg-text icon-margin">
                             {type.icon}
@@ -288,6 +289,7 @@ export default function Header({
                   }}
                 >
                   {buttons.map(button => (
+                      // eslint-disable-next-line react/jsx-key
                     <button
                       type="button"
                       className="sort-button"

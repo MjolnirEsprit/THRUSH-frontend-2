@@ -81,6 +81,7 @@ export default function Table({
       return (
         <div {...row.getRowProps({ style })} className="tr">
           {row.cells.map(cell => (
+              // eslint-disable-next-line react/jsx-key
             <div {...cell.getCellProps()} className="td">
               {cell.render('Cell')}
             </div>
@@ -111,6 +112,7 @@ export default function Table({
       >
         <div>
           {headerGroups.map(headerGroup => (
+              // eslint-disable-next-line react/jsx-key
             <div {...headerGroup.getHeaderGroupProps()} className="tr">
               {headerGroup.headers.map(column => column.render('Header'))}
             </div>

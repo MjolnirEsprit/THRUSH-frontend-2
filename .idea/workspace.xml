@@ -2,28 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/Badge.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/Cell.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/Table.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/colors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/ArrowDown.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/ArrowLeft.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/ArrowRight.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/ArrowUp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/Hash.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/Multi.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/Plus.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/Text.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/img/Trash.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/scrollbarWidth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UserDataTable/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/datatable.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Dashboard/DashboardContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dashboard/DashboardContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/DashboardContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/DataTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Deposits.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/DoghnutChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/LineChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Orders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/listItems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Badge.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Badge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Cell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Cell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

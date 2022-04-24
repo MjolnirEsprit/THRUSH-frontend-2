@@ -2,8 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { BaseLayout } from "@components/common/layout";
 import { useSession } from "next-auth/react";
-import DashboardContent from "@components/Dashboard/DashboardContent";
-import UserDataTable from "../../components/UserDataTable/App";
+import UserDataTable from "@components/UserDataTable/App";
 import {Line} from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -17,7 +16,6 @@ import {
 } from "chart.js";
 import {userService} from "../../services";
 import Grid from "@mui/material/Grid";
-import DataTable from "../../components/Dashboard/DataTable";
 import Container from "@mui/material/Container";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
