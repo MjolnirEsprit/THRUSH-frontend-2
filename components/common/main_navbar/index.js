@@ -6,7 +6,7 @@ export default function Navbar() {
   const { pathname } = useRouter();
 
   return (
-    <div className="flex bg-black">
+    <div className="flex z-50 absolute bg-black">
       <NavLinks>
       </NavLinks>
       

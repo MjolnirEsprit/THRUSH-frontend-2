@@ -14,7 +14,7 @@ const style = {
   headerWrap: ` z-500 relative bg-black pt-1 pb-0.5 flex items-center justify-center space-x-12`,
   headerItems: ` flex items-center justify-center space-x-12`,
   headerItem: `text-white font-bold text-white hover:text-[#8a939b] px-4 space-x-8 cursor-pointer p-1`,
-  dropElem: `border-solid cursor-pointer block px-4 py-2 text-white hover:bg-[#ffaa54]`,
+  dropElem: `border-solid cursor-pointer block px-4 py-2 text-white font-semibold hover:bg-[#ffaa54]`
 };
 
 export default function NavLinks() {
@@ -70,7 +70,7 @@ export default function NavLinks() {
             {open && (
               <div
                 ref={dropdown}
-                className="absolute mt-2 w-48 rounded-lg bg-[#FD7F2C] py-1 shadow-xl"
+                className="absolute mt-2 w-36 rounded-lg bg-[#FD7F2C] py-1 shadow-xl"
               >
                 <Link href="/nft-marketplace" className={style.dropElem}>
                   Homepage
