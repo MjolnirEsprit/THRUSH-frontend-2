@@ -2,22 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/fetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/fetcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/auth/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/DashboardContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/DataTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Deposits.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/DoghnutChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/LineChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Orders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/Title.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dashboard/listItems.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Badge.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Badge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Cell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Cell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Table.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserDataTable/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/bgLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/coin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/error.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/functions/lyric_scraper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/media/error.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/nft.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/thrushLogo.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/Dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/UserDataTable" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -73,21 +73,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\UserDataTable" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\Dashboard" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\dashboard" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\assets" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\styles" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\components\Dashboard" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\assets" />
       <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\helpers" />
-      <recent name="C:\Coding\pi-2022\THRUSH-frontend-2\pages\auth" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -159,6 +159,7 @@
       <workItem from="1650298619827" duration="2312000" />
       <workItem from="1650316211853" duration="25000" />
       <workItem from="1650316263117" duration="2423000" />
+      <workItem from="1650716137610" duration="20000" />
     </task>
     <servers />
   </component>
