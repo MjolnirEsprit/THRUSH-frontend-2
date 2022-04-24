@@ -1,5 +1,9 @@
 import courses from "../data/courses";
+
 export const getAllCourses = () => {
+
+  
+
   return {
     data: courses,
     courseMap: courses.reduce((a, c, i) => {

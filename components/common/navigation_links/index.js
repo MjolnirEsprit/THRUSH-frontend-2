@@ -64,52 +64,6 @@ export default function NavLinks() {
 
         <Dropdown/>
 
-        {/* */}
-        <div>
-          <button
-            style={{ color: "white", fontWeight: "bold" }}
-            onClick={() => setOpen((open) => !open)}
-          >
-            NFT Marketplace{" "}
-          </button>
-          <div>
-            {open && (
-              <div
-                ref={dropdown}
-                className="absolute mt-2 w-36 rounded-lg bg-[#FD7F2C] py-1 shadow-xl"
-              >
-                <Link href="/nft-marketplace" className={style.dropElem}>
-                  Homepage
-                </Link>
-                <hr className="dropdown-divider"/>
-                <Link
-                  href="https://thirdweb.com/dashboard"
-                  className={style.dropElem}
-                >
-                  Create
-                </Link>
-                <hr className="dropdown-divider"></hr>
-                <Link
-                  href="/nft-marketplace/collections/0x660aF8bB64C0D7aC993F786a6D8cD1E03A5C0E06/"
-                  className={style.dropElem}
-                >
-                  Collections
-                </Link>
-                <hr className="dropdown-divider"></hr>
-                <Link
-                  href="/nft-marketplace/help-center"
-                  className={style.dropElem}
-                >
-                  Resources
-                </Link>
-                <hr className="dropdown-divider"></hr>
-                <Link href="/nft-marketplace/Reviews" className={style.dropElem}>
-                  Reviews
-                </Link>
-              </div>
-            )}
-          </div>
-        </div>
 
         <ActiveLink href="/karaoke">
           <a className={style.headerItem}> Karaoke </a>
