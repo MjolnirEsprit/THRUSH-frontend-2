@@ -1,4 +1,5 @@
 import "@styles/globals.css";
+import '@styles/datatable.css';
 import { SessionProvider, useSession } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
