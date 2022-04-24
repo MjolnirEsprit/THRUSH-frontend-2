@@ -5,7 +5,9 @@ import { client } from '../../lib/sanityClient';
 import toast, { Toaster } from 'react-hot-toast';
 import MusicStreaming from "../music-streaming";
 import Navbar from "@components/common/main_navbar";
-import Footer from "@components/common/footer"; 
+import Footer from "@components/common/footer";
+import { BaseLayout } from "@components/common/layout";
+import Home from "../courses-marketplace";
 
 const style = {
   wrapper: `relative`,
@@ -52,7 +54,6 @@ export default function NFTMarketplace() {
     <>
       < Navbar />
       <div className={style.wrapper}>
-        <Toaster position="top-center" reverseOrder={false} />
         {address ? (
           <>
             <Homepage />
@@ -80,7 +81,7 @@ export default function NFTMarketplace() {
         <Footer />
       </div>
     </>
-  
+
   )
 
 }

@@ -7,6 +7,7 @@ import { LogoutIcon } from "@heroicons/react/outline";
 import { userService } from "services";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Dropdown from "../dropdown";
 
 const style = {
   logoContainer: `flex items-center cursor-pointer`,
@@ -14,7 +15,8 @@ const style = {
   headerWrap: ` z-500 relative bg-black pt-1 pb-0.5 flex items-center justify-center space-x-12`,
   headerItems: ` flex items-center justify-center space-x-12`,
   headerItem: `text-white font-bold text-white hover:text-[#8a939b] px-4 space-x-8 cursor-pointer p-1`,
-  dropElem: `border-solid cursor-pointer block px-4 py-2 text-white font-semibold hover:bg-[#ffaa54]`
+  dropElem: `border-solid cursor-pointer block px-4 py-2 text-white font-semibold hover:bg-[#ffaa54]`,
+  dropdowMenu: undefined
 };
 
 export default function NavLinks() {
@@ -59,6 +61,10 @@ export default function NavLinks() {
         <ActiveLink href="/music-streaming">
           <a className={style.headerItem}>Music Streaming</a>
         </ActiveLink>
+
+        <Dropdown/>
+
+        {/* */}
         <div>
           <button
             style={{ color: "white", fontWeight: "bold" }}
@@ -66,7 +72,7 @@ export default function NavLinks() {
           >
             NFT Marketplace{" "}
           </button>
-          <div className={style.dropdowMenu}>
+          <div>
             {open && (
               <div
                 ref={dropdown}
@@ -75,7 +81,7 @@ export default function NavLinks() {
                 <Link href="/nft-marketplace" className={style.dropElem}>
                   Homepage
                 </Link>
-                <hr className="dropdown-divider"></hr>
+                <hr className="dropdown-divider"/>
                 <Link
                   href="https://thirdweb.com/dashboard"
                   className={style.dropElem}
