@@ -74,7 +74,7 @@ export default function OwnedCourses() {
             course={course}
           >
             <Button
-              onClick={() => router.push(`/courses/${course.slug}`)}
+              onClick={() => router.push(`/courses-marketplace/courses/${course.slug}`)}
             >
               Watch the course
             </Button>

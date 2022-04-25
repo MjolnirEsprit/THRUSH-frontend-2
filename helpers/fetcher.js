@@ -1,8 +1,5 @@
 import courses from "../data/courses";
-
 export const getAllCourses = () => {
-
-  
 
   return {
     data: courses,
@@ -13,3 +10,4 @@ export const getAllCourses = () => {
     }, {}),
   };
 };
+

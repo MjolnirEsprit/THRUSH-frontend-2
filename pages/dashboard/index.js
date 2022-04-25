@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { BaseLayout } from "@components/common/layout";
 import { useSession } from "next-auth/react";
 import UserDataTable from "@components/UserDataTable/App";
-import {Line} from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -14,7 +14,7 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import {userService} from "../../services";
+import { userService } from "../../services";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
@@ -89,9 +89,6 @@ export default function Dashboard() {
                     </Grid>
                 </Grid>
             </Container>
-
-
-
         </div>
     );
 }

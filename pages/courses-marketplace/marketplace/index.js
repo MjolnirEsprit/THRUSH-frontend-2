@@ -26,6 +26,8 @@ export default function Marketplace() {
 
   const { ownedCourses } = useOwnedCourses(courses, account.data);
 
+  console.log('owned courses',ownedCourses)
+
   useEffect(() => {
     let isApiSubscribed = true;
 
@@ -123,6 +125,7 @@ export default function Marketplace() {
       <CourseList courses={courses}>
         {(course) => {
           const owned = ownedCourses.lookup[course.id];
+          console.log('courses',courses)
           return (
             <CourseCard
               key={course.id}

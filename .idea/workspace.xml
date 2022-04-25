@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/dropdown/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/dropdown/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/main_navbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/main_navbar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/fetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/fetcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
