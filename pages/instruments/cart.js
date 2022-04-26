@@ -11,25 +11,28 @@ import {
   TableRow,
   TableCell,
   Link,
-  Select,
-  MenuItem,
   Button,
   Card,
   List,
   ListItem,
-  CardContent,
-  Box,
-  CardActionArea,
-  CardMedia,
-  CardActions,
 } from "@material-ui/core";
 import { CartContext } from "../../Helper/Context";
-import useStyles from "../../utils/styles";
 import { BaseLayout } from "../../components/common/layout";
+
+import StripeCheckout from "react-stripe-checkout"
 
 export default function CartScreen() {
   const { cartItems, setCartItems } = useContext(CartContext);
-  const classes = useStyles();
+
+  const removeHandler = (instrumentToRemove) => {
+    setCartItems(
+      cartItems.filter((instrument)=> instrument !== instrumentToRemove)
+    )
+  }
+
+  const tokenHandler = (token, adresses) => {
+    console.log({token,adresses});
+  }
 
   return (
     <>
@@ -73,8 +76,8 @@ export default function CartScreen() {
                       </TableCell>
                       <TableCell align="right">${item.price}</TableCell>
                       <TableCell align="right">
-                        <Button variant="contained" color="secondary">
-                          x
+                        <Button variant="contained" color="secondary" onClick={() => removeHandler(item)}>
+                          Remove
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -92,9 +95,13 @@ export default function CartScreen() {
                   </Typography>
                 </ListItem>
                 <ListItem>
-                  <Button variant="contained" color="primary" fullWidth>
-                    Check Out
-                  </Button>
+                <StripeCheckout
+                  stripeKey="pk_test_51KqryfIKRXQIRRtH9lGiIHoGrG46CfMywPEaJYb43tD9F5DHeRKOo119SCV4t8SszETeubWVNjJQypJ4Jrei6di100XIOsNQeB"
+                  token={tokenHandler}
+                  billingAddress
+                  shippingAddress
+                  amount={(cartItems.reduce((a, c) => a + c.price, 0))*100}
+                  />
                 </ListItem>
               </List>
             </Card>
