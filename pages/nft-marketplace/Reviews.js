@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import Navbar from "@components/common/main_navbar";
+import {MainNavbar } from "@components/common";
 import Footer from "@components/common/footer";
 import Image from "next/image";
 
@@ -15,8 +15,8 @@ function Reviews() {
   if (state.succeeded) {
     return (
       <>
-        <Navbar />
-        <div className="flex min-h-screen w-screen flex-col items-center justify-center pt-24 pr-12 pb-12 pl-12">
+        <MainNavbar />
+        <div className="flex min-h-screen w-screen flex-col items-center justify-center pr-12 pb-12 pl-12">
           <Image
             height="100"
             width="100"
@@ -31,11 +31,9 @@ function Reviews() {
 
   return (
     <>
-      {/*
-      <Header />
-    */}
+      <MainNavbar />
       <div className="flex min-h-screen w-screen flex-col items-center justify-center pt-8 pr-12 pb-12 pl-12">
-        <div className="mt-20 w-full max-w-xs">
+        <div className="w-full max-w-xs">
           <form
             className=" mb-4 rounded bg-white px-8 pt-6 pb-8 shadow-md"
             onSubmit={handleSubmit}
