@@ -2,9 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Box, Button, Fab,
   Card, CardActionArea, 
   CardActions, CardContent, 
-  CardMedia, CssBaseline, Grid, 
-  ThemeProvider, Typography } from '@material-ui/core';
-import Navbar from '@components/common/main_navbar';
+  CardMedia, Grid, Typography } from '@material-ui/core';
 import db from '@utils/db';
 import Instrument from '@models/instrument';
 import useStyles from '@utils/styles';
@@ -36,7 +34,16 @@ export default function store(props) {
   }
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
+
+  const addToCartHandler = (product) => {
+    setCartItems([...cartItems, {...product}]);
+    alert('Item added to cart!')
+  }
   
+  const GoToCart = () =>{
+    router.push('/instruments/cart');
+  }
+
   return (
     <>      
       <Box sx={{
@@ -57,7 +64,7 @@ export default function store(props) {
                 }}>          
                   <div>               
                     <Typography >You can find selected items here</Typography>
-                    <Button variant="contained" color='primary' > Cart</Button>
+                    <Button variant="contained" color='primary' onClick={()=> GoToCart()}> Cart</Button>
                   </div>
                   <div>
                     <Typography >You can sell instruments here</Typography>

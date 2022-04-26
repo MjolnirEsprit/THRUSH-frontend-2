@@ -1,105 +1,92 @@
-import React, { useState, useEffect } from "react";
-import { Box, Button, Grid } from "@material-ui/core";
+import React, { useState } from "react";
+import { Button, CardActions,Card, CardContent,Typography, Grid, CardMedia} from "@material-ui/core";
 import { TextField } from "@mui/material";
 import axios from "axios";
-import { FilePond, registerPlugin } from "react-filepond";
-import "filepond/dist/filepond.min.css";
+import NextLink from 'next/link';
 
-import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orientation";
-import FilePondPluginImagePreview from "filepond-plugin-image-preview";
-import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 import {BaseLayout} from "../../components/common/layout";
 
-registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
-
 export default function AddInstrument() {
-  const defaultValues = {
-    name: "",
-    image: "",
-    price: 0,
-    description: "",
-    stock: 0,
-  };
-  const [files, setFiles] = useState([]);
-  const [formValues, setFormValues] = useState(defaultValues);
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
-  };
-  const instrument = formValues;
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(instrument);
-    axios.post("http://localhost:2000/api/v1/instruments", instrument);
-    alert("Item added successfully");
-  };
 
+  const [file, setFile] = useState("");
+
+  const [values, setValues] = useState({
+    name: '',
+    description: '',
+    image: '',
+    category: '',
+    stock: '',
+    price: ''
+})
+const handleChange = name => event => {
+  
+  const value = name === 'image'
+    ? event.target.value
+    : event.target.value
+  setValues({...values,  [name]: value })
+}
+const clickSubmit = (event) => {
+  event.preventDefault();
+  const instrument = values;
+  console.log(instrument);
+  axios.post("http://localhost:2000/api/v1/instruments", instrument);
+    alert("Item added successfully");
+  }
+
+  const ImageThumb = ({ image }) => {
+        return <img src={URL.createObjectURL(image)} alt={image.name} />;
+      };
+  function handleUpload(event) {
+    setFile(event.target.files[0]);
+  }
+    
+  
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <Grid container alignItems="center" justify="center" direction="column">
-          <Grid item>
-            <TextField
-              id="name-input"
-              name="name"
-              label="Name"
-              type="text"
-              value={formValues.name}
-              onChange={handleInputChange}
-            />
+    <div>
+      <Card >
+        <CardContent>
+       
+          <Grid container alignItems="center" justifyContent="center" direction="column">
+          <Typography type="headline" component="h2">
+            New Instrument
+          </Typography><br/>
+          <input accept="image/*" value={values.image.name} onChange={handleChange('image')} id="icon-button-file" type="file"/>
+          <label htmlFor="icon-button-file">
+            <Button variant="contained" color="secondary" component="span">
+              Upload Photo
+            </Button>
+            </label>
+             <span>{values.image ? values.image.name : '' }</span><br/>
+             <TextField id="name" label="Name" value={values.name} onChange={handleChange('name')} margin="normal"/><br/>
+          <TextField
+            id="multiline-flexible"
+            label="Description"
+            multiline
+            rows="5"
+            value={values.description}
+            onChange={handleChange('description')}
+            margin="normal"
+          /><br/>
+          <TextField id="category" label="Category" value={values.category} onChange={handleChange('category')} margin="normal"/><br/>
+          <TextField id="quantity" label="Quantity"value={values.stock} onChange={handleChange('stock')} type="number" margin="normal"/><br/>
+          <TextField id="price" label="Price" value={values.price} onChange={handleChange('price')} type="number" margin="normal"/><br/>
+          <div id="upload-box">
+            <input type="file" onChange={handleUpload} />
+            {file && <ImageThumb image={file} />}
+            <button >verify</button>
+          </div>
           </Grid>
-          <Grid item>
-            <TextField
-              className="classes.wFieldset"
-              id="price-input"
-              name="price"
-              label="Price"
-              type="number"
-              value={formValues.price}
-              onChange={handleInputChange}
-            />
-          </Grid>
-          <Grid item>
-            <TextField
-              className="classes.wFieldset"
-              id="stock-input"
-              name="stock"
-              label="Stock"
-              type="number"
-              value={formValues.stock}
-              onChange={handleInputChange}
-            />
-          </Grid>
-          <Grid item>
-            <TextField
-              className="classes.wFieldset"
-              id="description-input"
-              name="description"
-              label="Description"
-              type="text"
-              value={formValues.description}
-              onChange={handleInputChange}
-            />
-            <div className="App">
-              <FilePond
-                files={files}
-                name="image"
-                onupdatefiles={setFiles}
-                allowMultiple={false}
-                //server="/api"
-                labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
-              />
-            </div>
-          </Grid>
-          <Button variant="contained" color="primary" type="submit">
-            Submit
-          </Button>
-        </Grid>
-      </form>
-    </>
+
+        </CardContent>
+        <CardActions>
+          <Grid container alignItems="center" justifyContent="center" >
+          <Button color="primary" variant="contained" onClick={clickSubmit} >Submit</Button>
+          <NextLink href={`/instrument`} passHref><Button variant="contained">Cancel</Button></NextLink>
+          </Grid >
+        </CardActions>
+      </Card>
+
+    </div>
   );
 }
 AddInstrument.Layout = BaseLayout;
