@@ -17,7 +17,7 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["thrangra.sirv.com", "rb.gy"],
+    domains: ["upload.wikimedia.org", "thrangra.sirv.com", "rb.gy"],
   },
   i18n: {
     locales: ["en", "ar"],

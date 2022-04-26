@@ -1,13 +1,13 @@
 import * as React from 'react';
-import HelpBanner from './HelpBanner';
 import HelpItem from './HelpItem';
 import Footer from "@components/common/footer";
+import {MainNavbar } from "@components/common";
 
 const HelpCenter = () => {
   return (
     <>
     <div>
-      <HelpBanner/>
+      <MainNavbar/>
       <HelpItem/>
     </div>
     <div className="footer">
