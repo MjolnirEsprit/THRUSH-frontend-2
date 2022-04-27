@@ -3,8 +3,8 @@ import { IoMdSnow } from 'react-icons/io'
 import { AiOutlineHeart } from 'react-icons/ai'
 
 const style = {
-    topBar: `bg-[#303339] p-2 rounded-t-lg border-[#151c22] border`,
-    topBarContent: `flex items-center`,
+    topBar: `bg-[#f5f5f5] p-2 rounded-t-lg border`,
+    topBarContent: `flex items-center text-black`,
     likesCounter: `flex-1 flex items-center justify-end`,
 }
 
@@ -13,11 +13,10 @@ const NFTImage = ({ selectedNft }) => {
         <div>
             <div className={style.topBar}>
                 <div className={style.topBarContent}>
-                    <IoMdSnow />
-                    <div className={style.likesCounter}>
-                        <AiOutlineHeart />
-                       
-                    </div>
+                    <IoMdSnow color='black' />
+                <div className={style.likesCounter}>
+                <AiOutlineHeart/>
+                </div>
                 </div>
             </div>
             <div>

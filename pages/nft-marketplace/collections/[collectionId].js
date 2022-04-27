@@ -9,9 +9,10 @@ import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { HiDotsVertical } from 'react-icons/hi'
 import NFTCard from '@components/NFTMarketplace/NFTCard'
 import Footer from "@components/common/footer";
+import {MainNavbar } from "@components/common";
 
 const style = {
-    bannerImageContainer: `mt-20 h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
+    bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
     bannerImage: `w-full object-cover`,
     infoContainer: `w-screen px-4`,
     midRow: `w-full flex justify-center text-black`,
@@ -113,7 +114,7 @@ const Collection = () => {
     return (//scrollbars hiden
         <>
         <div className='overflow-hidden'>
-            <Header />
+            <MainNavbar />
             <div className={style.bannerImageContainer}>
                 <img
                     className={style.bannerImage}

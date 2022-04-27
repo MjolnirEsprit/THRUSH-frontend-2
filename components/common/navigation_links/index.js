@@ -62,7 +62,9 @@ export default function NavLinks() {
           <a className={style.headerItem}>Music Streaming</a>
         </ActiveLink>
 
-        <Dropdown/>
+        <ActiveLink href="/nft-marketplace">
+          <a className={style.headerItem}>NFT Marketplace</a>
+        </ActiveLink>
 
 
         <ActiveLink href="/karaoke">
