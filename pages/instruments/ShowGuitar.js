@@ -16,7 +16,7 @@ export default function ShowInstrument() {
                 <ambientLight intensity={1} />
                 <spotLight intensity={1} angle={0.1} penumbra={0.9} position={[5, 25, 20]} />
                 <Suspense fallback={null}>
-                    <Model modelPath="/guitar.glb" />
+                    <Model modelPath="guitar.glb" />
                 </Suspense>
                 <OrbitControls />           
             </Canvas>

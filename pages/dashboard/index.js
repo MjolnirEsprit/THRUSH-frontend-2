@@ -38,7 +38,7 @@ const data = {
     ],
     datasets: [
         {
-            label: "Sales/ month",
+            label: "Listeners / month",
             fill: true,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",

@@ -39,7 +39,7 @@ const Backdrop = styled('div')`
 `;
 
 
-export default function store(props) {
+export default function Store(props) {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen3D = () => setOpen(true);
@@ -170,4 +170,4 @@ export async function getServerSideProps() {
   };
 }
 
-store.Layout = BaseLayout
+Store.Layout = BaseLayout
