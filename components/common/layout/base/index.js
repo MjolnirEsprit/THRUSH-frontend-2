@@ -21,8 +21,7 @@ export default function BaseLayout({ children }) {
       <Web3Provider>
         <div>
           <MainNavbar />
-          <div className="fit">{children}</div>
-          <Footer />
+          <div>{children}</div>
         </div>
       </Web3Provider>
     </div>

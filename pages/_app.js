@@ -1,5 +1,5 @@
 import "@styles/globals.css";
-import '@styles/datatable.css';
+import "@styles/datatable.css";
 import { SessionProvider, useSession } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { userService } from "services";
-import {CartContext} from "../Helper/Context"
+import { CartContext } from "../Helper/Context";
 import "react-toastify/dist/ReactToastify.css";
 
 const supportedChainIds = [4]; //Chain ID 4 represents Rinkeby network
@@ -77,10 +77,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       <SessionProvider>
         <RecoilRoot>
           <Layout>
-          <CartContext.Provider value={{cartItems, setCartItems}} >
+            <CartContext.Provider value={{ cartItems, setCartItems }}>
               <ToastContainer />
               {authorized && <Component {...pageProps} />}
-          </CartContext.Provider>
+            </CartContext.Provider>
           </Layout>
         </RecoilRoot>
       </SessionProvider>
@@ -89,5 +89,3 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 }
 
 export default MyApp;
-/*
-*/

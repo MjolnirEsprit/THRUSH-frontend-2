@@ -1,69 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/auction/MainRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/assets/images/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/assets/images/stripeButton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/assets/images/unicornbike.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/Auction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/Auctions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/Bidding.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/DeleteAuction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/EditAuction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/MyAuctions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/NewAuction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/OpenAuctions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/Timer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auction/api-auction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auth/PrivateRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auth/Signin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auth/api-auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/auth/auth-helper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/cart/AddToCart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/cart/Cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/cart/CartItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/cart/Checkout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/cart/PlaceOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/cart/cart-helper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/config/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/core/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/core/Menu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/order/MyOrders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/order/Order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/order/ProductOrderEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/order/ShopOrders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/order/api-order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/Categories.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/DeleteProduct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/EditProduct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/MyProducts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/NewProduct.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/Product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/Products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/Suggestions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/product/api-product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/shop/DeleteShop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/shop/EditShop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/shop/MyShops.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/shop/NewShop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/shop/Shop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/shop/Shops.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/shop/api-shop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/user/DeleteUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/user/EditProfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/user/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/user/Signup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/user/StripeConnect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/user/Users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/auction/user/api-user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,6 +145,7 @@
       <workItem from="1650716137610" duration="20000" />
       <workItem from="1651037286033" duration="5799000" />
       <workItem from="1651351164753" duration="2264000" />
+      <workItem from="1651412166941" duration="571000" />
     </task>
     <servers />
   </component>

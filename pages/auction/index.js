@@ -1,23 +1,48 @@
 import React from 'react'
-import MainRouter from './MainRouter'
-import {BrowserRouter} from 'react-router-dom'
-import { ThemeProvider } from '@material-ui/styles'
-import theme from './theme'
-import { hot } from 'react-hot-loader'
+import Users from './user/Users'
+import Signup from './user/Signup'
+import Signin from './auth/Signin'
+import EditProfile from './user/EditProfile'
+import Profile from './user/Profile'
+import PrivateRoute from './auth/PrivateRoute'
+import Menu from './core/Menu'
+import NewShop from './shop/NewShop'
+import Shops from './shop/Shops'
+import MyShops from './shop/MyShops'
+import Shop from './shop/Shop'
+import EditShop from './shop/EditShop'
+import NewProduct from './product/NewProduct'
+import EditProduct from './product/EditProduct'
+import Product from './product/Product'
+import Cart from './cart/Cart'
+import StripeConnect from './user/StripeConnect'
+import ShopOrders from './order/ShopOrders'
+import Order from './order/Order'
+import MyAuctions from './auction/MyAuctions'
+import OpenAuctions from './auction/OpenAuctions'
+import NewAuction from './auction/NewAuction'
+import EditAuction from './auction/EditAuction'
+import Auction from './auction/Auction'
+import { BaseLayout } from "@components/common/layout";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
-const Index = () => {
-  React.useEffect(() => {
-    const jssStyles = document.querySelector('#jss-server-side')
-    if (jssStyles) {
-      jssStyles.parentNode.removeChild(jssStyles)
-    }
-  }, [])
+export default function AuctionHome() {
+  const router = useRouter();
+
+  const { status, data: session } = useSession({
+      required: true,
+      onUnauthenticated() {
+          router.push("../auth/signin");
+      },
+  });
+
   return (
-  <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <MainRouter/>
-      </ThemeProvider>
-  </BrowserRouter>
-)}
+      <div>
+          <Auction/>
+          Auction
+      </div>
+  );
+}
 
-export default hot(module)(Index)
+AuctionHome.Layout = BaseLayout;

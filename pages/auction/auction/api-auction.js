@@ -1,6 +1,6 @@
 const create = async (params, credentials, auction) => {
   try {
-    let response = await fetch('/api/auctions/by/'+ params.userId, {
+    let response = await fetch('/api/v2/auctions/by/'+ params.userId, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -16,7 +16,7 @@ const create = async (params, credentials, auction) => {
 
 const listOpen = async (signal) => {
   try {
-    let response = await fetch('/api/auctions', {
+    let response = await fetch('/api/v2/auctions', {
       method: 'GET',
       signal: signal
     })
@@ -28,7 +28,7 @@ const listOpen = async (signal) => {
 
 const listBySeller = async (params, credentials, signal) => {
   try {
-    let response = await fetch('/api/auctions/by/'+params.userId, {
+    let response = await fetch('/api/v2/auctions/by/'+params.userId, {
       method: 'GET',
       signal: signal,
       headers: {
@@ -44,7 +44,7 @@ const listBySeller = async (params, credentials, signal) => {
 
 const listByBidder = async (params, credentials, signal) => {
   try {
-    let response = await fetch('/api/auctions/bid/'+params.userId, {
+    let response = await fetch('/api/v2/auctions/bid/'+params.userId, {
       method: 'GET',
       signal: signal,
       headers: {
@@ -60,7 +60,7 @@ const listByBidder = async (params, credentials, signal) => {
 
 const read = async (params, signal) => {
   try {
-    let response = await fetch('/api/auction/' + params.auctionId, {
+    let response = await fetch('/api/v2/auction/' + params.auctionId, {
       method: 'GET',
       signal: signal,
     })
@@ -72,7 +72,7 @@ const read = async (params, signal) => {
 
 const update = async (params, credentials, auction) => {
   try {
-    let response = await fetch('/api/auctions/' + params.auctionId, {
+    let response = await fetch('/api/v2/auctions/' + params.auctionId, {
       method: 'PUT',
       headers: {
         'Accept': 'application/json',
@@ -88,7 +88,7 @@ const update = async (params, credentials, auction) => {
 
 const remove = async (params, credentials) => {
   try {
-    let response = await fetch('/api/auctions/' + params.auctionId, {
+    let response = await fetch('/api/v2/auctions/' + params.auctionId, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',

@@ -16,8 +16,6 @@ export default function Index() {
     },
   });
 
-  console.log(userService.userValue?.user.name)
-
   if (userService.userValue?.user.role == "admin") {
     router.push("/dashboard");
   }
@@ -25,7 +23,6 @@ export default function Index() {
   return (
     <div>
       <h1>Hi {userService.userValue?.user.name}!</h1>
-      <h3>Your token is {userService.tokenValue}</h3>
       <Content/>
     </div>
   );

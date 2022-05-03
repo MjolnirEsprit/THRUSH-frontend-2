@@ -11,18 +11,7 @@ import CartIcon from '@material-ui/icons/ShoppingCart'
 import Badge from '@material-ui/core/Badge'
 import cart from '../cart/cart-helper'
 
-const isActive = (history, path) => {
-  if (history.location.pathname === path)
-    return {color: '#bef67a'}
-  else
-    return {color: '#ffffff'}
-}
-const isPartActive = (history, path) => {
-  if (history.location.pathname.includes(path))
-    return {color: '#bef67a'}
-  else
-    return {color: '#ffffff'}
-}
+
 const Menu = () => { return (
   <AppBar position="static">
     <Toolbar>
@@ -31,7 +20,7 @@ const Menu = () => { return (
       </Typography>
       <div>
         <Link to="/">
-          <IconButton aria-label="Home" style={isActive(history, "/")}>
+          <IconButton aria-label="Home">
             <HomeIcon/>
           </IconButton>
         </Link>
@@ -42,7 +31,7 @@ const Menu = () => { return (
         */}
 
         <Link to="/auctions/all">
-          <Button style={isActive(history, "/auctions/all")}>All Auctions</Button>
+          <Button>All Auctions</Button>
         </Link>
 
         {/*
@@ -60,11 +49,11 @@ const Menu = () => { return (
       {
         !auth.isAuthenticated() && (<span>
           <Link to="/signup">
-            <Button style={isActive(history, "/signup")}>Sign up
+            <Button>Sign up
             </Button>
           </Link>
           <Link to="/signin">
-            <Button style={isActive(history, "/signin")}>Sign In
+            <Button>Sign In
             </Button>
           </Link>
         </span>)
@@ -75,11 +64,11 @@ const Menu = () => { return (
             {/*
             <Link to="/seller/shops"><Button style={isPartActive(history, "/seller/")}>My Shops</Button></Link>
             */}
-            <Link to="/myauctions"><Button style={isPartActive(history, "/myauctions")}>My Auctions</Button></Link>
+            <Link to="/myauctions"><Button>My Auctions</Button></Link>
             </>
           )}
           <Link to={"/user/" + auth.isAuthenticated().user._id}>
-            <Button style={isActive(history, "/user/" + auth.isAuthenticated().user._id)}>My Profile</Button>
+            <Button>My Profile</Button>
           </Link>
           <Button color="inherit" onClick={() => {
               auth.clearJWT(() => history.push('/'))

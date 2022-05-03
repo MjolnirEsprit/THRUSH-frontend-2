@@ -29,7 +29,9 @@
       "@public/*": ["public/*"],
       "@assets/*": ["assets/*"],
       "@helpers/*": ["helpers/*"],
-      "@services/*":["services/*"]
+      "@services/*":["services/*"],
+      "@config/*":["config/*"]
+
     }
   },
   "include": [
