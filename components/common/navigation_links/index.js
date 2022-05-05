@@ -66,11 +66,6 @@ export default function NavLinks() {
           <a className={style.headerItem}>NFT Marketplace</a>
         </ActiveLink>
 
-
-        <ActiveLink href="/karaoke">
-          <a className={style.headerItem}> Karaoke </a>
-        </ActiveLink>
-
         <button
           className={style.headerItem}
           onClick={() => signOut({ redirect: false })}
