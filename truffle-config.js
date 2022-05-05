@@ -5,8 +5,8 @@ require('babel-polyfill');
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const keys =  require("./keys.json");
 //only for testing, gonna switch to ropsten
-const ALCHEMY_API_KEY_TWO = "9GVXny_984t9lSLQ_iDFfuGRZNc7H9un";
-const RINKEBY_PRIVATE_KEY ="0x49654dDA84f87e1440d04b02524c5F0768C6DcEd";
+//const ALCHEMY_API_KEY_TWO = "9GVXny_984t9lSLQ_iDFfuGRZNc7H9un";
+//const RINKEBY_PRIVATE_KEY ="0x49654dDA84f87e1440d04b02524c5F0768C6DcEd";
 
 module.exports = {
   contracts_build_directory: "./public/contracts/",
@@ -16,10 +16,10 @@ module.exports = {
       port: 7545,
       network_id: "*",
     },
-    rinkeby:{
+    /*rinkeby:{
       url:`https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_API_KEY_TWO}`,
       accounts: [RINKEBY_PRIVATE_KEY]
-    },
+    },*/
     ropsten: {
       provider: () =>
           new HDWalletProvider({
@@ -52,6 +52,23 @@ module.exports = {
       }
     },
   },
+  solidity: {
+    compilers: [
+        {
+          version: "0.8.11"
+        },
+  /*
+        {
+        version: "0.8.4", // Fetch exact version from solc-bin (default: truffle's version)
+        settings: {
+          optimizer: {
+          enabled: true,
+          runs: 200
+          }
+        },
+        },*/
+     ],
+  }
 };
 
 // 5500000 * 20000000000 = 110000000000000000 = 0,11 ETH => 334 USD
