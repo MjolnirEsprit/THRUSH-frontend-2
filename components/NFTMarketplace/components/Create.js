@@ -3,39 +3,38 @@ import { ethers } from "ethers"
 import { Row, Form, Button } from 'react-bootstrap'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import useTextToxicity from "react-text-toxicity"
-import swal from "sweetalert"
-import {toast} from "react-toastify"
+import { toast } from "react-toastify"
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
 
-function NameToxicity ({ predictions_name }){
-  const style= {margin: 10}
+function NameToxicity({ predictions_name }) {
+  const style = { margin: 10 }
   if (!predictions_name) return <div style={style}>Loading predictions...</div>
-  
+
   return (
-    <div style= {style}>
+    <div style={style}>
       {predictions_name.map(({ label, match, probability }) => (
-        <div style= {{margin: 5}} key= {label}> 
-          {`${label} - ${probability} - ${match ? ' Clean it up NOW!🤢' : ' Spread kindness🥰' }`}
+        <div style={{ margin: 5 }} key={label}>
+          {`${label} - ${probability} - ${match ? ' Clean it up NOW!🤢' : ' Spread kindness🥰'}`}
         </div>
       ))}
     </div>
   );
-} 
-function DescriptionToxicity ({ predictions_desc }){
-  const style= {margin: 10}
+}
+function DescriptionToxicity({ predictions_desc }) {
+  const style = { margin: 10 }
   if (!predictions_desc) return <div style={style}>Loading predictions...</div>
-  
+
   return (
-    <div style= {style}>
+    <div style={style}>
       {predictions_desc.map(({ label, match, probability }) => (
-        <div style= {{margin: 5}} key= {label}> 
-          {`${label} - ${probability} - ${match ? ' Clean it up NOW!🤢' : ' Spread kindness🥰' }`}
+        <div style={{ margin: 5 }} key={label}>
+          {`${label} - ${probability} - ${match ? ' Clean it up NOW!🤢' : ' Spread kindness🥰'}`}
         </div>
       ))}
     </div>
   );
-} 
+}
 
 const Create = ({ marketplace, nft }) => {
   const [audio, setAudio] = useState('')
@@ -45,6 +44,7 @@ const Create = ({ marketplace, nft }) => {
   const predictions_name = useTextToxicity(name)
   const predictions_desc = useTextToxicity(description)
 
+
   const uploadToIPFS = async (event) => {
     event.preventDefault()
     const file = event.target.files[0]
@@ -53,37 +53,33 @@ const Create = ({ marketplace, nft }) => {
         const result = await client.add(file)
         console.log(result)
         setAudio(`https://ipfs.infura.io/ipfs/${result.path}`)
-      } catch (error){
+      } catch (error) {
         console.log("ipfs audio upload error: ", error)
       }
     }
   }
   const createNFT = async () => {
     if (!audio || !price || !name || !description) return
-    try{
-      const result = await client.add(JSON.stringify({audio, price, name, description}))
+    try {
+      const result = await client.add(JSON.stringify({ audio, price, name, description }))
       mintThenList(result)
-    } catch(error) {
+    } catch (error) {
       console.log("ipfs uri upload error: ", error)
     }
   }
   const mintThenList = async (result) => {
     const uri = `https://ipfs.infura.io/ipfs/${result.path}`
-    // mint nft 
-    await(await nft.mint(uri)).wait()
-    // get tokenId of new nft 
+    await (await nft.mint(uri)).wait()
     const id = await nft.tokenCount()
-    // approve marketplace to spend nft
-    await(await nft.setApprovalForAll(marketplace.address, true)).wait()
-    // add nft to marketplace
+    await (await nft.setApprovalForAll(marketplace.address, true)).wait()
     const listingPrice = ethers.utils.parseEther(price.toString())
-    await(await marketplace.makeItem(nft.address, id, listingPrice)).wait()
+    await (await marketplace.makeItem(nft.address, id, listingPrice)).wait()
     console.log("Added successfully to the marketplace!");
     toast.success('NFT successfully added to the marketplace 👏', {
       position: "top-center"
     })
   }
-  
+
   return (
     <div className="container-fluid mt-5">
       <div className="row">
@@ -98,12 +94,12 @@ const Create = ({ marketplace, nft }) => {
                 onChange={uploadToIPFS}
               />
               <Form.Control onChange={(e) => setName(e.target.value)} size="lg" required type="text" placeholder="Name" />
-              {name && <NameToxicity predictions_name = {predictions_name}/>}
+              {name && <NameToxicity predictions_name={predictions_name} />}
               <Form.Control onChange={(e) => setDescription(e.target.value)} size="lg" required as="textarea" placeholder="Description" />
-              {description && <DescriptionToxicity predictions_desc = {predictions_desc}/>}
+              {description && <DescriptionToxicity predictions_desc={predictions_desc} />}
               <Form.Control onChange={(e) => setPrice(e.target.value)} size="lg" required type="number" placeholder="Price in ETH" />
               <div className="d-grid px-0">
-                <Button onClick={createNFT} style= {{backgroundColor: "#ec5c0c", borderColor: "#ec5c0c", marginBottom: 5}} size="lg"> 
+                <Button onClick={createNFT} style={{ backgroundColor: "#ec5c0c", borderColor: "#ec5c0c", marginBottom: 10 }} size="lg">
                   Create & List NFT!
                 </Button>
               </div>
