@@ -7,18 +7,13 @@ export default function MyPurchases({ marketplace, nft, account }) {
     const [loading, setLoading] = useState(true)
     const [purchases, setPurchases] = useState([])//items purchased by user
     const loadPurchasedItems = async () => {
-        //fetch bought items frm mp by querying offered events with buyer set as user
         const filter = marketplace.filters.Bought(null, null, null, null, null, account)
-        const results = await marketplace.queryFilter(filter)//filter to find specific events
-        //fetch metadata of each nft and add it to listedItem obj
+        const results = await marketplace.queryFilter(filter)
         const purchases = await Promise.all(results.map(async i => {
-            //get arguments from each result
             i = i.args
-            //get data from ipfs
             const uri = await nft.tokenURI(i.tokenId)
             const response = await fetch(uri)
             const metadata = await response.json()
-            //get total price
             const totalPrice = await marketplace.getTotalPrice(i.itemId)
             let purchasedItem = {
                 totalPrice,
@@ -34,7 +29,6 @@ export default function MyPurchases({ marketplace, nft, account }) {
         setPurchases(purchases)
 
     }
-    //kol me ymounti el component naaytou lel fonction
     useEffect(() => {
         loadPurchasedItems()
     }, [])

@@ -33,19 +33,15 @@ export default function MyListedItems({ marketplace, nft, account }) {
     const [listedItems, setListedItems] = useState([])
     const [soldItems, setSoldItems] = useState([])
     const loadListedItems = async () => {
-        //load all sold items that user listed
         const itemCount = await marketplace.itemCount()
         let listedItems = []
         let soldItems = []
         for (let indx = 1; indx <= itemCount; indx++) {
-            //return all items from mp
             const i = await marketplace.items(indx)
             if (i.seller.toLowerCase() === account) {
                 const uri = await nft.tokenURI(i.tokenId)
-                // use uri to fetch the nft metadata stored on ipfs 
                 const response = await fetch(uri)
                 const metadata = await response.json()
-                // get total price of item (item price + fee)
                 const totalPrice = await marketplace.getTotalPrice(i.itemId)
                 let item = {
                     totalPrice,
@@ -56,16 +52,13 @@ export default function MyListedItems({ marketplace, nft, account }) {
                     audio: metadata.audio
                 }
                 listedItems.push(item)
-                //add listed item to sold items array if sold
                 if (i.sold) soldItems.push(item)
             }
         }
-        //after fetchin
         setLoading(false)
         setListedItems(listedItems)
         setSoldItems(soldItems)
     }
-    //load user listed items
     useEffect(() => {
         loadListedItems()
     }, [])
