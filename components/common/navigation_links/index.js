@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { ActiveLink } from "@components/common";
 import Image from "next/image";
-import thrushLogo from "@assets/thrushLogo.png";
+import thrushLogo from "@public/Thrush.png";
 import { signOut, useSession } from "next-auth/react";
 import { LogoutIcon } from "@heroicons/react/outline";
 import { userService } from "services";
@@ -45,7 +45,7 @@ export default function NavLinks() {
         <ActiveLink href="/">
           <div className={style.logoContainer}>
             <Image src={thrushLogo} height={50} width={50} />
-            <div className={style.logoText}>THRUSH</div>
+           
           </div>
         </ActiveLink>
 
