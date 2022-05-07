@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { userService } from "services";
-import {CartContext} from "../Helper/Context"
+import {CartContext} from "../helpers/Context"
 import "react-toastify/dist/ReactToastify.css";
 
 const supportedChainIds = [4]; //Chain ID 4 represents Rinkeby network
