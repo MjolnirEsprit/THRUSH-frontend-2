@@ -10,11 +10,13 @@ const LINKS = [{
 }, {
   href: "/courses-marketplace/marketplace/courses/owned",
   value: "My Courses"
-}, {
+},
+/* {
   href: "/courses-marketplace/marketplace/courses/managed",
   value: "Manage Courses",
   requireAdmin: true
-}]
+}
+*/]
 
 export default function Header() {
   const { account } = useAccount()

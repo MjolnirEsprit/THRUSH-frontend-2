@@ -14,7 +14,7 @@ import { withToast } from "@utils/toast";
 import { Navbar } from "@components/common";
 import { courseService } from "@services/course.service";
 
-export default function Marketplace() {
+export default function Marketplace({ courses }) {
   const { web3, contract, requireInstall } = useWeb3();
   const { hasConnectedWallet, isConnecting, account } = useWalletInfo();
 
@@ -22,11 +22,12 @@ export default function Marketplace() {
   const [busyCourseId, setBusyCourseId] = useState(null);
   const [isNewPurchase, setIsNewPurchase] = useState(true);
 
-  const [courses, setCourses] = useState([]);
+  const [courseData, setCourses] = useState([]);
 
-  const { ownedCourses } = useOwnedCourses(courses, account.data);
+  //const { ownedCourses } = useOwnedCourses(courses, account.data);
+  const { ownedCourses } = useOwnedCourses(courseData, account.data);
 
-  console.log('owned courses',ownedCourses)
+  console.log("owned courses", ownedCourses);
 
   useEffect(() => {
     let isApiSubscribed = true;
@@ -125,7 +126,7 @@ export default function Marketplace() {
       <CourseList courses={courses}>
         {(course) => {
           const owned = ownedCourses.lookup[course.id];
-          console.log('courses',courses)
+          console.log("courses", courses);
           return (
             <CourseCard
               key={course.id}
@@ -233,6 +234,15 @@ export default function Marketplace() {
       )}
     </>
   );
+}
+
+export function getStaticProps() {
+  const { data } = getAllCourses();
+  return {
+    props: {
+      courses: data,
+    },
+  };
 }
 
 Marketplace.Layout = BaseLayout;

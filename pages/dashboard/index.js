@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { BaseLayout } from "@components/common/layout";
 import { useSession } from "next-auth/react";
-import UserDataTable from "@components/UserDataTable/App";
+//import UserDataTable from "@components/UserDataTable/App";
 import { Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,
@@ -61,7 +61,6 @@ const data = {
     ],
 };
 
-
 export default function Dashboard() {
     const router = useRouter();
 
@@ -81,11 +80,6 @@ export default function Dashboard() {
                     {/* Chart */}
                     <Grid item xs={12} md={8} lg={9}>
                         <Line data={data} width={400}/>
-                    </Grid>
-
-                    {/* Recent Orders */}
-                    <Grid item xs={12}>
-                        <UserDataTable/>
                     </Grid>
                 </Grid>
             </Container>
