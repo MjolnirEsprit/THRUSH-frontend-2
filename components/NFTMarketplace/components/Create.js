@@ -3,7 +3,6 @@ import { ethers } from "ethers"
 import { Row, Form, Button } from 'react-bootstrap'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import useTextToxicity from "react-text-toxicity"
-import swal from "sweetalert"
 import {toast} from "react-toastify"
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
