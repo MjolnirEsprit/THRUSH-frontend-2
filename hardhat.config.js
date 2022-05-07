@@ -10,10 +10,6 @@ module.exports = {
           url: 'https://ropsten.infura.io/v3/20262928a70d4f43b1c965dd4611cecd',
           accounts: [ACC_PRIVATE_KEY]
         },
-        rinkeby: {
-            url: 'https://rinkeby.infura.io/v3/20262928a70d4f43b1c965dd4611cecd',
-            accounts: [ACC_PRIVATE_KEY]
-        },
         kovan: {
             url: 'https://kovan.infura.io/v3/20262928a70d4f43b1c965dd4611cecd',
             accounts: [ACC_PRIVATE_KEY]
