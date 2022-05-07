@@ -16,7 +16,7 @@ const style = {
   headerItems: ` flex items-center justify-center space-x-12`,
   headerItem: `text-white font-bold text-white hover:text-[#8a939b] px-4 space-x-8 cursor-pointer p-1`,
   dropElem: `border-solid cursor-pointer block px-4 py-2 text-white font-semibold hover:bg-[#ffaa54]`,
-  dropdowMenu: undefined
+  dropdowMenu: undefined,
 };
 
 export default function NavLinks() {
@@ -45,7 +45,6 @@ export default function NavLinks() {
         <ActiveLink href="/">
           <div className={style.logoContainer}>
             <Image src={thrushLogo} height={50} width={50} />
-           
           </div>
         </ActiveLink>
 
