@@ -5,6 +5,7 @@ import Home from '@components/NFTMarketplace/components/Home.js';
 import Create from '@components/NFTMarketplace/components/Create.js';
 import MyPurchases from "@components/NFTMarketplace/components/MyPurchases.js";
 import MyListedItems from "@components/NFTMarketplace/components/MyListedItem.js";
+import Reviews from "@components/NFTMarketplace/components/Reviews.js";
 import { ethers } from "ethers"; //interact with ethereum nodes
 import { useState } from "react";
 import MarketplaceAbi from '../../components/NFTMarketplace/scripts../contractsData/Marketplace.json';
@@ -67,16 +68,20 @@ export default function NFTMarketplace(){
                   <Route path="/" element={
                     <Home marketplace={marketplace} nft= {nft} />
                   } />
-                  <Route path="/create" element={
+                  <Route path="/nft-marketplace/create" element={
                     <Create marketplace={marketplace} nft= {nft} />
                   }/>
                   
-                  <Route path="/my-listed-items" element={
+                  <Route path="/nft-marketplace/my-listed-items" element={
                     <MyListedItems marketplace={marketplace} nft= {nft} account= {account}/>
                   }/>
                 
-                  <Route path="/my-purchases" element={
+                  <Route path="/nft-marketplace/my-purchases" element={
                     <MyPurchases marketplace= {marketplace} nft= {nft} account= {account} />
+                  }/>
+
+                  <Route path="/nft-marketplace/reviews" element={
+                    <Reviews />
                   }/>
                 </Routes>
               )}

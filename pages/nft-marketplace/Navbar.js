@@ -11,9 +11,10 @@ const Navigation = ({ web3Handler, account }) => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link  style={{color: "orange"}} as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link  style={{color: "orange"}} as={Link} to="/create">Create</Nav.Link>
-                        <Nav.Link  style={{color: "orange"}} as={Link} to="/my-listed-items">My Listed Items</Nav.Link>
-                        <Nav.Link  style={{color: "orange"}} as={Link} to="/my-purchases">My Purchases</Nav.Link>
+                        <Nav.Link  style={{color: "orange"}} as={Link} to="/nft-marketplace/create">Create</Nav.Link>
+                        <Nav.Link  style={{color: "orange"}} as={Link} to="/nft-marketplace/my-listed-items">My Listed Items</Nav.Link>
+                        <Nav.Link  style={{color: "orange"}} as={Link} to="/nft-marketplace/my-purchases">My Purchases</Nav.Link>
+                        <Nav.Link  style={{color: "orange"}} as={Link} to="/nft-marketplace/reviews">Reviews</Nav.Link>
                     </Nav>
                     <Nav>
                         {account ? (
