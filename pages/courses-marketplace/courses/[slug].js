@@ -1,27 +1,50 @@
-import { useAccount, useOwnedCourse } from "@components/MusicCourses/hooks/web3";
+import {
+  useAccount,
+  useOwnedCourse,
+} from "@components/MusicCourses/hooks/web3";
 import { useWeb3 } from "@components/MusicCourses/providers";
 import { Message, Modal } from "@components/common";
 import {
   CourseHero,
   Curriculum,
-  Keypoints
+  Keypoints,
 } from "@components/MusicCourses/ui/course";
-import { BaseLayout } from "@components/common/layout";
+import { BaseLayout } from "@components/common/layout";4
+import { useEffect, useState } from "react";
 import { getAllCourses } from "@helpers/fetcher";
+import { courseService } from "@services/course.service";
 
+export default function Course({ course }) {
+  const [coursesData, setCourses] = useState([]);
 
-export default function Course({course}) {
+  useEffect(() => {
+    let isApiSubscribed = true;
 
-  const { isLoading } = useWeb3()
-  const { account } = useAccount()
-  const { ownedCourse } = useOwnedCourse(course, account.data)
-  const courseState = ownedCourse.data?.state
+    courseService.getAll().then((x) => {
+      if (isApiSubscribed) {
+        // handle success
+        setCourses(x.data.courses);
+      }
+    });
+
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
+  }, []);
+
+  const courseData = coursesData.filter((c) => c.slug === params.slug)[0];
+
+  const { isLoading } = useWeb3();
+  const { account } = useAccount();
+  const { ownedCourse } = useOwnedCourse(courseData, account.data);
+  const courseState = ownedCourse.data?.state;
   // const courseState = "deactivated"
 
   const isLocked =
     !courseState ||
     courseState === "purchased" ||
-    courseState === "deactivated"
+    courseState === "deactivated";
 
   return (
     <>
@@ -33,31 +56,34 @@ export default function Course({course}) {
           image={course.coverImage}
         />
       </div>
-      <Keypoints
-        points={course.wsl}
-      />
-      { courseState &&
-        <div className="max-w-5xl mx-auto">
-          { courseState === "purchased" &&
+      <Keypoints points={course.wsl} />
+      {courseState && (
+        <div className="mx-auto max-w-5xl">
+          {courseState === "purchased" && (
             <Message type="warning">
-              Course is purchased and waiting for the activation. Process can take up to 24 hours.
-              <i className="block font-normal">In case of any questions, please contact info@eincode.com</i>
+              Course is purchased and waiting for the activation. Process can
+              take up to 24 hours.
+              <i className="block font-normal">
+                In case of any questions, please contact info@eincode.com
+              </i>
             </Message>
-          }
-          { courseState === "activated" &&
+          )}
+          {courseState === "activated" && (
             <Message type="success">
               Eincode wishes you happy watching of the course.
             </Message>
-          }
-          { courseState === "deactivated" &&
+          )}
+          {courseState === "deactivated" && (
             <Message type="danger">
-              Course has been deactivated, due the incorrect purchase data.
-              The functionality to watch the course has been temporaly disabled.
-              <i className="block font-normal">Please contact info@eincode.com</i>
+              Course has been deactivated, due the incorrect purchase data. The
+              functionality to watch the course has been temporaly disabled.
+              <i className="block font-normal">
+                Please contact info@eincode.com
+              </i>
             </Message>
-          }
+          )}
         </div>
-      }
+      )}
       <Curriculum
         isLoading={isLoading}
         locked={isLocked}
@@ -65,32 +91,31 @@ export default function Course({course}) {
       />
       <Modal />
     </>
-  )
+  );
 }
 
 export function getStaticPaths() {
-  const { data } = getAllCourses()
+  const { data } = getAllCourses();
 
   return {
-    paths: data.map(c => ({
+    paths: data.map((c) => ({
       params: {
-        slug: c.slug
-      }
+        slug: c.slug,
+      },
     })),
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-
-export function getStaticProps({params}) {
-  const { data } = getAllCourses()
-  const course = data.filter(c => c.slug === params.slug)[0]
+export function getStaticProps({ params }) {
+  const { data } = getAllCourses();
+  const course = data.filter((c) => c.slug === params.slug)[0];
 
   return {
     props: {
-      course
-    }
-  }
+      course,
+    },
+  };
 }
 
-Course.Layout = BaseLayout
+Course.Layout = BaseLayout;

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Poster from "./Poster";
 import Search from "./Search";
 import Track from "./Track";
+import axios from "axios";
+
 
 function Body({ chooseTrack, spotifyApi }) {
   const { data: session } = useSession();
@@ -10,7 +12,14 @@ function Body({ chooseTrack, spotifyApi }) {
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [newReleases, setNewReleases] = useState([]);
+  
+   
+    const onSubmit = async () => {
+      const result=await axios.get("http://127.0.0.1:5000/fetch")
+      
 
+   };
+ 
   useEffect(() => {
     if (!accessToken) return;
     spotifyApi.setAccessToken(accessToken);
@@ -103,6 +112,9 @@ function Body({ chooseTrack, spotifyApi }) {
           </div>
           <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
             All Genres
+          </button>
+          <button  onClick={()=>onSubmit()} className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
+            Find Lyrics
           </button>
         </div>
 
