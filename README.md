@@ -41,6 +41,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit a
 - Installing python packages **pip install flask python-deotenv pandas spotipy sklearn textblob**
 
 
+# Testing NFT Marketplace on the local blockchain
+- npx hardhat test
+
 ### You need to have a **keys.json** file with the following variables:
 - **INFURA_PROJECT_ID**: "your-infura-project-id"
 - **MNEMONIC**: "your-wallet-secret-phrase"
@@ -48,8 +51,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit a
 - **SPOTIFY_CLIENT_SECRET**: "your-spotify-client-secret"
 
 # Running this project
-- Run flask server **cd /AiApi**
-- Run **yarn start-api**
+- Run flask **yarn start-api**
 - Run Project **npm run dev**
 
 <br />
