@@ -8,10 +8,10 @@ import MyListedItems from "@components/NFTMarketplace/components/MyListedItem.js
 import Reviews from "@components/NFTMarketplace/components/Reviews.js";
 import { ethers } from "ethers"; //interact with ethereum nodes
 import { useState } from "react";
-import MarketplaceAbi from '../../components/NFTMarketplace/scripts../contractsData/Marketplace.json';
-import MarketplaceAddress from '@components/NFTMarketplace/scripts../contractsData/Marketplace-address.json'
-import NFTAbi from '@components/NFTMarketplace/scripts../contractsData/NFT.json'
-import NFTAddress from '@components/NFTMarketplace/scripts../contractsData/NFT-address.json'
+import MarketplaceAbi from '../../components/NFTMarketplace/scripts/contractsData/Marketplace.json';
+import MarketplaceAddress from '@components/NFTMarketplace/scripts/contractsData/Marketplace-address.json'
+import NFTAbi from '@components/NFTMarketplace/scripts/contractsData/NFT.json'
+import NFTAddress from '@components/NFTMarketplace/scripts/contractsData/NFT-address.json'
 import { Spinner } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 

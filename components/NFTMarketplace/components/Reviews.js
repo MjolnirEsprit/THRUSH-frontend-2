@@ -61,7 +61,7 @@ export default function Reviews() {
                 onSubmit={handleSubmit(onSubmitForm)}
                 className="grid grid-cols-1 gap-y-6">
                 <div>
-                    <label for="name" className="sr-only">
+                    <label htmlFor="name" className="sr-only">
                         Full name
                     </label>
                     <input
@@ -76,7 +76,7 @@ export default function Reviews() {
                     </span>
                 </div>
                 <div>
-                    <label for="email" className="sr-only">
+                    <label htmlFor="email" className="sr-only">
                         Email
                     </label>
                     <input
@@ -92,7 +92,7 @@ export default function Reviews() {
                 </div>
 
                 <div>
-                    <label for="review" className="sr-only">
+                    <label htmlFor="review" className="sr-only">
                         Review
                     </label>
                     <textarea
