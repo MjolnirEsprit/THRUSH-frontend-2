@@ -58,7 +58,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit a
 - npx hardhat run src/backend/scripts/deploy.js --network localhost
  
 ### 4. Run Tests
-- npx hardhat test**
+- npx hardhat test
 
 ### 5. Deploy to Ropsten
 - cd components/NFTMarketplace/scripts
