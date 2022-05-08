@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from flask_cors import CORS
 import os
 import pandas as pd
 from features import *
@@ -7,7 +8,7 @@ from model import *
 #Creation et localisation de l'instance de flask
 app_path= os.path.dirname(__file__)
 app= Flask(__name__, static_folder = app_path + '/static')
-
+CORS(app)
 #Creation d'une cle secrete pour la securité des sessions cote client
 app.config['SECRET_KEY'] = 'Y\x95I\xaebyQ\x1et\xce\x89\xc4$L\xc4\x0e7v\xb7V\x8c\x85\xb9\xfc'
 
