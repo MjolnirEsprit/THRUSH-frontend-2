@@ -14,12 +14,6 @@ module.exports = {
             url: 'https://kovan.infura.io/v3/20262928a70d4f43b1c965dd4611cecd',
             accounts: [ACC_PRIVATE_KEY]
         }
-        
-        /*
-        mainnet: {
-            url: 'https://mainnet.infura.io/v3/20262928a70d4f43b1c965dd4611cecd',
-            accounts: [ROPSTEN_PRIVATE_KEY]
-        }*/
     },
     paths: {
         artifacts: "./components/NFTMarketplace/artifacts",
