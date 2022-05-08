@@ -41,7 +41,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit a
 - Installing python packages **pip install flask python-deotenv pandas spotipy sklearn textblob**
 
 # Requirements For NFT Marketplace Initial Setup
-- Install NodeJS, should work with any node version below 16.5.0
+- Install NodeJS (works with any node version below 16.5.0)
 - Install Hardhat
 
 # Setting up the NFT Marketplace
@@ -63,7 +63,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit a
 5. Deploy to Ropsten
 - **cd components/NFTMarketplace/scripts**
 - **npx hardhat run deploy.js --network ropsten**
-- 
+
 6. Launch Frontend
 - **yarn dev**
 
