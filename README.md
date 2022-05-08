@@ -38,33 +38,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit a
 - Use **yarn install**
 - Setting up python venv **cd /AiApi**
   - **py -3 -m venv venv**
-- Installing python packages **pip install flask python-deotenv pandas spotipy sklearn textblob**
+- Installing python packages **pip install flask python-dotenv pandas spotipy sklearn textblob**
 
-# Requirements For NFT Marketplace Initial Setup
+### Requirements For NFT Marketplace Initial Setup
 - Install NodeJS (works with any node version below 16.5.0)
 - Install Hardhat
 
 # Setting up the NFT Marketplace
-1. Boot up local development blockchain:
+# 1. Boot up local development blockchain:
  npx hardhat node
 
-2. To test on the local blockchain:
+# 2. To test on the local blockchain:
 - Connect development blockchain accounts to Metamask
 - Copy private key of the addresses and import to Metamask
 - Connect your metamask to hardhat blockchain, network 127.0.0.1:8545.
 - If you have not added hardhat to the list of networks on your metamask, open up a browser, click the fox icon, then click the top center dropdown button that lists all the available networks then click add networks. A form should pop up. For the "Network Name" field enter "Hardhat". For the "New RPC URL" field enter "http://127.0.0.1:8545". For the chain ID enter "31337". Then click save.
 
-3. Migrate Smart Contracts
+# 3. Migrate Smart Contracts
 - **npx hardhat run src/backend/scripts/deploy.js --network localhost**
  
-4. Run Tests
+# 4. Run Tests
 - **npx hardhat test**
 
-5. Deploy to Ropsten
+# 5. Deploy to Ropsten
 - **cd components/NFTMarketplace/scripts**
 - **npx hardhat run deploy.js --network ropsten**
 
-6. Launch Frontend
+# 6. Launch Frontend
 - **yarn dev**
 
 ### You need to have a **keys.json** file with the following variables:
