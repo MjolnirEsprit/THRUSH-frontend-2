@@ -28,7 +28,6 @@ export default function Home({ courses }) {
   return (
     <>
       <Hero />
-
       <CourseList courses={courseData}>
         {(course) => <CourseCard key={course.id} course={course} />}
       </CourseList>

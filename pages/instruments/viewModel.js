@@ -1,6 +1,6 @@
 import { Card } from "@material-ui/core";
 import "@google/model-viewer";
-import { BaseLayout } from "../../components/common/layout";
+import { BaseLayout } from "@components/common/layout";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
@@ -37,7 +37,7 @@ export default function ViewModel() {
     >
       {itemData.map((item) => {
         return (
-          <Card>
+          <Card key={item.title}>
             <ImageListItem style={{ height: 320, width: 400 }} key={item.title}>
               <model-viewer
                 className={style.itemm}
@@ -45,7 +45,7 @@ export default function ViewModel() {
                 camera-controls
                 shadow-intensity="1"
                 src={item.mod}
-              ></model-viewer>
+              />
             </ImageListItem>
           </Card>
         );

@@ -14,7 +14,7 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import { userService } from "../../services";
+import { userService } from "@services";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 

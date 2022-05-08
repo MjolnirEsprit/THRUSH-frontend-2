@@ -1,100 +1,146 @@
-import React, {useState, useEffect} from 'react';
-import {Button, Fab,
-  Card, CardActionArea, 
-  CardActions, CardContent, 
-  CardMedia, Grid, Typography } from '@material-ui/core';
-import db from '@utils/db';
-import Instrument from '@models/instrument';
-import useStyles from '@utils/styles';
-import NextLink from 'next/link'
-import Filterbar from '@components/Filterbar';
-import axios from 'axios';
-import { useRouter } from 'next/router';
-import Home from "../courses-marketplace";
-import {BaseLayout} from "../../components/common/layout";
-import { styled, Box } from '@mui/system';
-import ModalUnstyled from '@mui/base/ModalUnstyled';
-
+import React, { useState, useEffect } from "react";
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import db from "@utils/db";
+import Instrument from "@models/instrument";
+import useStyles from "@utils/styles";
+import NextLink from "next/link";
+import Filterbar from "@components/Filterbar";
+import { useRouter } from "next/router";
+import { BaseLayout } from "@components/common/layout";
+import { Box } from "@mui/system";
+import {instrumentsService} from "@services/instrument.service";
 
 export default function Store(props) {
-
   const [open, setOpen] = React.useState(false);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   const { instruments } = props;
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [listInstruments, setlistInstruments] = useState([]);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(()=> {
-    
-    axios.get("http://localhost:2000/api/v1/instruments").then((response) => {
-      setlistInstruments(response.data);
-      
-    })
-  },[])
+  useEffect(() => {
+    let isApiSubscribed = true;
 
-  const GoToModelsPage = () =>{
-    router.push('/instruments/viewModel')
-  }
-  const GoToProviderPage = () =>{
-    router.push('/instruments/addInstrument');
-  }
+
+    instrumentsService.getAll().then((response) => {
+      if (isApiSubscribed) {
+        // handle success
+        setlistInstruments(response);
+      }
+    });
+
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
+  }, []);
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
+  /*
+  useEffect(() => {
+    axios
+      .get("https://thrush-backend.herokuapp.com/api/v1/instruments")
+      .then((response) => {
+        setlistInstruments(response.data);
+      });
+  }, []);
+   */
+
+  const GoToModelsPage = () => {
+    router.push("/instruments/viewModel");
+  };
+  const GoToProviderPage = () => {
+    router.push("/instruments/addInstrument");
+  };
   const classes = useStyles();
 
   const addToCartHandler = (product) => {
-    setCartItems([...cartItems, {...product}]);
-    alert('Item added to cart!')
-  }
-  
-  const GoToCart = () =>{
-    router.push('/instruments/cart');
-  }
+    setCartItems([...cartItems, { ...product }]);
+    alert("Item added to cart!");
+  };
+
+  const GoToCart = () => {
+    router.push("/instruments/cart");
+  };
 
   return (
-    <>      
-      <Box sx={{
-            borderRadius: 1,
-            margin: 30
-          }}>
-      <Grid container >
-        <Grid item md={12}> 
-          <Card color='primary'>
-            <CardContent>
-              <Typography component="h1" variant='h1'>Thrush Store</Typography>
-              <Box color='primary'
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent:" space-between",
-                  borderRadius: 1,
-                }}>          
-                  <div>               
-                    <Typography >You can find selected items here</Typography>
-                    <Button variant="contained" color='primary' onClick={()=> GoToCart()}> Cart</Button>
-                  </div>
-                  <div>               
-                    <Typography >3D Models available</Typography>
-                    <Button variant="contained" color='primary' onClick={() => GoToModelsPage()}> 3D MODELS</Button>
+    <>
+      <Box
+        sx={{
+          borderRadius: 1,
+          margin: 30,
+        }}
+      >
+        <Grid container>
+          <Grid item md={12}>
+            <Card color="primary">
+              <CardContent>
+                <Typography component="h1" variant="h1">
+                  Thrush Store
+                </Typography>
+                <Box
+                  color="primary"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: " space-between",
+                    borderRadius: 1,
+                  }}
+                >
+                  <div>
+                    <Typography>You can find selected items here</Typography>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => GoToCart()}
+                    >
+                      {" "}
+                      Cart
+                    </Button>
                   </div>
                   <div>
-                    <Typography >You can sell instruments here</Typography>
-                    <Button variant="contained" color='primary' onClick={()=> GoToProviderPage()}> Sell Instruments</Button>
+                    <Typography>3D Models available</Typography>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => GoToModelsPage()}
+                    >
+                      {" "}
+                      3D MODELS
+                    </Button>
                   </div>
-              </Box>
-            </CardContent>
-          </Card>
+                  <div>
+                    <Typography>You can sell instruments here</Typography>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => GoToProviderPage()}
+                    >
+                      {" "}
+                      Sell Instruments
+                    </Button>
+                  </div>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
-      </Grid>
-        <Box 
+        <Box
           sx={{
-            color:'primary',
+            color: "primary",
             display: "flex",
             flexDirection: "row",
             borderRadius: 3,
           }}
-          className={classes.main}>
+          className={classes.main}
+        >
           <Filterbar />
           <div>
             <Grid container spacing={2}>
@@ -106,12 +152,13 @@ export default function Store(props) {
                         <CardMedia
                           component="img"
                           image={product.image}
-                          title={product.name}></CardMedia>
+                          title={product.name}
+                        />
                         <CardContent>
                           <Typography>{product.name}</Typography>
                           <CardActions>
                             <Typography>${product.price}</Typography>
-                            <Button color='primary'>Add to cart</Button>
+                            <Button color="primary">Add to cart</Button>
                           </CardActions>
                         </CardContent>
                       </CardActionArea>
@@ -122,8 +169,7 @@ export default function Store(props) {
             </Grid>
           </div>
         </Box>
-        </Box>
-      
+      </Box>
     </>
   );
 }
@@ -138,4 +184,4 @@ export async function getServerSideProps() {
   };
 }
 
-Store.Layout = BaseLayout
+Store.Layout = BaseLayout;

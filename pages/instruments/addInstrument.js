@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { Button, CardActions,Card, CardContent,Typography, Grid, CardMedia} from "@material-ui/core";
+import { Button, CardActions,Card, CardContent,Typography, Grid} from "@material-ui/core";
 import { TextField } from "@mui/material";
 import axios from "axios";
 import NextLink from 'next/link';
+import getConfig from 'next/config';
 
-import {BaseLayout} from "../../components/common/layout";
+const { publicRuntimeConfig } = getConfig();
+const baseUrl = `${publicRuntimeConfig.apiUrl}/instruments`;
+
+import {BaseLayout} from "@components/common/layout";
 
 export default function AddInstrument() {
 
@@ -29,7 +33,7 @@ const clickSubmit = (event) => {
   event.preventDefault();
   const instrument = values;
   console.log(instrument);
-  axios.post("http://localhost:2000/api/v1/instruments", instrument);
+  axios.post(baseUrl, instrument);
     alert("Item added successfully");
   }
 
@@ -81,7 +85,7 @@ const clickSubmit = (event) => {
         <CardActions>
           <Grid container alignItems="center" justifyContent="center" >
           <Button color="primary" variant="contained" onClick={clickSubmit} >Submit</Button>
-          <NextLink href={`/instrument`} passHref><Button variant="contained">Cancel</Button></NextLink>
+          <NextLink href={`/instruments`} passHref><Button variant="contained">Cancel</Button></NextLink>
           </Grid >
         </CardActions>
       </Card>
