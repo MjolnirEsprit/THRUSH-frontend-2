@@ -33,11 +33,11 @@ export default function Course({ course }) {
     };
   }, []);
 
-  const courseData = coursesData.filter((c) => c.slug === params.slug)[0];
+  //const courseData = coursesData.filter((c) => c.slug === params.slug)[0];
 
   const { isLoading } = useWeb3();
   const { account } = useAccount();
-  const { ownedCourse } = useOwnedCourse(courseData, account.data);
+  const { ownedCourse } = useOwnedCourse(course, account.data);
   const courseState = ownedCourse.data?.state;
   // const courseState = "deactivated"
 

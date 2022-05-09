@@ -9,8 +9,6 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
-import db from "@utils/db";
-import Instrument from "@models/instrument";
 import useStyles from "@utils/styles";
 import NextLink from "next/link";
 import Filterbar from "@components/Filterbar";
@@ -172,16 +170,6 @@ export default function Store(props) {
       </Box>
     </>
   );
-}
-export async function getServerSideProps() {
-  await db.connect();
-  const instruments = await Instrument.find({}).lean();
-  await db.disconnect();
-  return {
-    props: {
-      instruments: instruments.map(db.convertDocToObj),
-    },
-  };
 }
 
 Store.Layout = BaseLayout;

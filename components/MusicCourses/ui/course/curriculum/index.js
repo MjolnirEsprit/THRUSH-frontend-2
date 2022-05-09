@@ -3,12 +3,12 @@ import { LoaderEth } from "@components/common"
 import Link from "next/link"
 
 const lectures = [
-  "How to init App",
-  "How to get a help",
-  "Introduction to Solidity",
-  "Programing in C++",
-  "How to write For Loops",
-  "Safe operator",
+  "How to make Music",
+  "Example lecture one",
+  "Example lecture two",
+  "Example lecture three",
+  "Example lecture four",
+  "Example lecture five",
 ]
 
 export default function Curriculum({locked, courseState, isLoading}) {
