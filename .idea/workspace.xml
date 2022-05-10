@@ -2,11 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CheckBoxFilters.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/CheckBoxFilters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Filterbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Filterbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/hooks/web3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/hooks/web3/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useManagedCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useManagedCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/hooks/useOwnedCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/providers/web3/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/providers/web3/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/Managed.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/Managed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/curriculum/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/curriculum/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/filter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/filter/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/hero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/keypoints/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/keypoints/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MusicCourses/ui/course/list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MusicCourses/ui/course/list/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NFTMarketplace/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/NFTMarketplace/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Badge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Cell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/Table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/colors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/ArrowDown.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/ArrowLeft.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/ArrowRight.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/ArrowUp.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/Hash.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/Multi.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/Plus.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/Text.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/img/Trash.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/scrollbarWidth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UserDataTable/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/breadcrumbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/breadcrumbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/layout/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/navbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navbar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/common/navigation_links/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/common/navigation_links/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/sanityClient.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/account/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/[_id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/[_id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/courses/[slug].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/courses/[slug].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/hooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/hooks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/addCourse.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/addCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/managed.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/managed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/owned.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dashboard/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/fan-space/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fan-space/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/instruments/[_id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/[_id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/addInstrument.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/addInstrument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/music-streaming/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/music-streaming/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nft-marketplace/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nft-marketplace/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/nft-marketplace/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nft-marketplace/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/db.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loadContract.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loadContract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/normalize.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/normalize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/toast.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/toast.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +223,7 @@
       <workItem from="1651037286033" duration="5799000" />
       <workItem from="1652006307366" duration="18563000" />
       <workItem from="1652050835131" duration="312000" />
-      <workItem from="1652111919299" duration="21116000" />
+      <workItem from="1652111919299" duration="28654000" />
     </task>
     <servers />
   </component>

@@ -32,18 +32,18 @@ export default function Card({ course, disabled, Footer, state }) {
                   Deactivated
                 </div>
               )}
-              {/* state === "purchased" &&
+              {state === "purchased" && (
                 <AnimateKeyframes
                   play
                   duration={2}
                   keyframes={["opacity: 0.2", "opacity: 1"]}
                   iterationCount="infinite"
                 >
-                  <div className="text-xs text-black bg-yellow-200 p-1 px-3 rounded-full">
+                  <div className="rounded-full bg-yellow-200 p-1 px-3 text-xs text-black">
                     Bought
                   </div>
                 </AnimateKeyframes>
-            */}
+              )}
             </div>
           </div>
 

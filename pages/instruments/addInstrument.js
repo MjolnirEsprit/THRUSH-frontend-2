@@ -8,7 +8,7 @@ import getConfig from 'next/config';
 const { publicRuntimeConfig } = getConfig();
 const baseUrl = `${publicRuntimeConfig.apiUrl}/instruments`;
 
-import {BaseLayout} from "@components/common/layout";
+import {BaseLayout} from "../../components/common/layout";
 
 export default function AddInstrument() {
 

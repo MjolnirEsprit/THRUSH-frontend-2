@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Button, Container } from 'react-bootstrap'
 
-
 const Navigation = ({ web3Handler, account }) => {
     return (
         <Navbar expand="lg" bg="white">

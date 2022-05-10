@@ -1,5 +1,5 @@
 {
-  "name": "THRUSH-frontend-2",
+  "name": "THRUSH",
   "version": "0.0.1",
   "proxy": "http://localhost:5000",
   "description": "",
@@ -15,7 +15,7 @@
       "eslint"
     ]
   },
-  "author": "thrush",
+  "author": "MJOLNIR",
   "license": "ISC",
   "dependencies": {
     "@3rdweb/hooks": "^1.9.2",
@@ -59,6 +59,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.1.3",
     "chai": "^4.3.6",
@@ -105,6 +106,7 @@
     "prettier-plugin-tailwindcss": "^0.1.1",
     "prop-types": "^15.7.2",
     "python3": "^0.0.1",
+    "query-string": "^7.1.1",
     "react": "^17.0.2",
     "react-3d-viewer": "^1.0.12",
     "react-accessible-accordion": "^3.3.5",

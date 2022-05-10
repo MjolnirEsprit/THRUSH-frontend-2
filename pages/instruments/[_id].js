@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
-import useStyles from "@utils/styles";
+import useStyles from "../../utils/styles";
 import {
   CardMedia,
   CardActionArea,
@@ -13,11 +13,11 @@ import {
 
 } from "@material-ui/core";
 import { useRouter } from "next/router";
-import { CartContext } from "@helpers/Context";
-import { BaseLayout } from "@components/common/layout";
+import { CartContext } from "../../helpers/Context";
+import { BaseLayout } from "../../components/common/layout";
 import axios from "axios";
-import db from "@utils/db";
-import Instrument from "@models/instrument";
+import db from "../../utils/db";
+import Instrument from "../../models/instrument";
 
 export default function InstrumentsScreen(props) {
   const { cartItems, setCartItems } = useContext(CartContext);

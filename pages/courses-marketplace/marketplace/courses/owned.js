@@ -1,16 +1,14 @@
-
-
-import { useAccount, useOwnedCourses } from "@components/MusicCourses/hooks/web3"
-import { Button, Message } from "@components/common"
-import { OwnedCourseCard } from "@components/MusicCourses/ui/course"
-import { BaseLayout } from "@components/common/layout"
-import { MarketHeader } from "@components/MusicCourses/ui/marketplace"
+import { useAccount, useOwnedCourses } from "../../../../components/MusicCourses/hooks/web3"
+import { Button, Message } from "../../../../components/common"
+import { OwnedCourseCard } from "../../../../components/MusicCourses/ui/course"
+import { BaseLayout } from "../../../../components/common/layout"
+import { MarketHeader } from "../../../../components/MusicCourses/ui/marketplace"
 import { useRouter } from "next/router"
 import Link from "next/link"
-import { useWeb3 } from "@components/MusicCourses/providers"
+import { useWeb3 } from "../../../../components/MusicCourses/providers"
 import {useEffect, useState} from "react";
-import {courseService} from "@services/course.service";
-import { getAllCourses } from "@helpers/fetcher"
+import {courseService} from "../../../../services";
+import { getAllCourses } from "../../../../helpers/fetcher"
 
 export default function OwnedCourses({courses}) {
   const router = useRouter()

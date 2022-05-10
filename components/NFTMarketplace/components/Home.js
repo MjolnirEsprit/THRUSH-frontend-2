@@ -33,7 +33,7 @@ const Home = ({ marketplace, nft }) => {
 
   const buyMarketItem = async (item) => {
     await (await marketplace.purchaseItem(item.itemId, { value: item.totalPrice })).wait()
-    loadMarketplaceItems()
+    await loadMarketplaceItems()
   }
 
   useEffect(() => {

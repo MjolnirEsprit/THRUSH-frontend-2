@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { userService, alertService } from 'services';
+import {BaseLayout} from "../../components/common/layout";
 const theme = createTheme({
     palette: {
         primary: {
@@ -23,8 +24,8 @@ const theme = createTheme({
             // contrastText: will be calculated to contrast with palette.primary.main
         },
         secondary: {
-            light: '#0066ff',
-            main: '#0044ff',
+            light: '#4f5b62',
+            main: '#263238',
             // dark: will be calculated from palette.secondary.main,
             contrastText: '#ffcc00',
         },
@@ -37,19 +38,6 @@ const theme = createTheme({
         tonalOffset: 0.2,
     },
 });
-
-function Copyright(props) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
-            <Link color="inherit" href="">
-                Thrush
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
 
 export default function Profile() {
 
@@ -140,8 +128,9 @@ export default function Profile() {
                         </Grid>
                     </Box>
                 </Box>
-                <Copyright sx={{ mt: 8, mb: 4 }} />
             </Container>
         </ThemeProvider>
     );
 }
+
+Profile.Layout = BaseLayout;

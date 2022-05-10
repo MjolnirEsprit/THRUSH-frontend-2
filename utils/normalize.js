@@ -1,5 +1,3 @@
-
-
 export const COURSE_STATES = {
   0: "purchased",
   1: "activated",

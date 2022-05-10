@@ -1,5 +1,5 @@
-import { Web3Provider } from "@components/MusicCourses/providers";
-import { Navbar, Footer, MainNavbar } from "@components/common";
+import { Web3Provider } from "components/MusicCourses/providers";
+import { Navbar, Footer, MainNavbar } from "components/common";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { userService } from "services";

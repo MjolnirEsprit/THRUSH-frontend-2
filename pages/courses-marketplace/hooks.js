@@ -1,4 +1,4 @@
-import { useEthPrice } from "@components/MusicCourses/hooks/useEthPrice"
+import { useEthPrice } from "../../components/MusicCourses/hooks/useEthPrice"
 import { useEffect, useState } from "react"
 
 

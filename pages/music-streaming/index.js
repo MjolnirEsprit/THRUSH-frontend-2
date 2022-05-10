@@ -1,5 +1,5 @@
-import Dashboard from "@components/MusicStreaming/Dashboard";
-import { BaseLayout } from "@components/common/layout";
+import Dashboard from "../../components/MusicStreaming/Dashboard";
+import { BaseLayout } from "../../components/common/layout";
 import { useRouter } from "next/router";
 import { SessionProvider, useSession } from "next-auth/react";
 import React from "react";
@@ -9,7 +9,7 @@ export default function MusicStreaming() {
   const { status, data: session } = useSession({
     required: true,
     onUnauthenticated() {
-      router.push("/api/auth/signin");
+      router.push("/auth/signin");
     },
   });
   if (!session) {

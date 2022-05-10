@@ -10,9 +10,9 @@ import {
   Grid,
   Typography,
 } from "@material-ui/core";
-import useStyles from "@utils/styles";
+import useStyles from "../../utils/styles";
 import NextLink from "next/link";
-import Filterbar from "@components/Filterbar";
+import Filterbar from "../../components/Filterbar";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { BaseLayout } from "../../components/common/layout";

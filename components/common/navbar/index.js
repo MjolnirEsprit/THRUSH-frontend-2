@@ -1,7 +1,7 @@
-import { useWeb3 } from "@components/MusicCourses/providers";
-import { useAccount } from "@components/MusicCourses/hooks/web3";
+import { useWeb3 } from "components/MusicCourses/providers";
+import { useAccount } from "components/MusicCourses/hooks/web3";
 import { useRouter } from "next/router";
-import {Button} from "@components/common";
+import {Button} from "components/common";
 
 export default function Navbar() {
   const { connect, isLoading, requireInstall } = useWeb3();

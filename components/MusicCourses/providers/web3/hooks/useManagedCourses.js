@@ -1,6 +1,5 @@
 
-
-import { normalizeOwnedCourse } from "@utils/normalize"
+import { normalizeOwnedCourse } from "utils/normalize"
 import useSWR from "swr"
 
 export const handler = (web3, contract) => account => {
