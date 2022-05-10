@@ -70,6 +70,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   }
 
   return (
+    <>
+    <script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'
+    strategy='beforeInteractive'/>
+
     <ThirdwebWeb3Provider
       supportedChainIds={supportedChainIds}
       connectors={connectors}
@@ -85,6 +89,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         </RecoilRoot>
       </SessionProvider>
     </ThirdwebWeb3Provider>
+    </>
   );
 }
 
