@@ -1,23 +1,26 @@
-import React, {useState, useEffect} from 'react';
-import {Button, Fab,
-  Card, CardActionArea, 
-  CardActions, CardContent, 
-  CardMedia, Grid, Typography } from '@material-ui/core';
-import db from '@utils/db';
-import Instrument from '@models/instrument';
-import useStyles from '@utils/styles';
-import NextLink from 'next/link'
-import Filterbar from '@components/Filterbar';
-import axios from 'axios';
-import { useRouter } from 'next/router';
-import Home from "../courses-marketplace";
-import {BaseLayout} from "../../components/common/layout";
-import { styled, Box } from '@mui/system';
-import ModalUnstyled from '@mui/base/ModalUnstyled';
-import dynamic from 'next/dynamic';
-const ViewModel = dynamic(
-  () => import('./ViewModel')
-)
+import React, { useState, useEffect } from "react";
+import {
+  Button,
+  Fab,
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import useStyles from "@utils/styles";
+import NextLink from "next/link";
+import Filterbar from "@components/Filterbar";
+import axios from "axios";
+import { useRouter } from "next/router";
+import { BaseLayout } from "../../components/common/layout";
+import { styled, Box } from "@mui/system";
+import ModalUnstyled from "@mui/base/ModalUnstyled";
+import dynamic from "next/dynamic";
+import { instrumentsService } from "../../services";
+const ViewModel = dynamic(() => import("./viewModel"));
 const StyledModal = styled(ModalUnstyled)`
   position: fixed;
   z-index: 1300;
@@ -30,8 +33,7 @@ const StyledModal = styled(ModalUnstyled)`
   justify-content: center;
 `;
 
-const Backdrop = styled('div')`
-
+const Backdrop = styled("div")`
   z-index: -1;
   position: fixed;
   right: 0;
@@ -52,9 +54,9 @@ export default function Store(props) {
   const { instruments } = props;
   const [listInstruments, setlistInstruments] = useState([]);
 
+  /*
   useEffect(() => {
     let isApiSubscribed = true;
-
 
     instrumentsService.getAll().then((response) => {
       if (isApiSubscribed) {
@@ -68,21 +70,28 @@ export default function Store(props) {
       isApiSubscribed = false;
     };
   }, []);
-
-
+  */
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  /*
+
   useEffect(() => {
+    let isApiSubscribed = true;
+
     axios
       .get("https://thrush-backend.herokuapp.com/api/v1/instruments")
       .then((response) => {
-        setlistInstruments(response.data);
+        if (isApiSubscribed) {
+          setlistInstruments(response.data);
+        }
       });
+
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
   }, []);
-   */
 
   const GoToModelsPage = () => {
-    router.push("/instruments/ViewModel");
+    router.push("/instruments/viewModel");
   };
   const GoToProviderPage = () => {
     router.push("/instruments/addInstrument");
@@ -99,55 +108,64 @@ export default function Store(props) {
   };
 
   return (
-    <>      
-      <Box sx={{
-            borderRadius: 1,
-            margin: 30
-          }}>
-      <Grid container >
-        <Grid item md={12}> 
-          <Card color='primary'>
-            <CardContent>
-              <Typography component="h1" variant='h1'>Thrush Store</Typography>
-              <Box color='primary'
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent:" space-between",
-                  borderRadius: 1,
-                }}>          
-                  <div>               
-                    <Typography >You can find selected items here</Typography>
-                    <Button variant="contained" color='primary' onClick={()=> GoToCart()}> Cart</Button>
+    <>
+      <Box
+        sx={{
+          borderRadius: 1,
+          margin: 30,
+        }}
+      >
+        <Grid container>
+          <Grid item md={12}>
+            <Card color="primary">
+              <CardContent>
+                <Typography component="h1" variant="h1">
+                  Thrush Store
+                </Typography>
+                <Box
+                  color="primary"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: " space-between",
+                    borderRadius: 1,
+                  }}
+                >
+                  <div>
+                    <Typography>You can find selected items here</Typography>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => GoToCart()}
+                    >
+                      {" "}
+                      Cart
+                    </Button>
                   </div>
-                  <div>               
-                    <Typography >3D Models available</Typography>
-                    {(typeof window !== 'undefined') &&
-                    <Button variant="contained" color='primary' onClick={() => GoToModelsPage()}> 3D MODELS</Button>
-                    }
-                  </div>       
+                  <div>
+                    <Typography>3D Models available</Typography>
+                    {typeof window !== "undefined" && (
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => GoToModelsPage()}
+                      >
+                        {" "}
+                        3D MODELS
+                      </Button>
+                    )}
+                  </div>
                   <StyledModal
                     aria-labelledby="unstyled-modal-title"
                     aria-describedby="unstyled-modal-description"
                     open={open}
                     onClose={handleClose}
                     BackdropComponent={Backdrop}
-                >
+                  >
                     <Box>
-                        <ViewModel />
+                      <ViewModel />
                     </Box>
-                </StyledModal>
-                  <div>
-                    <Typography>3D Models available</Typography>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={() => GoToModelsPage()}
-                    >
-                      {" "}
-                      3D MODELS
-                    </Button>
-                  </div>
+                  </StyledModal>
                   <div>
                     <Typography>You can sell instruments here</Typography>
                     <Button

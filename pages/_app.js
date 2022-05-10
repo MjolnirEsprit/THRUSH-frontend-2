@@ -71,8 +71,12 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 
   return (
     <>
-    <script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'
-    strategy='beforeInteractive'/>
+      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+    <script
+        type='module'
+        src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'
+        strategy='beforeInteractive'
+    />
 
     <ThirdwebWeb3Provider
       supportedChainIds={supportedChainIds}

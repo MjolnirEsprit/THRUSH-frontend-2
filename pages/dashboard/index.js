@@ -14,9 +14,9 @@ import {
     Tooltip,
     Legend,
 } from "chart.js";
-import { userService } from "@services";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
+import {userService} from "../../services";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
