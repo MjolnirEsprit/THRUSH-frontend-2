@@ -19,6 +19,8 @@ contract Marketplace is ReentrancyGuard{
         bool sold;
     }
 
+    mapping(uint => Item) public items;
+
     event Offered (
         uint itemId,
         address indexed nft,

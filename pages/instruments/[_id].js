@@ -18,6 +18,8 @@ import { BaseLayout } from "../../components/common/layout";
 import axios from "axios";
 import db from "../../utils/db";
 import Instrument from "../../models/instrument";
+import NextLink from "next/link";
+import Link from "next/link";
 
 export default function InstrumentsScreen(props) {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -56,7 +58,7 @@ export default function InstrumentsScreen(props) {
 
   const addToCartHandler = (product) => {
     setCartItems([...cartItems, product]);
-    router.push("/instruments/cart");
+    //router.push("/instruments/cart");
     alert("Item added to cart!");
   };
 
@@ -76,6 +78,7 @@ export default function InstrumentsScreen(props) {
           <Grid item md={6} xs={12}>
             <Card className={classes.card}>
               <CardActionArea>
+                <Link href="/instruments/viewModel"><a>Click here for 3D models</a></Link>
                 <CardMedia
                   component="img"
                   image={instrument.image}
