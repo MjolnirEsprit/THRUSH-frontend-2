@@ -75,6 +75,9 @@ const Create = ({ marketplace, nft }) => {
     const listingPrice = ethers.utils.parseEther(price.toString())
     await (await marketplace.makeItem(nft.address, id, listingPrice)).wait()
     console.log("Added successfully to the marketplace!");
+    toast.success('NFT successfully added to the marketplace 👏', {
+      position: "top-center"
+    })
    
   }
 
