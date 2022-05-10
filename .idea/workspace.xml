@@ -3,25 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/config/.checksums" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/config/@sanity/data-aspects.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/config/@sanity/default-layout.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/config/@sanity/default-login.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/config/@sanity/form-builder.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/config/@sanity/vision.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/plugins/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/sanity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/schemas/schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/static/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +148,7 @@
       <workItem from="1651037286033" duration="5799000" />
       <workItem from="1652006307366" duration="18563000" />
       <workItem from="1652050835131" duration="312000" />
-      <workItem from="1652111919299" duration="9595000" />
+      <workItem from="1652111919299" duration="9721000" />
     </task>
     <servers />
   </component>
