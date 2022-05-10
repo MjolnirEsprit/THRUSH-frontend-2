@@ -137,7 +137,7 @@ function Body({ chooseTrack, spotifyApi }) {
             <div className="genre">Country</div>
             <div className="genre">Techno</div>
           </div>
-          <button className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
+          <button className="text-white bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out" style={{ backgroundColor: "#ec5c0c", borderColor: "#ec5c0c", fontStyle: "italic", fontWeight: "bold" }} >
             All Genres
           </button>
 
@@ -156,7 +156,7 @@ function Body({ chooseTrack, spotifyApi }) {
             </Box>
           </StyledModal>
 
-          <button onClick={() => onSubmit()} className="text-[#CECECE] bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out">
+          <button onClick={() => onSubmit()} className="text-white bg-[#1A1A1A] text-[13px] py-3.5 px-4 rounded-2xl w-full font-bold bg-opacity-80 hover:bg-opacity-100 transition ease-out" style={{ backgroundColor: "#ec5c0c", borderColor: "#ec5c0c", fontStyle: "italic", fontWeight: "bold" }} >
             Find Lyrics
           </button>
         </div>
