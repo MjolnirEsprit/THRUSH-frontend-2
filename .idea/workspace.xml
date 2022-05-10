@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ee90886-762e-4009-ad6d-b29b2736247a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/account/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/courses-marketplace/marketplace/courses/addCourse.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/.flaskenv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/data1/First_1000.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/data1/allsong_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/data1/complete_feature.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/data1/processed_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/data1/raw_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/data1/test_playlist.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/features.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/static/lyrics_scraper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/AiApplication/templates/results.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiApi/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/instruments/[_id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/instruments/[_id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/music-streaming/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/music-streaming/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +152,7 @@
       <workItem from="1651037286033" duration="5799000" />
       <workItem from="1652006307366" duration="18563000" />
       <workItem from="1652050835131" duration="312000" />
-      <workItem from="1652111919299" duration="16928000" />
+      <workItem from="1652111919299" duration="21116000" />
     </task>
     <servers />
   </component>

@@ -6,10 +6,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "start-api": "cd AiApi/AiApplication && flask run --no-debugger",
     "build": "next build",
     "start": "next start",
-    "test-api": "cd AiApi/AiApplication && flask test",
     "lint": "next lint"
   },
   "lint-staged": {
