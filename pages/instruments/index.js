@@ -138,6 +138,17 @@ export default function Store(props) {
                     </Box>
                 </StyledModal>
                   <div>
+                    <Typography>3D Models available</Typography>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => GoToModelsPage()}
+                    >
+                      {" "}
+                      3D MODELS
+                    </Button>
+                  </div>
+                  <div>
                     <Typography>You can sell instruments here</Typography>
                     <Button
                       variant="contained"
