@@ -22,7 +22,7 @@
 	<div class='container'>
 	{% block about %}
 		<div class="input_field">
-			<h2 style='color: #ececec'> Please, paste a playlist link</h2>
+			<h2 style='color: black'> Please, paste a playlist link</h2>
 			<div class="break"></div>
 				<div class="ml-container">
 					<form action="{{ url_for('recommend') }}"  id="form1" method="POST">
@@ -30,7 +30,7 @@
 						<div class="break"></div>
 						<small id="emailHelp" class="form-text text-muted"> You can find the playlist link by following instructions <a href="https://wordpress.com/support/audio/spotify/" target="_blank"> here </a> </small>
 						<div class="break"></div>
-							<label style='color: #ececec' for="number-of-recs" >How many songs do you want?:</label>
+							<label style='color: black' for="number-of-recs" >How many songs do you want?:</label>
 							<select name="number-of-recs" id="number-of-recs" form="form1">
 								<option value="5" selected> 5</option>
 								<option value="10">10</option>
@@ -42,6 +42,7 @@
 					</form>
 				</div>
 		</div>
+		
 
 			<div class="results">
 				{% block results %}

@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(black, rgba(30,215,96,255));
+    background-image: white;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -39,9 +39,10 @@ body{
     grid-row:1;
 }
 
+
 .song {
     background-color: #000000;
-    border-left: solid 4px #1ed760;
+    border-left: solid 4px #ec5c0c;
     line-height: 18px;
     overflow: hidden;
     padding: 12px;
@@ -54,16 +55,16 @@ body{
 input.button1, input.input1, #number-of-recs{
     display:inline-block;
     padding:0.46em 1.6em;
-    border:0.1em solid #000000;
+    border:0.1em solid #ec5c0c;
     margin:0 0.2em 0.2em 0;
     border-radius:0.12em;
     box-sizing: border-box;
     text-decoration:none;
     font-family: sans-serif;
     font-weight:300;
-    color:#000000;
-    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    background-color: #1ed760;
+    color:#FFFFFF;
+    text-shadow: 0 0.04em 0.04em #FFFFFF;
+    background-color: #ec5c0c;
     text-align:center;
     transition: all 0.15s;
 }
@@ -81,7 +82,7 @@ input.button1:hover{
 input.input1:hover{
     text-shadow: 0 0 2em rgba(255,255,255,1);
     color:#FFFFFF;
-    border-color:#1ed760;
+    border-color:#ec5c0c;
 }
 
 #number-of-recs:hover{
@@ -98,6 +99,7 @@ input.input1:hover{
 }
 
 .results {
+    color: black;
     animation-duration        : 1.5s;
     animation-fill-mode       : both;
     animation-iteration-count : 1;
