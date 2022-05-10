@@ -3,12 +3,12 @@ import dynamic from 'next/dynamic';
 dynamic(() => import('@google/model-viewer'), { ssr: false });
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import {BaseLayout} from "../../components/common/layout";
+import { BaseLayout } from "../../components/common/layout";
 
 
 const style = {
-  dispo: `flex w-full inline-block mt-5 justify-center items-center`,
-  itemm: `flex inline-block`,
+    dispo: `flex w-full inline-block mt-5 justify-center items-center`,
+    itemm: `flex inline-block`,
 };
 
 const itemData = [
@@ -38,26 +38,24 @@ const itemData = [
 export default function ViewModel() {
 
     return (
-        <div className='w-screen h-screen p-0 mt-0 bg-white'>
-            <ImageList className={style.dispo} sx={{ height: 800 }} cols={3} rowHeight={164}>
-                {itemData.map((item) => {
-                    return (
+        <ImageList className={style.dispo} sx={{ height: 800 }} cols={3} rowHeight={164}>
+            {itemData.map((item) => {
+                return (
                     <>
-                         <Card>
-                        
+                        <Card>
                             <ImageListItem key={item.name} style={{ height: 320, width: 400 }}>
-                            {(typeof window !== 'undefined') &&
-                            <model-viewer enable-pans className={style.itemm} style={{ height: 320, width: 400 }} shadow-intensity="1" camera-controls src={item.mod}></model-viewer>
-                            }
+                                {(typeof window !== 'undefined') &&
+                                    <model-viewer enable-pans className={style.itemm} 
+                                    style={{ height: 320, width: 400 }} shadow-intensity="1" 
+                                    camera-controls src={item.mod}>
+                                    </model-viewer>
+                                }
                             </ImageListItem>
-                        
-                    </Card>
+                        </Card>
                     </>
-                    )
-                })}
-            </ImageList>
-        </div>
-        
+                )
+            })}
+        </ImageList>
     );
 }
 
