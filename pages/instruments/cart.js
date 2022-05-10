@@ -16,8 +16,8 @@ import {
   List,
   ListItem,
 } from "@material-ui/core";
-import { CartContext } from "../../Helper/Context";
-import { BaseLayout } from "../../components/common/layout";
+import { CartContext } from "@helpers/Context";
+import { BaseLayout } from "@components/common/layout";
 
 import StripeCheckout from "react-stripe-checkout"
 

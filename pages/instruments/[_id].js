@@ -7,22 +7,16 @@ import {
   CardActionArea,
   Grid,
   List,
-  Image,
   ListItem,
   Typography,
   Card,
   Button,
   Box,
-  ThemeProvider,
-  Fab,
+
 } from "@material-ui/core";
-import NextLink from "next/link";
-import axios from "axios";
-import Store from "@utils/Store";
 import { useRouter } from "next/router";
-import { CartContext } from "../../Helper/Context";
-import { BaseLayout } from "../../components/common/layout";
-import AddInstrument from "./addInstrument";
+import { CartContext } from "@helpers/Context";
+import { BaseLayout } from "@components/common/layout";
 
 export default function InstrumentsScreen(props) {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -57,7 +51,7 @@ export default function InstrumentsScreen(props) {
                   component="img"
                   image={instrument.image}
                   title={instrument.name}
-                ></CardMedia>
+                />
               </CardActionArea>
             </Card>
           </Grid>

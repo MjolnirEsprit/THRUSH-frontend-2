@@ -43,7 +43,6 @@ const Backdrop = styled('div')`
 `;
 
 export default function Store(props) {
-
   const [open, setOpen] = React.useState(false);
   const handleOpen3D = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -51,35 +50,53 @@ export default function Store(props) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   const { instruments } = props;
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [listInstruments, setlistInstruments] = useState([]);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(()=> {
-    
-    axios.get("http://localhost:2000/api/v1/instruments").then((response) => {
-      setlistInstruments(response.data);
-      
-    })
-  },[])
+  useEffect(() => {
+    let isApiSubscribed = true;
 
-  const GoToModelsPage = () =>{
-    router.push('/instruments/ViewModel');
-  }
-  const GoToProviderPage = () =>{
-    router.push('/instruments/addInstrument');
-  }
+
+    instrumentsService.getAll().then((response) => {
+      if (isApiSubscribed) {
+        // handle success
+        setlistInstruments(response);
+      }
+    });
+
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
+  }, []);
+
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
+  /*
+  useEffect(() => {
+    axios
+      .get("https://thrush-backend.herokuapp.com/api/v1/instruments")
+      .then((response) => {
+        setlistInstruments(response.data);
+      });
+  }, []);
+   */
+
+  const GoToModelsPage = () => {
+    router.push("/instruments/ViewModel");
+  };
+  const GoToProviderPage = () => {
+    router.push("/instruments/addInstrument");
+  };
   const classes = useStyles();
 
   const addToCartHandler = (product) => {
-    setCartItems([...cartItems, {...product}]);
-    alert('Item added to cart!')
-  }
-  
-  const GoToCart = () =>{
-    router.push('/instruments/cart');
-  }
+    setCartItems([...cartItems, { ...product }]);
+    alert("Item added to cart!");
+  };
+
+  const GoToCart = () => {
+    router.push("/instruments/cart");
+  };
 
   return (
     <>      
@@ -121,22 +138,41 @@ export default function Store(props) {
                     </Box>
                 </StyledModal>
                   <div>
-                    <Typography >You can sell instruments here</Typography>
-                    <Button variant="contained" color='primary' onClick={()=> GoToProviderPage()}> Sell Instruments</Button>
+                    <Typography>3D Models available</Typography>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => GoToModelsPage()}
+                    >
+                      {" "}
+                      3D MODELS
+                    </Button>
                   </div>
-              </Box>
-            </CardContent>
-          </Card>
+                  <div>
+                    <Typography>You can sell instruments here</Typography>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={() => GoToProviderPage()}
+                    >
+                      {" "}
+                      Sell Instruments
+                    </Button>
+                  </div>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
-      </Grid>
-        <Box 
+        <Box
           sx={{
-            color:'primary',
+            color: "primary",
             display: "flex",
             flexDirection: "row",
             borderRadius: 3,
           }}
-          className={classes.main}>
+          className={classes.main}
+        >
           <Filterbar />
           <div>
             <Grid container spacing={2}>
@@ -148,12 +184,13 @@ export default function Store(props) {
                         <CardMedia
                           component="img"
                           image={product.image}
-                          title={product.name}></CardMedia>
+                          title={product.name}
+                        />
                         <CardContent>
                           <Typography>{product.name}</Typography>
                           <CardActions>
                             <Typography>${product.price}</Typography>
-                            <Button color='primary'>Add to cart</Button>
+                            <Button color="primary">Add to cart</Button>
                           </CardActions>
                         </CardContent>
                       </CardActionArea>
@@ -164,20 +201,9 @@ export default function Store(props) {
             </Grid>
           </div>
         </Box>
-        </Box>
-      
+      </Box>
     </>
   );
 }
-export async function getServerSideProps() {
-  await db.connect();
-  const instruments = await Instrument.find({}).lean();
-  await db.disconnect();
-  return {
-    props: {
-      instruments: instruments.map(db.convertDocToObj),
-    },
-  };
-}
 
-Store.Layout = BaseLayout
+Store.Layout = BaseLayout;

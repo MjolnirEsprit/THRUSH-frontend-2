@@ -7,9 +7,9 @@ import {BaseLayout} from "../../components/common/layout";
 
 
 const style = {
-    dispo: `flex w-full inline-block mt-5 justify-center items-center`,
-    itemm: `flex inline-block`
-}
+  dispo: `flex w-full inline-block mt-5 justify-center items-center`,
+  itemm: `flex inline-block`,
+};
 
 const itemData = [
     {
@@ -60,7 +60,5 @@ export default function ViewModel() {
         
     );
 }
-
-
 
 ViewModel.Layout = BaseLayout;

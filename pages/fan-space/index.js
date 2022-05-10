@@ -1,19 +1,15 @@
-import Head from "next/head";
 import { getProviders, getSession, useSession } from "next-auth/react";
 import { modalState } from "../../atoms/modalAtom";
 import { useRecoilState } from "recoil";
 import Feed from "@components/MusicStreaming/Feed";
-import Sidebar2 from "@components/MusicStreaming/Sidebar2";
-import Widgets from "@components/MusicStreaming/Widgets";
 import Modal from "@components/MusicStreaming/Modal";
 import Login from "@components/MusicStreaming/Login";
-import MusicStreaming from "../music-streaming";
 import {BaseLayout} from "@components/common/layout";
  
 
 export default function FanSpace({ trendingResults, followResults, providers }) {
   const { data: session } = useSession();
-  const [isOpen, setIsOpen] = useRecoilState(modalState);
+  const [isOpen] = useRecoilState(modalState);
 
   if (!session) return <Login providers={providers} />;
 

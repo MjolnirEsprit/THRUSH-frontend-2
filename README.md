@@ -33,16 +33,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a justo eget elit a
 
 <br />
 
-# Instalation
+# Installation
 - Download files by **git clone _repository-name_**
 - Use **yarn install**
 - Setting up python venv **cd /AiApi**
   - **py -3 -m venv venv**
-- Installing python packages **pip install flask python-deotenv pandas spotipy sklearn textblob**
+- Installing python packages **pip install flask python-dotenv pandas spotipy sklearn textblob**
 
+# Requirements For NFT Marketplace Initial Setup
+- Install NodeJS (works with any node version below 16.5.0)
+- Install Hardhat
 
-# Testing NFT Marketplace on the local blockchain
+# Setting up the NFT Marketplace
+### 1. Boot up local development blockchain:
+- npx hardhat node
+
+### 2. Run Tests
 - npx hardhat test
+
+### 3. Deploy to Ropsten
+- cd components/NFTMarketplace/scripts
+- npx hardhat run deploy.js --network ropsten
 
 ### You need to have a **keys.json** file with the following variables:
 - **INFURA_PROJECT_ID**: "your-infura-project-id"
