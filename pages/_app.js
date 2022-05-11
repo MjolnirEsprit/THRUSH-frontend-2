@@ -1,5 +1,4 @@
-import "@styles/globals.css";
-import '@styles/datatable.css';
+import "../styles/globals.css";
 import { SessionProvider, useSession } from "next-auth/react";
 import { RecoilRoot } from "recoil";
 import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
@@ -74,7 +73,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       {/* eslint-disable-next-line @next/next/no-sync-scripts */}
     <script
         type='module'
-        src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'
+        src={'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'}
         strategy='beforeInteractive'
     />
 

@@ -1,11 +1,11 @@
 
-import { ActiveLink } from "@components/common"
+import { ActiveLink } from "components/common"
 import React from "react"
 
 const BreadcrumbItem = ({item, index}) => {
   return (
     <li
-      className={`${index == 0 ? "pr-4" : "px-4"} font-medium text-gray-500 hover:text-gray-900`}>
+      className={`${index === 0 ? "pr-4" : "px-4"} font-medium text-gray-500 hover:text-gray-900`}>
       <ActiveLink href={item.href}>
         <a>
           {item.value}

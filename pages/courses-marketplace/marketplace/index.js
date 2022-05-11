@@ -1,18 +1,18 @@
-import { CourseCard, CourseList } from "@components/MusicCourses/ui/course";
-import { BaseLayout } from "@components/common/layout";
-import { getAllCourses } from "@helpers/fetcher";
+import { CourseCard, CourseList } from "../../../components/MusicCourses/ui/course";
+import { BaseLayout } from "../../../components/common/layout";
+import { getAllCourses } from "../../../helpers/fetcher";
 import {
   useOwnedCourses,
   useWalletInfo,
-} from "@components/MusicCourses/hooks/web3";
-import { Button, LoaderEth } from "@components/common";
-import { OrderModal } from "@components/MusicCourses/ui/order";
+} from "../../../components/MusicCourses/hooks/web3";
+import { Button, LoaderEth } from "../../../components/common";
+import { OrderModal } from "../../../components/MusicCourses/ui/order";
 import { useEffect, useState } from "react";
-import { MarketHeader } from "@components/MusicCourses/ui/marketplace";
-import { useWeb3 } from "@components/MusicCourses/providers";
-import { withToast } from "@utils/toast";
-import { Navbar } from "@components/common";
-import { courseService } from "@services/course.service";
+import { MarketHeader } from "../../../components/MusicCourses/ui/marketplace";
+import { useWeb3 } from "../../../components/MusicCourses/providers";
+import { withToast } from "../../../utils/toast";
+import { Navbar } from "../../../components/common";
+import { courseService } from "../../../services";
 
 export default function Marketplace({ courses }) {
   const { web3, contract, requireInstall } = useWeb3();

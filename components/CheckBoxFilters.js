@@ -5,10 +5,7 @@ export default function CheckboxList() {
   return (
     <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
       <FormGroup>
-        <FormControlLabel
-          control={<Checkbox  />}
-          label="Guitars"
-        />
+        <FormControlLabel control={<Checkbox />} label="Guitars" />
         <FormControlLabel control={<Checkbox />} label="Keyboards" />
         <FormControlLabel control={<Checkbox />} label="Drums" />
         <FormControlLabel control={<Checkbox />} label="Pedals" />

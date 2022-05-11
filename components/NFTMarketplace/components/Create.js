@@ -78,6 +78,7 @@ const Create = ({ marketplace, nft }) => {
     toast.success('NFT successfully added to the marketplace 👏', {
       position: "top-center"
     })
+   
   }
 
   return (

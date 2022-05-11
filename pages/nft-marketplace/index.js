@@ -1,17 +1,17 @@
-import { BaseLayout } from "@components/common/layout";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BaseLayout } from "../../components/common/layout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navigation from './Navbar';
-import Home from '@components/NFTMarketplace/components/Home.js';
-import Create from '@components/NFTMarketplace/components/Create.js';
-import MyPurchases from "@components/NFTMarketplace/components/MyPurchases.js";
-import MyListedItems from "@components/NFTMarketplace/components/MyListedItem.js";
-import Reviews from "@components/NFTMarketplace/components/Reviews.js";
+import Home from '../../components/NFTMarketplace/components/Home.js';
+import Create from '../../components/NFTMarketplace/components/Create.js';
+import MyPurchases from "../../components/NFTMarketplace/components/MyPurchases.js";
+import MyListedItems from "../../components/NFTMarketplace/components/MyListedItem.js";
+import Reviews from "../../components/NFTMarketplace/components/Reviews.js";
 import { ethers } from "ethers"; //interact with ethereum nodes
 import { useState } from "react";
 import MarketplaceAbi from '../../components/NFTMarketplace/scripts/contractsData/Marketplace.json';
-import MarketplaceAddress from '@components/NFTMarketplace/scripts/contractsData/Marketplace-address.json'
-import NFTAbi from '@components/NFTMarketplace/scripts/contractsData/NFT.json'
-import NFTAddress from '@components/NFTMarketplace/scripts/contractsData/NFT-address.json'
+import MarketplaceAddress from '../../components/NFTMarketplace/scripts/contractsData/Marketplace-address.json'
+import NFTAbi from '../../components/NFTMarketplace/scripts/contractsData/NFT.json'
+import NFTAddress from '../../components/NFTMarketplace/scripts/contractsData/NFT-address.json'
 import { Spinner } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -40,7 +40,7 @@ export default function NFTMarketplace(){
           setAccount(accounts[0])
           await web3Handler()
         })
-        loadContracts(signer)
+        await loadContracts(signer)
     }
     const loadContracts = async(signer) =>{
         //get deployed copies of contracts
@@ -88,7 +88,6 @@ export default function NFTMarketplace(){
             </div>
           </div>
         </BrowserRouter>
-    
       );
 }
 

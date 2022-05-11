@@ -1,6 +1,6 @@
 import nc from 'next-connect';
-import Instrument from '@models/instrument';
-import db from '@utils/db';
+import Instrument from '../../models/instrument';
+import db from '../../utils/db';
 
 const handler = nc();
 

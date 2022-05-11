@@ -1,5 +1,5 @@
 
-import { LoaderEth } from "@components/common"
+import { LoaderEth } from "components/common"
 import Link from "next/link"
 
 const lectures = [
@@ -80,10 +80,10 @@ export default function Curriculum({locked, courseState, isLoading}) {
                                 </Link>
                               }
                             </> :
-                            <Link href="/watch">
+                            <Link href="/">
                               <a
                                 className="text-orange-600 hover:text-orange-900">
-                                Watch
+                                Read
                               </a>
                             </Link>
                         }

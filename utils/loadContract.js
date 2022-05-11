@@ -2,7 +2,7 @@
 const NETWORK_ID = process.env.NEXT_PUBLIC_NETWORK_ID
 
 export const loadContract = async (name, web3) => {
-  const res = await fetch(`/contracts/${name}.json`)
+  const res = await fetch(`./contracts/${name}.json`)
   const Artifact = await res.json()
   let contract = null
 

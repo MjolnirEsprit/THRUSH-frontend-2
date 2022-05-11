@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
 
     const transporter = nodemailer.createTransport(

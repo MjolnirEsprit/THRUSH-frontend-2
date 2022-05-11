@@ -1,6 +1,6 @@
-import { useHooks } from "@components/MusicCourses/providers/web3"
+import { useHooks } from "components/MusicCourses/providers/web3"
 import { useEffect } from "react"
-import { useWeb3 } from "@components/MusicCourses/providers"
+import { useWeb3 } from "components/MusicCourses/providers"
 import { useRouter } from "next/router"
 
 const _isEmpty = data => {

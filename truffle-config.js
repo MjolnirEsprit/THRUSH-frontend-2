@@ -1,12 +1,7 @@
 require('babel-register');
 require('babel-polyfill');
-import keys from "/keys.json"
 
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-//const keys =  require("./keys.json");
-//only for testing, gonna switch to ropsten
-//const ALCHEMY_API_KEY_TWO = "9GVXny_984t9lSLQ_iDFfuGRZNc7H9un";
-//const RINKEBY_PRIVATE_KEY ="0x49654dDA84f87e1440d04b02524c5F0768C6DcEd";
 
 module.exports = {
   contracts_build_directory: "./public/contracts/",
@@ -16,17 +11,13 @@ module.exports = {
       port: 7545,
       network_id: "*",
     },
-    /*rinkeby:{
-      url:`https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_API_KEY_TWO}`,
-      accounts: [RINKEBY_PRIVATE_KEY]
-    },*/
     ropsten: {
       provider: () =>
           new HDWalletProvider({
             mnemonic: {
-              phrase: keys.MNEMONIC
+              phrase: "rifle dice ranch iron offer vibrant echo cricket blossom foil door kitchen"
             },
-            providerOrUrl: `https://ropsten.infura.io/v3/${keys.INFURA_PROJECT_ID}`,
+            providerOrUrl: `https://ropsten.infura.io/v3/20262928a70d4f43b1c965dd4611cecd`,
             addressIndex: 0,
           }),
       network_id: 3,
@@ -57,16 +48,6 @@ module.exports = {
         {
           version: "0.8.11"
         },
-  /*
-        {
-        version: "0.8.4", // Fetch exact version from solc-bin (default: truffle's version)
-        settings: {
-          optimizer: {
-          enabled: true,
-          runs: 200
-          }
-        },
-        },*/
      ],
   }
 };

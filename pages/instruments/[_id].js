@@ -1,7 +1,5 @@
-import React, { useContext, useState } from "react";
-import db from "@utils/db";
-import Instrument from "@models/instrument";
-import useStyles from "@utils/styles";
+import React, {useContext, useEffect, useState} from "react";
+import useStyles from "../../utils/styles";
 import {
   CardMedia,
   CardActionArea,
@@ -15,25 +13,58 @@ import {
 
 } from "@material-ui/core";
 import { useRouter } from "next/router";
-import { CartContext } from "@helpers/Context";
-import { BaseLayout } from "@components/common/layout";
+import { CartContext } from "../../helpers/Context";
+import { BaseLayout } from "../../components/common/layout";
+import axios from "axios";
+import db from "../../utils/db";
+import Instrument from "../../models/instrument";
+import NextLink from "next/link";
+import Link from "next/link";
 
 export default function InstrumentsScreen(props) {
   const { cartItems, setCartItems } = useContext(CartContext);
   const router = useRouter();
   //const { dispatch } = useContext(Store);
   const { instrument } = props;
+  const { _id } = props;
   const classes = useStyles();
+  const [instrumentData, setInstrument] = useState([]);
+
+
+  console.log(_id)
+  /*
+  useEffect(() => {
+    let isApiSubscribed = true;
+
+
+    axios
+        .get("https://thrush-backend.herokuapp.com/api/v1/instruments/", {
+          params: {
+            id: _id
+          }
+        })
+        .then((response) => {
+          if (isApiSubscribed) {
+            setInstrument(response.data);
+          }
+        });
+
+    return () => {
+      // cancel the subscription
+      isApiSubscribed = false;
+    };
+  }, []);
+  */
+
+  const addToCartHandler = (product) => {
+    setCartItems([...cartItems, product]);
+    //router.push("/instruments/cart");
+    alert("Item added to cart!");
+  };
 
   if (!instrument) {
     return <h1>not found sorry :(</h1>;
   }
-
-  const addToCartHandler = (product) => {
-    setCartItems([...cartItems, product]);
-    router.push("/instruments/cart");
-    alert("Item added to cart!");
-  };
 
   return (
     <>
@@ -47,6 +78,7 @@ export default function InstrumentsScreen(props) {
           <Grid item md={6} xs={12}>
             <Card className={classes.card}>
               <CardActionArea>
+                <Link href="/instruments/viewModel"><a>Click here for 3D models</a></Link>
                 <CardMedia
                   component="img"
                   image={instrument.image}
@@ -65,7 +97,7 @@ export default function InstrumentsScreen(props) {
               </ListItem>
               <ListItem>
                 <Typography>
-                  Rating: {instrument.rating} stars ({instrument.reviews}{" "}
+                  Rating: {instrument.rating} stars ({instrumentData.reviews}{" "}
                   reviews)
                 </Typography>
               </ListItem>
@@ -119,16 +151,16 @@ export default function InstrumentsScreen(props) {
 }
 
 export async function getServerSideProps(context) {
-  const { params } = context;
-  const { _id } = params;
-  await db.connect();
-  const instrument = await Instrument.findOne({ _id }).lean();
-  await db.disconnect();
-  return {
-    props: {
-      instrument: db.convertDocToObj(instrument),
-    },
-  };
-}
+    const { params } = context;
+    const { _id } = params;
+    await db.connect();
+    const instrument = await Instrument.findOne({ _id }).lean();
+    await db.disconnect();
+    return {
+      props: {
+        instrument: db.convertDocToObj(instrument),
+      },
+    };
+  }
 
 InstrumentsScreen.Layout = BaseLayout;

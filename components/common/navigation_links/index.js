@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
-import { ActiveLink } from "@components/common";
+import { ActiveLink } from "components/common";
 import Image from "next/image";
-import thrushLogo from "@public/Thrush.png";
+import thrushLogo from "public/Thrush.png";
 import { signOut, useSession } from "next-auth/react";
 import { LogoutIcon } from "@heroicons/react/outline";
 import { userService } from "services";
 import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import Dropdown from "../dropdown";
 
 const style = {
   logoContainer: `flex items-center cursor-pointer`,

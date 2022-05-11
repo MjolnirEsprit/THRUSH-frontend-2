@@ -1,18 +1,18 @@
 import {
   useAccount,
   useOwnedCourse,
-} from "@components/MusicCourses/hooks/web3";
-import { useWeb3 } from "@components/MusicCourses/providers";
-import { Message, Modal } from "@components/common";
+} from "../../../components/MusicCourses/hooks/web3";
+import { useWeb3 } from "../../../components/MusicCourses/providers";
+import { Message, Modal } from "../../../components/common";
 import {
   CourseHero,
   Curriculum,
   Keypoints,
-} from "@components/MusicCourses/ui/course";
-import { BaseLayout } from "@components/common/layout";4
+} from "../../../components/MusicCourses/ui/course";
+import { BaseLayout } from "../../../components/common/layout";4
 import { useEffect, useState } from "react";
-import { getAllCourses } from "@helpers/fetcher";
-import { courseService } from "@services/course.service";
+import { getAllCourses } from "../../../helpers/fetcher";
+import { courseService } from "../../../services";
 
 export default function Course({ course }) {
   const [coursesData, setCourses] = useState([]);
@@ -70,7 +70,7 @@ export default function Course({ course }) {
           )}
           {courseState === "activated" && (
             <Message type="success">
-              Eincode wishes you happy watching of the course.
+              Thrush wishes you happy watching of the course.
             </Message>
           )}
           {courseState === "deactivated" && (
@@ -78,7 +78,7 @@ export default function Course({ course }) {
               Course has been deactivated, due the incorrect purchase data. The
               functionality to watch the course has been temporaly disabled.
               <i className="block font-normal">
-                Please contact info@eincode.com
+                Please contact info@thrush.com
               </i>
             </Message>
           )}

@@ -1,9 +1,9 @@
-import { Hero } from "@components/common";
-import { CourseList, CourseCard } from "@components/MusicCourses/ui/course";
-import { BaseLayout } from "@components/common/layout";
-import { courseService } from "@services/course.service";
+import { Hero } from "../../components/common";
+import { CourseList, CourseCard } from "../../components/MusicCourses/ui/course";
+import { BaseLayout } from "../../components/common/layout";
+import { courseService } from "../../services";
 import { useEffect, useState } from "react";
-import { getAllCourses } from "@helpers/fetcher";
+import { getAllCourses } from "../../helpers/fetcher";
 
 export default function Home({ courses }) {
   const [courseData, setCourses] = useState([]);
